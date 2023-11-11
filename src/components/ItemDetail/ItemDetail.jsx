@@ -1,6 +1,38 @@
+import { useState } from 'react'
+import Contador from '../Contador/Contador';
+import { Link } from 'react-router-dom';
 import './ItemDetail.css'
+//Importamos CarritoContext
+import { CarritoContext } from '../../context/CarritoContext';
+//Importo el Hook useContext:
+import { useContext } from 'react';
 
-const ItemDetail = ({id, nombre, precio, img}) => {
+const ItemDetail = ({id, nombre, precio, img, stock}) => {
+  //creamos un estado local con la cantidad de productos agregados.
+  const [agregarCantidad, setAgregarCantidad] = useState(0);
+  
+  //////////////////////////////AGREGADO CLASE 6
+  
+  
+  const {agregarAlCarrito} = useContext(CarritoContext);
+  
+  
+  //////////////////////////////AGREGADO CLASE 6
+  
+  
+  
+  //Creamos una funcion manejdora de la cantidad:
+
+
+  const manejadorCantidad = (cantidad) => {
+    setAgregarCantidad(cantidad)
+    //console.log("Productos agregados:" + cantidad);
+  
+  //Ahora aca yo puedo crear un objeto con el item y la cantidad:
+  const item = {id,nombre,precio};
+  agregarAlCarrito(item,cantidad);
+  }
+  
   return (
     <div className='contenedorItem'>
 
@@ -15,6 +47,15 @@ const ItemDetail = ({id, nombre, precio, img}) => {
             assumenda necessitatibus 
             voluptatem? Repellendus deleniti ipsam 
             illo!</p>
+            {
+              //Aca empleamos la logica ara el montaje y el desmontaje de contador
+
+            }
+            { agregarCantidad > 0 ? (<Link to="/cart">Terminar Compra</Link>) : 
+            (<Contador inicial={1} stock={stock} 
+              funcionAgregar={manejadorCantidad}/>)
+            }
+
         
     </div>
   )

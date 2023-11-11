@@ -1,5 +1,5 @@
-import { Link, NavLink } from 'react-router-dom'
-import CarWidget from '../CarWidget/CarWidget'
+import { Link, NavLink } from 'react-router-dom';
+import CarWidget from "../CarWidget/CarWidget";
 import "./NavBar.css"
 
 const NavBar = () => {

@@ -1,13 +1,13 @@
 const misProductos = [
-    {id:"1", nombre: "Mario", precio:1500, img: "../img/mariobros.jfif", idCat:"1"},
-    {id:"2", nombre: "Luigi", precio:1400, img: "../img/luigi.jfif", idCat:"1"},
-    {id:"3", nombre: "Wario", precio:600, img: "../img/wario.jfif", idCat:"2"},
-    {id:"4", nombre: "Bowser", precio:1200, img: "../img/bowser.jfif", idCat:"2"},
-    {id:"5", nombre: "Peach", precio:1500, img: "../img/peach.jfif", idCat:"3"},
-    {id:"6", nombre: "Rosalina", precio:900, img: "../img/rosalina.jfif", idCat:"3"},
-    {id:"7", nombre: "King Boo", precio:900, img: "../img/kingboo.png", idCat:"2"},
-    {id:"8", nombre: "Yoshi", precio:1100, img: "../img/yoshi.jfif", idCat:"1"},
-    {id:"9", nombre: "Daisy", precio:600, img: "../img/daisy.jfif", idCat:"3"},
+    {id:"1", nombre: "Mario", stock:10, precio:1500, img: "../img/mariobros.jfif", idCat:"1"},
+    {id:"2", nombre: "Luigi", stock:10, precio:1400, img: "../img/luigi.jfif", idCat:"1"},
+    {id:"3", nombre: "Wario", stock:10, precio:600, img: "../img/wario.jfif", idCat:"2"},
+    {id:"4", nombre: "Bowser",stock:10,  precio:1200, img: "../img/bowser.jfif", idCat:"2"},
+    {id:"5", nombre: "Peach",stock:10,  precio:1500, img: "../img/peach.jfif", idCat:"3"},
+    {id:"6", nombre: "Rosalina",stock:10,  precio:900, img: "../img/rosalina.jfif", idCat:"3"},
+    {id:"7", nombre: "King Boo",stock:10,  precio:900, img: "../img/kingboo.png", idCat:"2"},
+    {id:"8", nombre: "Yoshi",stock:10,  precio:1100, img: "../img/yoshi.jfif", idCat:"1"},
+    {id:"9", nombre: "Daisy",stock:10,  precio:600, img: "../img/daisy.jfif", idCat:"3"},
 ];
 
 
