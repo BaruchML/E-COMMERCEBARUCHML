@@ -1,5 +1,5 @@
 //1) Voy a importar de react createContext que me permite crear
-//un contexto que almacenara utoda a logica de mi carrito de compras
+//un contexto que almacenara toda la logica de mi carrito de compras
 
 import { useState, createContext, Children } from "react"
 

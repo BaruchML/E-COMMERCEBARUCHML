@@ -19,13 +19,15 @@ const NavBar = () => {
             <NavLink to="categoria/1">Heroes</NavLink>
           </li>
           <li>
+            <NavLink to="categoria/3">Princesas</NavLink>
+          </li>
+          <li>
             <NavLink to="categoria/2">Villanos</NavLink>
           </li>
           <li>
-            <NavLink to="categoria/3">Princesas</NavLink>
+            <NavLink to="categoria/3">Extras</NavLink>
           </li>
-          
-          
+                 
 
         </ul>
       </nav>
