@@ -1,18 +1,50 @@
 header {
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 20px solid rgb(167, 37, 37);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 20px solid rgb(167, 37, 37);
+
 
 }
 
-.LogoNintendo{
-    width: 150px;
+.LogoNintendo {
+  width: 250px;
+  border-radius: 40px;
 }
 
-li{
-    display: inline-block;
-    margin: 0 15px;
-    text-transform: uppercase;
-    font-weight: bold;
+li {
+  display: inline-block;
+  margin: 0 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 4px;
+
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #afa5a5;
+  border-radius: 90px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 10px;
+
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+
+.active {
+  background-color: brown;
 }

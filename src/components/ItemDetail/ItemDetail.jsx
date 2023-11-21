@@ -2,61 +2,42 @@ import { useState } from 'react'
 import Contador from '../Contador/Contador';
 import { Link } from 'react-router-dom';
 import './ItemDetail.css'
-//Importamos CarritoContext
 import { CarritoContext } from '../../context/CarritoContext';
-//Importo el Hook useContext:
 import { useContext } from 'react';
 
-const ItemDetail = ({id, nombre, precio, img, stock}) => {
-  //creamos un estado local con la cantidad de productos agregados.
+const ItemDetail = ({ id, nombre, precio, img, stock }) => {
   const [agregarCantidad, setAgregarCantidad] = useState(0);
-  
-  //////////////////////////////AGREGADO CLASE 6
-  
-  
-  const {agregarAlCarrito} = useContext(CarritoContext);
-  
-  
-  //////////////////////////////AGREGADO CLASE 6
-  
-  
-  
-  //Creamos una funcion manejdora de la cantidad:
 
+  const { agregarAlCarrito } = useContext(CarritoContext);
 
   const manejadorCantidad = (cantidad) => {
     setAgregarCantidad(cantidad)
-    //console.log("Productos agregados:" + cantidad);
-  
-  //Ahora aca yo puedo crear un objeto con el item y la cantidad:
-  const item = {id,nombre,precio};
-  agregarAlCarrito(item,cantidad);
+
+    const item = { id, nombre, precio };
+    agregarAlCarrito(item, cantidad);
   }
-  
+
   return (
     <div className='contenedorItem'>
+      <img src={img} alt={nombre} className="imgDetail" />
+      <div className='cardProductoInfo'>
+        <h1>Nombre: {nombre}</h1>
+        <h2>Precio: ${precio}</h2>
+        <h3>En Stock: {stock}</h3>
+        <p>ID: {id}</p>
+        <p>Increible figura coleccionable de {nombre}</p>
+        <p>Envio a toda Latinoamerica y E.U.A.</p>
+        {
 
-        <h2>Nombre: {nombre}</h2>
-        <h3>Precio: {precio}</h3>
-        <h3>ID: {id}</h3>
-        <img src={img} alt={nombre} className="imgDetail"/>
-        <p>Lorem ipsum dolor, sit amet consectetur 
-            adipisicing elit. Harum cupiditate, fuga 
-            officia iure, voluptatum non sit maxime 
-            tenetur quas provident autem fugit aliquam 
-            assumenda necessitatibus 
-            voluptatem? Repellendus deleniti ipsam 
-            illo!</p>
-            {
-              //Aca empleamos la logica ara el montaje y el desmontaje de contador
 
-            }
-            { agregarCantidad > 0 ? (<Link to="/cart">Terminar Compra</Link>) : 
-            (<Contador inicial={1} stock={stock} 
-              funcionAgregar={manejadorCantidad}/>)
-            }
+        }
+        {agregarCantidad > 0 ? (<Link to="/cart"><button className='btnCompra'>Terminar Compra</button></Link>) :
+          (<Contador inicial={1} stock={stock}
+            funcionAgregar={manejadorCantidad} />)
+        }
 
-        
+
+      </div>
     </div>
   )
 }

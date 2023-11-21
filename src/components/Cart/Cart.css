@@ -1,0 +1,103 @@
+.divCardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.divCardContainer .divCard {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    width: 300px;
+    height: 500px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: .5rem;
+    margin: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    transition-duration: 0.2s;
+    border-radius: 30px;
+}
+
+.divCardContainer .divCard p {
+    font-style: italic;
+    font-size: 22px;
+}
+
+.divCardContainer .divCard h2 {
+    font-style: italic;
+    font-size: 26px;
+}
+
+.divCardContainer .divCard:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.divCardContainer .divCard .btnVaciarCompra {
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0.5rem;
+    border: 1rem;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #fafafa;
+    color: brown;
+    border: 2px solid brown;
+    width: 150px;
+}
+
+.divCardContainer .divCard .btnFinCompra {
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0.5rem;
+    border: 1rem;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #309184;
+    color: white;
+    margin: 1rem;
+    width: 250px;
+}
+
+.divCardContainer .divCard .btnFinCompra:hover {
+    border: 2px solid #309184;
+    color: #309184;
+    background-color: #fafafa;
+}
+
+.divCardContainer .divCard .btnVaciarCompra:hover {
+    border: 2px solid #309184;
+    color: #309184;
+    background-color: #fafafa;
+}
+
+.cartVacio {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    font-size: 26px;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.cartVacio button {
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0.5rem;
+    border: 1rem;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #309184;
+    color: white;
+    margin: 1rem;
+    width: 250px;
+
+}
+
+.cartVacio button:hover {
+    border: 2px solid #309184;
+    color: #309184;
+    background-color: #fafafa;
+}

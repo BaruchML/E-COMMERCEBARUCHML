@@ -1,0 +1,39 @@
+.divContador .btn {
+
+
+    margin: 1rem;
+    cursor: pointer;
+
+    padding: 0.5rem;
+    border: 1rem;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #fafafa;
+    color: brown;
+    border: 2px solid brown;
+    width: 50px;
+}
+
+.divContador .btnAgregar {
+    margin: 1rem;
+    cursor: pointer;
+    border-radius: 30px;
+    border: 1rem;
+    padding: 10px 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #309184;
+    color: white;
+    margin: 1rem;
+    width: 200px;
+}
+
+.divContador .btnAgregar:hover {
+    border: 2px solid #309184;
+    color: #309184;
+    background-color: #fafafa;
+}
+
+.divContador .btn:hover {
+    background-color: brown;
+    color: white;
+}

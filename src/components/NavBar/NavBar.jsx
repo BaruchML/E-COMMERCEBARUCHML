@@ -8,11 +8,9 @@ const NavBar = () => {
       <Link to="/">
         <img className="LogoNintendo" src={"../img/logo.png"} alt="Logo Nintendo" />
       </Link>
-      
-      
       <nav>
         <ul>
-        <li>
+          <li>
             <NavLink to="/">Inicio</NavLink>
           </li>
           <li>
@@ -25,9 +23,9 @@ const NavBar = () => {
             <NavLink to="categoria/2">Villanos</NavLink>
           </li>
           <li>
-            <NavLink to="categoria/3">Extras</NavLink>
+            <NavLink to="categoria/4">Extras</NavLink>
           </li>
-                 
+
 
         </ul>
       </nav>
