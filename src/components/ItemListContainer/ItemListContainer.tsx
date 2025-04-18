@@ -1,34 +1,35 @@
 import { useState, useEffect } from 'react';
-// import ItemList from "../ItemList/ItemList";
+import ItemList from "../ItemList/ItemList";
 import { useParams } from 'react-router-dom';
-// import { db } from "../../services/config";
+import { db } from "../../services/config"
 import { collection, getDocs, query, where } from 'firebase/firestore';
+import { ProductsType } from '../ItemList/ItemList';
 
 const ItemListContainer = () => {
-  // const [productos, setProductos] = useState([]);
+  const [productos, setProductos] = useState<ProductsType[]>([]);
 
-  // const { idCategoria } = useParams();
+  const { idCategoria } = useParams();
 
-  // useEffect(() => {
-  //   const misProductos = idCategoria ? query(collection(db, "productos"),
-  //     where("idCat", "==", idCategoria)) : collection(db, "productos");
+  useEffect(() => {
+    const misProductos = idCategoria ? query(collection(db, "productos"),
+      where("idCat", "==", idCategoria)) : collection(db, "productos");
 
-  //   getDocs(misProductos)
-  //     .then(res => {
-  //       const nuevosProductos = res.docs.map(doc => {
-  //         const data = doc.data()
-  //         return { id: doc.id, ...data }
+    getDocs(misProductos)
+      .then(res => {
+        const nuevosProductos:ProductsType[] = res.docs.map(doc => {
+          const data = doc.data()
+          return { id: doc.id, ...data }
 
-  //       })
-  //       setProductos(nuevosProductos);
-  //     })
-  //     .catch(error => console.log(error));
-  // }, [idCategoria])
+        })
+        setProductos(nuevosProductos);
+      })
+      .catch(error => console.log(error));
+  }, [idCategoria])
 
   return (
     <>
       <h2 style={{ textAlign: "center", fontSize: "36px" }}>Productos</h2>
-      {/* <ItemList productos={productos} /> */}
+      <ItemList productos={productos} />
     </>
   )
 }
