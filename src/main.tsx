@@ -15,7 +15,12 @@ const router = createBrowserRouter([{
   children:[{
     path: 'categoria/:idCategoria',
     element:<ItemListContainer/>
-  }]
+  },
+  {path:'/',
+    element:<ItemListContainer/>
+  }
+]
+
 },
 // {
 //   path: 'categoria/1',

@@ -6,7 +6,7 @@ const Item = (props:ProductsType) => {
   return (
     <div className='cardProducto'>
       <img src={props.img} alt={props.nombre} />
-      <div className='cardProductoInfo'>
+      <div className=''>
         <h3>{props.nombre}</h3>
         <p>Precio: ${props.precio}</p>
         <p>ID: {props.id}</p>

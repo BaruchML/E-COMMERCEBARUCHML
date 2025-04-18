@@ -10,7 +10,7 @@ import NavBar from './routes/NavBar'
 // import Cart from './components/Cart/Cart'
 // import Checkout from './components/Checkout/Checkout'
 // import './App.css'
-
+import './styles/main.scss'
 const App = () => {
   return (
     <>
