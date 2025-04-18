@@ -5,7 +5,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 // import NavBar from './components/NavBar/NavBar'
 ''
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import NavBar from './routes/root'
+import NavBar from './routes/NavBar'
 // import { CarritoProvider } from './context/CarritoContext'
 // import Cart from './components/Cart/Cart'
 // import Checkout from './components/Checkout/Checkout'
@@ -14,12 +14,12 @@ import NavBar from './routes/root'
 const App = () => {
   return (
     <>
-<NavBar/>
-<div>
-  <Outlet/>
-</div>
-<footer></footer>
-</>)
+      <NavBar />
+      <div>
+        <Outlet />
+      </div>
+      <footer></footer>
+    </>)
 }
 
 export default App
