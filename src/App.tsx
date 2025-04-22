@@ -12,6 +12,7 @@ import NavBar from './routes/NavBar'
 // import './App.css'
 import './styles/main.scss'
 const App = () => {
+  
   return (
     <>
       <NavBar />

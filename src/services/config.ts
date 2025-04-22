@@ -3,7 +3,7 @@ import {getFirestore} from "firebase/firestore";
 
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  apiKey: import.meta.env!.VITE_FIREBASE_API_KEY,
   authDomain: "tienda-gaming-7b9ac.firebaseapp.com",
   projectId: "tienda-gaming-7b9ac",
   storageBucket: "tienda-gaming-7b9ac.appspot.com",

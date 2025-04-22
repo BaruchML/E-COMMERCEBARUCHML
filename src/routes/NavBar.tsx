@@ -33,7 +33,6 @@ const NavBar = () => {
       </nav>
       {/* <CarWidget /> */}
     </header>
-    {/* <div ><Outlet/></div> */}
     </>
     
   )

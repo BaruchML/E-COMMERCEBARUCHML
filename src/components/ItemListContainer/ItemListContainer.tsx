@@ -16,7 +16,7 @@ const ItemListContainer = () => {
 
     getDocs(misProductos)
       .then(res => {
-        const nuevosProductos:ProductsType[] = res.docs.map(doc => {
+        const nuevosProductos:typeof productos = res.docs.map(doc => {
           const data = doc.data()
           return { id: doc.id, ...data }
 

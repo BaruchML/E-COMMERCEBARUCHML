@@ -7,6 +7,7 @@ export type ProductsType = {
   precio?: string, 
   img?: string, 
   stock?: string 
+
 }
 
 export type ProductsPropType = {
@@ -14,10 +15,10 @@ export type ProductsPropType = {
 }
 
 
-const ItemList = (props:ProductsPropType) => {
+const ItemList = ({productos}:ProductsPropType) => {
   return (
     <div className='contenedorProductos'>
-      {props.productos.map(item => <Item key={item.id}{...item} />)}
+      {productos.map(item => <Item key={item.id}{...item} />)}
     </div>
   )
 }

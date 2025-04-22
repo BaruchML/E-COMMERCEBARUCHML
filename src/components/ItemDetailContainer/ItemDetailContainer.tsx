@@ -4,12 +4,19 @@ import { useParams } from "react-router-dom";
 import { db } from "../../services/config";
 import { getDoc, doc } from "firebase/firestore";
 import "./ItemDetailContainer.css"
+import { ProductsType } from "../ItemList/ItemList";
 
 const ItemDetailContainer = () => {
-  const [producto, setProducto] = useState(null);
+   interface IdItemType  {
+    idItem : string | undefined
+  }
+  const [producto, setProducto] = useState<ProductsType>();
 
-  const { idItem } = useParams();
+  const { idItem } = useParams();//intentar tipar useParams con iditemtype
 
+  if(!idItem){
+    return (<h1>Sin item</h1>)
+  }
   useEffect(() => {
     const nuevoDoc = doc(db, "productos", idItem);
 
@@ -23,7 +30,7 @@ const ItemDetailContainer = () => {
   }, [idItem])
   return (
     <div className="itemDetailContainer">
-      <ItemDetail {...producto} />
+      <ItemDetail producto = {producto} />
     </div>
   )
 }

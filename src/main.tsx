@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom'
 import ErrorPage from './routes/error-page'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 
 const router = createBrowserRouter([{
   path:'/',
@@ -18,7 +19,11 @@ const router = createBrowserRouter([{
   },
   {path:'/',
     element:<ItemListContainer/>
-  }
+  },
+ { 
+  path:'item/:idItem',
+  element:<ItemDetailContainer/>
+}
 ]
 
 },
