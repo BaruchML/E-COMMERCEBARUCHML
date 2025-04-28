@@ -1,11 +1,18 @@
 import { useState } from "react";
 import "./Contador.css"
+import { ItemType } from "../../context/CartContext";
+import { ProductsType } from "../ItemList/ItemList";
+interface ContadorType {
+    inicial:number,
+    producto: ProductsType,
+    funcionAgregar:(quantity:number) => void
 
-const Contador = ({ inicial, stock, funcionAgregar }) => {
+}
+const Contador = ({ inicial, producto, funcionAgregar }:ContadorType) => {
     const [contador, setContador] = useState(inicial);
 
     const sumaContador = () => {
-        if (contador < stock) {
+        if (producto.stock && contador < producto.stock ) {
             setContador(contador + 1)
         }
     }

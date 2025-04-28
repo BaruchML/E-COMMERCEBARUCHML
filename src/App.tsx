@@ -6,7 +6,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 ''
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import NavBar from './routes/NavBar'
-// import { CarritoProvider } from './context/CarritoContext'
+import CartProvider, { CartContext } from './context/CartContext'
 // import Cart from './components/Cart/Cart'
 // import Checkout from './components/Checkout/Checkout'
 // import './App.css'
@@ -15,11 +15,14 @@ const App = () => {
   
   return (
     <>
+    <CartProvider>
+
       <NavBar />
       <div>
         <Outlet />
       </div>
       <footer></footer>
+    </CartProvider>
     </>)
 }
 

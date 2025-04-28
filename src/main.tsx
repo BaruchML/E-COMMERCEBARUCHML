@@ -8,6 +8,7 @@ import {
 import ErrorPage from './routes/error-page'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+import Cart from './components/Cart/Cart'
 
 const router = createBrowserRouter([{
   path:'/',
@@ -23,6 +24,10 @@ const router = createBrowserRouter([{
  { 
   path:'item/:idItem',
   element:<ItemDetailContainer/>
+},
+{
+  path:'/cart',
+  element:<Cart/>
 }
 ]
 

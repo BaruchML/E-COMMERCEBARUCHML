@@ -3,11 +3,10 @@ import './ItemList.css'
 
 export type ProductsType = {
   id:string, 
-  nombre?: string, 
-  precio?: string, 
+  name?: string, 
+  price?: number, 
   img?: string, 
-  stock?: string 
-
+  stock?: number 
 }
 
 export type ProductsPropType = {

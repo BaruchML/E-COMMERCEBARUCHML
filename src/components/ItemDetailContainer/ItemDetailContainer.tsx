@@ -7,12 +7,9 @@ import "./ItemDetailContainer.css"
 import { ProductsType } from "../ItemList/ItemList";
 
 const ItemDetailContainer = () => {
-   interface IdItemType  {
-    idItem : string | undefined
-  }
   const [producto, setProducto] = useState<ProductsType>();
 
-  const { idItem } = useParams();//intentar tipar useParams con iditemtype
+  const { idItem } = useParams();
 
   if(!idItem){
     return (<h1>Sin item</h1>)
@@ -22,15 +19,20 @@ const ItemDetailContainer = () => {
 
     getDoc(nuevoDoc)
       .then(res => {
-        const data = res.data();
-        const nuevoProducto = { id: res.id, ...data }
-        setProducto(nuevoProducto)
+        if (res.exists()) {
+          
+          const data = res.data() as Omit<ProductsType, 'id'>;
+          setProducto({ id: res.id, ...data })
+        }
       })
       .catch(error => console.log(error))
   }, [idItem])
+  if (!producto) {
+    return <h1>Cargando...</h1>;
+  }
   return (
     <div className="itemDetailContainer">
-      <ItemDetail producto = {producto} />
+      <ItemDetail {...producto} />
     </div>
   )
 }
