@@ -1,5 +1,4 @@
 import { Link, NavLink } from 'react-router-dom';
-// import { Outlet } from 'react-router-dom';
 import CarWidget from "../components/CarWidget/CarWidget";
 import "../components/NavBar/NavBar.css"
 

@@ -36,7 +36,7 @@ export const CartProvider = ({ children }:CartContextProps) => {
     const [totalQuantity, setTotalQuantity] = useState(0); //cambiar el nombre
 
     const addToCart = ({item, quantity}:ItemType) => {
-        console.log({item});
+        console.log({item,quantity,price:item.price,name:item.name});
         const existingProduct = cart.find(prod => prod.item.id === item.id);
 
         if (!existingProduct) {

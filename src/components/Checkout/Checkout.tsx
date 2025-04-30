@@ -1,9 +1,9 @@
-import { useState, useEffect, useContext } from 'react';
-import { CarritoContext } from '../../context/CarritoContext';
+import { useState,  useContext, FormEvent } from 'react';
+import { CartContext, ItemType } from '../../context/CartContext';
 import { db } from '../../services/config';
 import { collection, addDoc, updateDoc, doc, getDoc } from 'firebase/firestore';
-import React from 'react'
 import "./Checkout.css"
+
 const Checkout = () => {
     const [nombre, setNombre] = useState("");
     const [apellido, setApellido] = useState("");
@@ -13,9 +13,20 @@ const Checkout = () => {
     const [error, setError] = useState("");
     const [ordenId, setOrdenId] = useState("");
 
-    const { carrito, vaciarCarrito, total, totalCantidad } = useContext(CarritoContext);
+    const { cart, cleanCart, total, totalQuantity } = useContext(CartContext);
 
-    const manejadorFormulario = (event) => {
+    interface OrderType {
+        items: ItemType[],
+        total: number,
+        fecha: Date,
+        nombre: string,
+        apellido: string,
+        telefono: string,
+        email: string
+
+    }
+
+    const manejadorFormulario = (event: FormEvent) => {
         event.preventDefault();
 
         if (!nombre || !apellido || !telefono || !email || !emailConfirmacion) {
@@ -28,12 +39,15 @@ const Checkout = () => {
             return;
         }
 
-        const orden = {
-            items: carrito.map(producto => ({
-                id: producto.item.id,
-                nombre: producto.item.nombre,
-                cantidad: producto.cantidad,
-            })),
+        const orden:OrderType = {
+            items: cart.map(producto => {
+                return{
+                    item:{id:producto.item.id,
+                        name:producto.item.name,
+                    },
+                    quantity:producto.quantity
+                }
+            }),
             total: total,
             fecha: new Date(),
             nombre,
@@ -44,19 +58,24 @@ const Checkout = () => {
 
         Promise.all(
             orden.items.map(async (productoOrden) => {
-                const productoRef = doc(db, "productos", productoOrden.id);
+                const productoRef = doc(db, "productos", productoOrden.item.id);
                 const productoDoc = await getDoc(productoRef);
-                const stockActual = productoDoc.data().stock;
-                await updateDoc(productoRef, {
-                    stock: stockActual - productoOrden.cantidad
-                })
+                if (productoDoc.exists()) {
+                    console.log("Document data:", productoDoc.data());
+                    const stockActual = productoDoc.data().stock;
+                    await updateDoc(productoRef, {
+                        stock: stockActual - productoOrden.quantity
+                    })
+                } else {
+                    console.log("No such document!");
+                }
             })
         )
             .then(() => {
                 addDoc(collection(db, "ordenes"), orden)
                     .then(docRef => {
                         setOrdenId(docRef.id);
-                        vaciarCarrito();
+                        cleanCart();
                     })
                     .catch(error => {
                         console.log("Error al crear la orden", error);
@@ -76,10 +95,10 @@ const Checkout = () => {
             <h2>Checkout</h2>
 
             {
-                carrito.map(producto => (
+                cart.map(producto => (
                     <div className="orden" key={producto.item.id}>
-                        <p>{producto.item.nombre} x {producto.cantidad}</p>
-                        <p>{producto.item.precio}</p>
+                        <p>{producto.item.name} x {producto.quantity}</p>
+                        <p>{producto.item.price}</p>
 
                     </div>
                 ))
