@@ -1,19 +1,20 @@
 
 import { Outlet } from 'react-router-dom'
 import NavBar from './routes/NavBar'
-import CartProvider, { CartContext } from './context/CartContext'
-// import './App.css'
+import CartProvider from './components/context/CartContext'
 import './styles/main.scss'
 const App = () => {
   
   return (
     <>
-    <CartProvider>
 
+    <CartProvider>
       <NavBar />
+
       <div>
         <Outlet />
       </div>
+      
       <footer></footer>
     </CartProvider>
     </>)

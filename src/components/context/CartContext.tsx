@@ -1,5 +1,5 @@
 import { useState, createContext, } from "react"
-import { ProductsType } from "../components/ItemList/ItemList";
+import { ProductsType } from "../ItemList/ItemList";
 
 interface CartContextProps {
     children?: React.ReactNode;

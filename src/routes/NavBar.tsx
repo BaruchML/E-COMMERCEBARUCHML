@@ -1,11 +1,11 @@
 import { Link, NavLink } from 'react-router-dom';
 import CarWidget from "../components/CarWidget/CarWidget";
-import "../components/NavBar/NavBar.css"
+import '../styles/NavBar.scss'
 
 const NavBar = () => {
   return (
     <>
-    <header>
+    <header className=''>
       <Link to="/">
         <img className="LogoNintendo" src={"../img/logo.png"} alt="Logo Nintendo" />
       </Link>

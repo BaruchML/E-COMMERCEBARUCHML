@@ -1,4 +1,4 @@
-import {ProductsType } from '../ItemList/ItemList';
+import {ProductsType } from '../../types/componentTypes';
 import './Item.css';
 import { Link } from 'react-router-dom'
 

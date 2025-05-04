@@ -1,6 +1,6 @@
 
 import { useContext } from "react"
-import { CartContext, ItemType } from "../../context/CartContext";
+import { CartContext, ItemType } from "../context/CartContext";
 import './CartItem.css'
 
 const CartItem = ({ item, quantity }:ItemType) => {
