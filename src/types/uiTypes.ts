@@ -4,4 +4,7 @@ export interface ButtonPropType {
 
 export interface CardPropType {
     scss?:string
+    text?:string
+    tittle?:string,
+    img?:string
 }

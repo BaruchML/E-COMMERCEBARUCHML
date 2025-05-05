@@ -13,6 +13,7 @@ const HomePage = () => {
      <Carousel/>
      <News/>
     <Info/>
+    <Info/>
    <Container/>
    <Container/>
    <Container/>

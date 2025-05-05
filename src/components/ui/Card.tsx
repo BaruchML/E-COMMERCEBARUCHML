@@ -2,7 +2,8 @@ import Button from "./button"
 import { CardPropType } from "../../types/uiTypes"
 
 
-const Card = ({scss='card'}:CardPropType) => {
+export const Card = ({scss='card',text}:CardPropType) => {
+
     return (
         <>
             <div className={scss}>
@@ -13,5 +14,17 @@ const Card = ({scss='card'}:CardPropType) => {
         </>
     )
 }
+export const CardText = ({scss='card',text}:CardPropType) => {
 
-export default Card
+    return (
+        <>
+            <div className={scss}>
+          <p className="negativo">
+            
+            {text}
+            </p>
+            </div>
+        </>
+    )
+}
+

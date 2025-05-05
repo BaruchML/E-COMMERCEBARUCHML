@@ -1,4 +1,4 @@
-import Card from '../../ui/card'
+import {Card} from '../../ui/card'
 import { GameType, getGames } from "../../../services/data"
 import { useEffect, useState } from "react"
 import Container from '../../ui/container'

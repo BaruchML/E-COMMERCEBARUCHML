@@ -1,5 +1,5 @@
 
-import Card from '../../ui/card'
+import {Card} from '../../ui/card'
 import Container from '../../ui/container'
 
 const News = (/* {handleEvent}:ButtonPropType */) => {
@@ -7,6 +7,7 @@ const News = (/* {handleEvent}:ButtonPropType */) => {
             <Container>                   
                 <p>News</p>
                 <p>Title</p>
+       
                 <Card/>
                 <Card/>
                 <Card/>
