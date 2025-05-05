@@ -1,32 +1,13 @@
-import Button from "./Button"
-import '../../styles/Card.scss'
-import { useEffect, useState } from "react"
-import { GameType, getGames } from "../../services/data"
+import Button from "./button"
+import { CardPropType } from "../../types/uiTypes"
 
 
-
-
-const Card = (/* {handleEvent}:ButtonPropType */) => {
-    const [games, setGames] = useState<GameType[]>([])
-    useEffect(() => {
-        const gamesFetch = async () => {
-            try {
-                const resp = await getGames();
-                setGames(resp)
-            }
-            catch (err) {
-                console.log('Error trayendo games',err);
-
-            }
-        }
-        gamesFetch()
-    }, [])
+const Card = ({scss='card'}:CardPropType) => {
     return (
         <>
-            <div className="card">
-
+            <div className={scss}>
                 <p>Card</p>
-                <p>Title{games.map((e,i)=> <p>{e.img}</p>)}</p>
+                <p>Title</p>
                 <Button />
             </div>
         </>

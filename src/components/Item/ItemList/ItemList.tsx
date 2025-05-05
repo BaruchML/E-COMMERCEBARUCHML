@@ -1,6 +1,6 @@
-import Item from '../Item/Item'
+import Item from '../Item'
 import './ItemList.css'
-import { ProductsPropType } from '../../types/componentTypes'
+import { ProductsPropType } from '../../../types/componentTypes'
 
 
 const ItemList = ({productos}:ProductsPropType) => {

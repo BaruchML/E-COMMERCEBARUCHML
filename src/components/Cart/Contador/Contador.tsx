@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Contador.css"
-import { ItemType } from "../context/CartContext";
-import { ProductsType } from "../ItemList/ItemList";
+import { ItemType } from "../../context/CartContext";
+import { ProductsType } from "../../Item/ItemList/ItemList";
 interface ContadorType {
     inicial:number,
     producto: ProductsType,
