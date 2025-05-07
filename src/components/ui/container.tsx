@@ -1,12 +1,12 @@
 
 import { CartContextProps } from "../../types/componentTypes"
 
-const Container: React.FC<CartContextProps> = ({children,scss = 'divContainer'}) => {
+const Container: React.FC<CartContextProps> = ({children,scss}) => {
 
 
     return (
         <>
-            <div className={scss}>
+            <div className={`container ${scss}`}>
             {children}
             </div>
         </>

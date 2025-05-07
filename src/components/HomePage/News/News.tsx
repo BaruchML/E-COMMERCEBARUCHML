@@ -4,13 +4,13 @@ import Container from '../../ui/container'
 
 const News = (/* {handleEvent}:ButtonPropType */) => {
     return (
-            <Container>                   
-                <p>News</p>
-                <p>Title</p>
-       
+            <Container scss='container-sp-even '>                   
+
                 <Card/>
                 <Card/>
                 <Card/>
+                <Card/>
+                
                 <Card/>
             </Container>
             

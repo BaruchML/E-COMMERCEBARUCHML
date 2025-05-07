@@ -8,105 +8,30 @@
 //     height: 400px;
 // }
 
-p{
-    background-color: greenyellow;
-}
 
 .card {
-    display: flex;
-    align-items: center;
-    padding: .5rem;
-    flex-direction: row;
+    display: grid;
+    // grid-template-columns: 1fr 1fr;
+    // grid-template-rows: 1fr 1fr;
     background-color: rgb(255, 255, 255);
-    margin: 1rem;
-    width: 500px;
+    width: 200px;
+    height: 300px;
     border-radius: 30px;
     transition-duration: 0.2s;
     font-family: Arial, Helvetica, sans-serif;
     justify-content: space-around;
+    padding: 2rem;
 }
 
 .card:hover {
     background-color: #ffffff;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    padding: 3rem;
+}
+.card-carousel{
+    width: 400px;
 }
 
-.card img {
-    width: 200px;
-    object-fit: contain;
-    height: 250px;
-}
-
-.card button {
-    font-size: 1.2rem;
-    border-radius: 30px;
-    border: 1rem;
-    padding: 10px 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #309184;
-    color: white;
-    margin: 1rem;
-    width: 200px;
-    cursor: pointer;
-}
-
-.card button:hover {
-    border: 2px solid #309184;
-    color: #309184;
-    background-color: #fafafa;
-}
-
-.card h3 {
-    color: brown;
-    font-size: 25px;
-    font-style: italic;
-
-}
-
-.card p {
-    color: black;
-    font-weight: bold;
-}
-
-.cardContainer {
-    background-color: rgb(205, 164, 51);
-    margin:20px;
-    flex-direction: column;
-    display: flex;
-    width: 100%;
-}
-.cardCarousel {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    background-color: rgb(44, 170, 193);
-    // padding: .5rem;
-    // margin: 1rem;
-    width: 100%;
-    height: 90%;
-    border-radius: 30px;
-    transition-duration: 0.2s;
-    font-family: Arial, Helvetica, sans-serif;
-    justify-content: space-around;
-}
-.cardText {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    background-color: rgb(44, 170, 193);
-    // padding: .5rem;
-    // margin: 1rem;
-    width: 100%;
-    height: 90%;
-    border-radius: 30px;
-    transition-duration: 0.2s;
-    font-family: Arial, Helvetica, sans-serif;
-    justify-content: space-around;
-    p{
-        background-color: red;
-    }
-}
-
-.negativo{
-    background-color: rgb(193, 133, 44);
+.card-info{
+    width: 80%;
 }

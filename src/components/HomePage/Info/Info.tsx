@@ -1,16 +1,11 @@
 
-import {CardText} from '../../ui/card'
+import {Card, CardText} from '../../ui/card'
 import Container from '../../ui/container'
 
 const Info = (/* {handleEvent}:ButtonPropType */) => {
     return (
-            <Container>    
-                <div className='cardContainer'>
-                <p>Info</p>
-                <p>Title</p>
-                <CardText scss='cardText negativo' text='sisisisi'/>
-                    </div>               
-            
+            <Container scss='container-center'>    
+                <Card scss='card-info'/>
             </Container>
             
     )

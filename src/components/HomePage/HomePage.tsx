@@ -5,6 +5,7 @@ import News from './News/News';
 import Carousel from '../HomePage/Carousel/Carousel';
 import Container from '../ui/container';
 import Info from './Info/Info';
+import Notice from './Notice/Notice';
 
 const HomePage = () => {
   return (
@@ -14,9 +15,7 @@ const HomePage = () => {
      <News/>
     <Info/>
     <Info/>
-   <Container/>
-   <Container/>
-   <Container/>
+   <Notice/>
     </div>
   )
 }

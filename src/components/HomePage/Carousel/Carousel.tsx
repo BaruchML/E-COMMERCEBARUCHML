@@ -20,10 +20,8 @@ export default function Carousel() {
     }, [])
 
     return (
-        <Container>
-
-            <h2>Carousel</h2>
-            {games.map((e, i) => <Card key={i} />)}
+        <Container scss='container-sp-even '>
+            {games.map((e, i) => <Card scss='card-carousel' key={i} />)}
         </Container>
     )
 }

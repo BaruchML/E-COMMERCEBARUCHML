@@ -1,14 +1,30 @@
 
 // CONTENEDORES
-.divContainer {
+.container {
 background-color: blueviolet;
 height: 500px;
 width:auto;
-margin:40px,20px;
-padding:40px,20px;
+// margin:40px,20px;
+// padding:40px,20px;
 display: flex;
 border: 2px, solid, black
 }
+.container-sp-even {
+    justify-content: space-evenly;
+    align-items: center;
+}
+.container-center{
+    justify-content: center;
+    align-items: center;
+}
+
+.container-notice{
+place-items: center;
+justify-content: center;
+gap: 10px;
+}
+
+
 .footerContainer {
 background-color: blue;
 height: 300px;
@@ -19,12 +35,12 @@ display: flex;
 border: 2px, solid, black
 }
 
-.intoDivContainer {
-background-color: blueviolet;
-height: 500px;
-width:50%;
-margin:40px,20px;
-padding:40px,20px;
-display: flex;
-border: 2px, solid, black
-}
+// .intoDivContainer {
+// background-color: blueviolet;
+// height: 500px;
+// width:50%;
+// margin:40px,20px;
+// padding:40px,20px;
+// display: flex;
+// border: 2px, solid, black
+// }

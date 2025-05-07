@@ -2,11 +2,11 @@ import {ButtonPropType}from'../../types/uiTypes'
 
 
 
-const Button = ({handleEvent}:ButtonPropType) => {
+const Button = ({handleEvent,scss,children = 'button'}:ButtonPropType) => {
     return (
         <>
         
-        <button onClick={handleEvent}>Algo hace</button>
+        <button className={`btn ${scss}`} onClick={handleEvent}>{children}</button>
         </>
     )
 }

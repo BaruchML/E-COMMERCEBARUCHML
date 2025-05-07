@@ -1,5 +1,7 @@
 export interface ButtonPropType {
     handleEvent?:() => void
+    scss?:string
+    children? : React.ReactNode
 }
 
 export interface CardPropType {

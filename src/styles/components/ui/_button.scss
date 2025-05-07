@@ -1,0 +1,14 @@
+.btn{
+    font-size: 1.2rem;
+    border-radius: 30px;
+    border: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #309184;
+    color: white;
+    cursor: pointer;
+    &:hover{
+        border: 2px solid #309184;
+        color: #309184;
+        background-color: #fafafa;
+    }
+}
