@@ -1,0 +1,18 @@
+.navbar{
+    display: flex;
+    background-color: red;
+    justify-content: space-between;
+}
+.navbar_nav{
+    background-color: violet;
+    display: flex;
+    width: 80%;
+}
+.navLinks{
+    display: flex;
+    width: 100%;
+    background-color: yellow;
+    align-items: center;
+    justify-content: space-evenly;
+  
+}

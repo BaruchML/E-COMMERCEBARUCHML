@@ -4,17 +4,17 @@ import CarWidget from "../components/Cart/CarWidget/CarWidget";
 const NavBar = () => {
   return (
     <>
-    <header className=''>
+    <header className='navbar'>
       <Link to="/">
         <img className="LogoNintendo" src={"../img/logo.png"} alt="Logo Nintendo" />
       </Link>
-      <nav>
-        <ul>
+      <nav className='navbar_nav'>
+        <ul className='navLinks'>
           <li>
             <NavLink to="/">Inicio</NavLink>
           </li>
           <li>
-            <NavLink to="categoria/1">Heroes</NavLink>
+            <NavLink to="/shop">Shop</NavLink>
           </li>
           <li>
             <NavLink to="categoria/3">Princesas</NavLink>

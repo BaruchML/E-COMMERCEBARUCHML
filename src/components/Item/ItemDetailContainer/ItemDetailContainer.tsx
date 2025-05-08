@@ -4,7 +4,9 @@ import { useParams } from "react-router-dom";
 import { db } from "../../../services/config";
 import { getDoc, doc } from "firebase/firestore";
 import "./ItemDetailContainer.css"
-import { ProductsType } from "../ItemList/ItemList";
+import { ProductsType } from "../../../types/componentTypes";
+import Container from "../../ui/container";
+
 
 const ItemDetailContainer = () => {
   const [producto, setProducto] = useState<ProductsType>();
@@ -33,6 +35,10 @@ const ItemDetailContainer = () => {
   return (
     <div className="itemDetailContainer">
       <ItemDetail {...producto} />
+      <Container/>
+      <Container/>
+      <Container/>
+      <Container/>
     </div>
   )
 }

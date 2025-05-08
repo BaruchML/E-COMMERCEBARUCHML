@@ -21,6 +21,10 @@
     font-family: Arial, Helvetica, sans-serif;
     justify-content: space-around;
     padding: 2rem;
+    & img{
+        height: 100px;
+        width: 100px;
+    }
 }
 
 .card:hover {
@@ -34,4 +38,9 @@
 
 .card-info{
     width: 80%;
+}
+
+.card-shop:hover{
+    padding: 2rem;
+    gap: 4px;
 }

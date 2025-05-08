@@ -11,6 +11,7 @@ import ItemDetailContainer from './components/Item/ItemDetailContainer/ItemDetai
 import Cart from './components/Cart/Cart'
 import Checkout from './components/Checkout/Checkout'
 import HomePage from './components/HomePage/HomePage'
+import Shop from './components/Shop/Shop'
 
 const router = createBrowserRouter([{
   path:'/',
@@ -34,6 +35,10 @@ const router = createBrowserRouter([{
 {
   path:'/checkout',
   element:<Checkout/>
+},
+{
+  path:'/shop',
+  element:<Shop/>
 }
 ],
 },

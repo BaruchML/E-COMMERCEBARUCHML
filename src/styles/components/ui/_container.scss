@@ -23,8 +23,31 @@ place-items: center;
 justify-content: center;
 gap: 10px;
 }
+.container-shop{
+    height: auto;
+    flex-wrap: wrap;
+    position: relative;
 
+}
+.container-sidebar{
+    position: absolute;
+    width: 15%;
+    background-color: wheat;
+    height: 100%;
 
+}
+.container-side-items{
+    display: flex;
+    justify-content: end;
+}
+.container-side-items_items{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    justify-content: center;
+    width: 85%;
+    background-color: yellow;
+}
 .footerContainer {
 background-color: blue;
 height: 300px;

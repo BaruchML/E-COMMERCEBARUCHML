@@ -1,6 +1,8 @@
-.contenedorProductos {
+/* .contenedorProductos {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-
-}
+    width: 85%;
+    background-color: yellow;
+} *
+ /* estas reglas se pasaron a container.scss */

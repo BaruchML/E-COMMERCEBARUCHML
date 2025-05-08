@@ -28,8 +28,11 @@ const ItemListContainer = () => {
 
   return (
     <>
-      <h2 style={{ textAlign: "center", fontSize: "36px" }}>Productos</h2>
+    <div className='container-side-items'>
+
+      {/* <h2 style={{ textAlign: "center", fontSize: "36px" }}>Productos</h2> */}
       <ItemList productos={productos} />
+    </div>
     </>
   )
 }

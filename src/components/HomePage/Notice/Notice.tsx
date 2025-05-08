@@ -5,8 +5,8 @@ function Notice() {
     return ( 
         <>
         <Container scss="container-notice">
-            <Card scss=""/>
-            <Card scss=""/>
+            <Card scss="card-carousel"/>
+            <Card scss="card-carousel"/>
         </Container>
         <Container  scss="container-notice">
 
