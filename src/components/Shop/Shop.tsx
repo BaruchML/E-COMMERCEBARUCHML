@@ -5,24 +5,17 @@ import SideBar from "./SideBar";
 import { ProductsType } from "../../types/componentTypes";
 
 function Shop() {
-    // const [product, setProduct] = useState<ProductsType>()
-    // setProduct({id:'1'})
-    const handleSearch = (productId:string) => {
-        console.log({productId});
+    const [query, setQuery] = useState('')
+
+    const handleSearch = (e:React.ChangeEvent<HTMLInputElement>) => {
+        console.log(e.target.value);
         
-    }
-    
-    const handleHello = () => {
-        console.log({si:'si'});
-        // console.log({hola:'hola'});
-        // setProduct({id:'2'})
-        // console.log({product});
-        
+        setQuery(e.target.value);
     }
    
     return (
         <Container scss="container-shop">
-            <SideBar handleEvent={handleHello} />
+            <SideBar handleEvent={handleSearch} />
             <ItemListContainer />
         </Container>
     );

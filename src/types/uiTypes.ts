@@ -12,6 +12,6 @@ export interface CardPropType {
 }
 
 export interface SearchPropType {
-    handleEvent?:() => void | string
+    handleEvent?:(e:React.ChangeEvent<HTMLInputElement>) => void | string
     scss?:string
 }

@@ -11,7 +11,7 @@ export type ProductsType = {
     productos: ProductsType[]
   }
 
-  export interface CartContextProps {
+  export interface ChildrenContextProps {
       scss?:string
       children?: React.ReactNode;
   }
@@ -30,3 +30,17 @@ export type ProductsType = {
       cleanCart:() => void
   
   }
+
+  
+export interface UserType {
+    id:number,
+    name:string,
+    status?:boolean
+    
+}
+export interface UserContextType {
+    user:UserType | null,
+    state:'no-loged' | 'logging'| 'logged',
+    loadUser: ({id, name}:UserType) => void,
+    cleanUser:() => void
+}

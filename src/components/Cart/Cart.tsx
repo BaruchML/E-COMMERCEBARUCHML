@@ -3,10 +3,22 @@ import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom"
 import CartItem from "./CartItem/CartItem";
 import './Cart.css'
+import { UserContext } from "../context/UserContext";
 
 const Cart = () => {
+    const {user,state,cleanUser,loadUser} = useContext(UserContext)
     const { cart, cleanCart, total, totalQuantity } = useContext(CartContext);
+if (!user) {
+    return (
+        <div>
 
+        <button onClick={()=>loadUser({id:1,name:'baruch'})} >Logeate</button>
+        <h1>Logeate</h1>
+        <h1>Logeate</h1>
+        <h1>Logeate</h1>
+        </div>
+    )
+}
     if (totalQuantity === 0) {
         return (
             <>

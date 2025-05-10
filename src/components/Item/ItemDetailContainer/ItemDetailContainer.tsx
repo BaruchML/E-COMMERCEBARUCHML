@@ -3,9 +3,10 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import { db } from "../../../services/config";
 import { getDoc, doc } from "firebase/firestore";
-import "./ItemDetailContainer.css"
 import { ProductsType } from "../../../types/componentTypes";
 import Container from "../../ui/container";
+import Info from "../../HomePage/Info/Info";
+import AboutItem from "./AboutItem/About";
 
 
 const ItemDetailContainer = () => {
@@ -30,15 +31,15 @@ const ItemDetailContainer = () => {
       .catch(error => console.log(error))
   }, [idItem])
   if (!producto) {
-    return <h1>Cargando...</h1>;
+    return <h1>No hay producto con ese id</h1>;
   }
   return (
-    <div className="itemDetailContainer">
+    <div>
+      <Container scss="container-center">
       <ItemDetail {...producto} />
-      <Container/>
-      <Container/>
-      <Container/>
-      <Container/>
+      </Container>
+      <Info/>
+      <AboutItem/>
     </div>
   )
 }

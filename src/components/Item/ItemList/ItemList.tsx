@@ -1,5 +1,4 @@
 import Item from '../Item'
-import './ItemList.css'
 import { ProductsPropType } from '../../../types/componentTypes'
 
 

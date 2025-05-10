@@ -4,11 +4,12 @@ import NavBar from './routes/NavBar'
 import CartProvider from './components/context/CartContext'
 import './styles/main.scss'
 import Footer from './components/Footer/Footer'
+import UserProvider from './components/context/UserContext'
 const App = () => {
   
   return (
     <>
-
+    <UserProvider>
     <CartProvider>
       <NavBar />
 
@@ -18,6 +19,7 @@ const App = () => {
       
       <Footer/>
     </CartProvider>
+    </UserProvider>
     </>)
 }
 
