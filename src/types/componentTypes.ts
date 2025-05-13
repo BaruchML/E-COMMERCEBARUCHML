@@ -42,5 +42,5 @@ export interface UserContextType {
     user:UserType | null,
     state:'no-loged' | 'logging'| 'logged',
     loadUser: ({id, name}:UserType) => void,
-    cleanUser:() => void
+    logOut:() => void
 }

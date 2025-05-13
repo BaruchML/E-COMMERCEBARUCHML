@@ -1,22 +1,22 @@
 import Container from "../../../ui/container";
 import { Card } from "../../../ui/Card";
 function AboutItem() {
-    return (  
-       <Container scss="container-about card-">
+    return (
+        <Container scss="container-center card-">
 
-           <Card/>
+            <Card />
             <hr></hr>
-<Card/>
+            <Card />
             <hr></hr>
-<Card/>
+            <Card />
             <hr></hr>
-<Card/>
+            <Card />
             <hr></hr>
-<Card/>
+            <Card />
             <hr></hr>
 
-       </Container>
-        
+        </Container>
+
     );
 }
 

@@ -7,6 +7,7 @@ import { ProductsType } from "../../../types/componentTypes";
 import Container from "../../ui/container";
 import Info from "../../HomePage/Info/Info";
 import AboutItem from "./AboutItem/About";
+import { Card } from "../../ui/Card";
 
 
 const ItemDetailContainer = () => {
@@ -31,7 +32,17 @@ const ItemDetailContainer = () => {
       .catch(error => console.log(error))
   }, [idItem])
   if (!producto) {
-    return <h1>No hay producto con ese id</h1>;
+    return(
+    <div>
+      <Container scss="container-center">
+      {/* <ItemDetail {...producto} /> */}
+      {/* <Card scss="card-item-detail"/> */}
+      <h1>Provisional</h1>
+      </Container>
+      <Info/>
+      <AboutItem/>
+    </div>
+  )
   }
   return (
     <div>

@@ -1,7 +1,7 @@
+import { ChildrenContextProps } from "../../types/componentTypes"
 
-import { CartContextProps } from "../../types/componentTypes"
 
-const Container: React.FC<CartContextProps> = ({children,scss}) => {
+const Container: React.FC<ChildrenContextProps> = ({children,scss}) => {
 
 
     return (

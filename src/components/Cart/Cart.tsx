@@ -4,28 +4,30 @@ import { Link } from "react-router-dom"
 import CartItem from "./CartItem/CartItem";
 import './Cart.css'
 import { UserContext } from "../context/UserContext";
+import { Card } from "../ui/Card";
+import Container from "../ui/container";
+import Button from "../ui/Button";
 
 const Cart = () => {
-    const {user,state,cleanUser,loadUser} = useContext(UserContext)
+    const {user,state,logOut,loadUser} = useContext(UserContext)
     const { cart, cleanCart, total, totalQuantity } = useContext(CartContext);
 if (!user) {
     return (
-        <div>
+            <Container scss='container-center'>
 
-        <button onClick={()=>loadUser({id:1,name:'baruch'})} >Logeate</button>
-        <h1>Logeate</h1>
-        <h1>Logeate</h1>
-        <h1>Logeate</h1>
-        </div>
+
+        <Button handleEvent={()=>loadUser({id:1,name:'baruch'})} >Log in</Button>
+            </Container>
     )
 }
     if (totalQuantity === 0) {
         return (
             <>
-                <div className="cartVacio">
+                     <Container scss='container-center'>
                     <h2>No hay productos en el carrito. Compra o vete</h2>
-                    <Link to="/"><button>Ver Productos</button></Link>
-                </div>
+                    <Link to="/"><Button>Ver Productos</Button></Link>
+                    <Button handleEvent={logOut} >Log out</Button>
+                      </Container>
                 <hr />
             </>
         )

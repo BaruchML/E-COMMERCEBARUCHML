@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { db } from "../../../services/config"
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { ProductsType } from '../../../types/componentTypes';
+import Container from '../../ui/container';
 
 const ItemListContainer = () => {
   const [productos, setProductos] = useState<ProductsType[]>([]);
@@ -25,7 +26,13 @@ const ItemListContainer = () => {
       })
       .catch(error => console.log(error));
   }, [idCategoria])
+if(!productos){
+  return (
+   
+    <Container/>
 
+  )
+}
   return (
     <>
     <div className='container-side-items'>

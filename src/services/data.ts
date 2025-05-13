@@ -18,17 +18,17 @@ const games: GameType[] = [
         name: "Luigis Mansion",
         description: 'Lorem',
         // description:"Utilizando Node.js, Express, habdlbars, MongoDB entre otras dependencias, fue que realice este proyecto backend de un e-commerce, contiene Log-In y Registro, autorizaciones de usuario, chat en tiempo real, productos en tiempo real, carrito de compras conectado a la base de datos, entre otras funciones utiles",
-        img: "../public/img/lugi.jfif",
+        img: "../../public/img/luigis-mansion.jpeg",
         // gitImage: tiny.github,
         // git: "https://github.com/BaruchML/BACKEND-FINALPROYECT",
         // icons : [tiny.js, tiny.express,tiny.mongo,tiny.node,tiny.git]
     },
     {
         id: "2",
-        name: "MarioKartWorld",
+        name: "Mario Kart World",
         description: 'Lorem',
         // description:"Proyecto FRONT-END de un e-commerce con tematica de Nintendo. \nlas herramientas que utilice fueron React con Vite, Desplegado con Vercel, usando Bootstrap para el estilo y Firebase",
-        img: "./img/office.svg",
+        img: "../../public/img/mario-kart.jpeg",
         // gitImage: tiny.github,
         // git: "https://github.com/BaruchML/E-COMMERCEBARUCHML",
         // icons : [tiny.js, tiny.react,tiny.vite,tiny.bootstrap,tiny.git]
@@ -36,10 +36,10 @@ const games: GameType[] = [
     },
     {
         id: "3",
-        name: "DevilMayCry",
+        name: "Devil May Cry",
         description: 'Lorem',
         // description:"Un pequeño proyecto de cuando comenzaba a profundizar en este maravilloso mundo de la programación y de JS",
-        img: "./img/ship-it.svg",
+        img: "../../public/img/devil-may-cry.jpg",
         // gitImage: tiny.github,
         // git: "https://github.com/BaruchML/JSProyectoFinalMendivil",
         // icons : [tiny.ts, tiny.react,tiny.next,tiny.tailwind,tiny.git]

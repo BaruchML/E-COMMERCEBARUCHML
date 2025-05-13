@@ -1,7 +1,8 @@
-import {Card} from '../../ui/card'
+import {Card,CardGame} from '../../ui/Card'
 import { GameType, getGames } from "../../../services/data"
 import { useEffect, useState } from "react"
 import Container from '../../ui/container'
+
 
 export default function Carousel() {
     const [games, setGames] = useState<GameType[]>([])
@@ -21,7 +22,7 @@ export default function Carousel() {
 
     return (
         <Container scss='container-sp-even '>
-            {games.map((e, i) => <Card scss='card-carousel' key={i} />)}
+            {games.map((e, i) => <CardGame title={e.name} img={e.img} scss='card-carousel' key={i} />)}
         </Container>
     )
 }

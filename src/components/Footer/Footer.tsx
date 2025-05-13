@@ -3,7 +3,7 @@ import { Card } from "../ui/Card"
 const Footer = (/* {handleEvent}:ButtonPropType */) => {
     return (
         <>
-      <Container scss="container-about container-footer">
+      <Container scss="container-center container-footer">
 
 <Card/>
  <hr></hr>

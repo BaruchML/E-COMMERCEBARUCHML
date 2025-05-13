@@ -5,7 +5,7 @@ export const UserContext = createContext<UserContextType>({
     user: null,
     state:'no-loged',
     loadUser: ({id, name}:UserType) =>{} ,
-    cleanUser:() => {},
+    logOut:() => {},
     
 });
 
@@ -25,14 +25,14 @@ export const UserProvider = ({ children }:ChildrenContextProps) => {
         }
     }
 
-    const cleanUser = () => {
+    const logOut = () => {
         setUser(null);
         setState('no-loged')
     }
 
     return (
 
-        <UserContext.Provider value={{user,state,loadUser,cleanUser}}>
+        <UserContext.Provider value={{user,state,loadUser,logOut}}>
             {children}
         </UserContext.Provider>
     )

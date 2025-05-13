@@ -1,51 +1,101 @@
-// .card {
-//     background-color: yellow;
-//     display:flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     justify-self: center;
-//     width:300px;
-//     height: 400px;
-// }
-
-
 .card {
-    display: grid;
-    // grid-template-columns: 1fr 1fr;
-    // grid-template-rows: 1fr 1fr;
+    // display: grid;
     background-color: rgb(255, 255, 255);
     width: 200px;
-    height: 300px;
-    border-radius: 30px;
+    height: auto;
+    border-radius: 10px;
     transition-duration: 0.2s;
     font-family: Arial, Helvetica, sans-serif;
     justify-content: space-around;
     padding: 2rem;
-    & img{
-        height: 100px;
-        width: 100px;
-    }
+
 }
 
 .card:hover {
-    background-color: #ffffff;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     padding: 3rem;
 }
-.card-carousel{
+
+.card-carousel {
     width: 400px;
+    padding: 0rem;
+    border-radius: 10%;
+
+    // align-items: center;
 }
 
-.card-info{
+.card-carousel:hover {
+    & p {
+        color: red;
+    }
+
+    padding: 0rem;
+    border-radius: 10%;
+}
+
+.card-img-container-ar {
+    position: relative;
+    padding-bottom: 75%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10% 10% 0% 0%;
+
+    & img {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        border-radius: 10% 10% 0% 0%;
+        object-fit: cover;
+        z-index: 1;
+        transition: transform 0.3s ease-in-out;
+        /* Agrega una transición suave */
+        transform-origin: center center;
+
+        /* Asegura que la escala sea desde el centro */
+        &:hover {
+            transform: scale(1.1);
+            border-radius: 10% 10% 0% 0%;
+        }
+    }
+
+}
+
+.card-info {
     width: 80%;
 }
 
-.card-shop:hover{
+.card-shop:hover {
     padding: 2rem;
     gap: 4px;
 }
 
-.card-item-detail{
+.card-item-detail {
     width: 60%;
     display: flex;
+}
+
+.card-cartwidget {
+    height: auto;
+    display: flex;
+    align-items: center;
+
+    & img {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+.card-cartwidget:hover {
+    padding: 2rem;
+    box-shadow: none;
+
+}
+
+
+.card-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }

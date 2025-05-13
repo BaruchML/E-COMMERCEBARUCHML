@@ -4,8 +4,6 @@
 background-color: blueviolet;
 height: 500px;
 width:auto;
-// margin:40px,20px;
-// padding:40px,20px;
 display: flex;
 border: 2px, solid, black
 }
@@ -27,7 +25,6 @@ gap: 10px;
     height: auto;
     flex-wrap: wrap;
     position: relative;
-
 }
 .container-sidebar{
     position: absolute;
@@ -48,11 +45,7 @@ gap: 10px;
     width: 85%;
     background-color: yellow;
 }
-.container-about{
 
-   justify-content: center;
-   align-items: center;
-}
 .container-footer {
 background-color: blue;
 height: 300px;
@@ -62,13 +55,3 @@ padding:40px,20px;
 display: flex;
 border: 2px, solid, black
 }
-
-// .intoDivContainer {
-// background-color: blueviolet;
-// height: 500px;
-// width:50%;
-// margin:40px,20px;
-// padding:40px,20px;
-// display: flex;
-// border: 2px, solid, black
-// }
