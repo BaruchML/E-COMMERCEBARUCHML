@@ -21,7 +21,7 @@ export default function Carousel() {
     }, [])
 
     return (
-        <Container scss='container-sp-even '>
+        <Container scss='container-sp-even container_clean '>
             {games.map((e, i) => <CardGame title={e.name} img={e.img} scss='card-carousel' key={i} />)}
         </Container>
     )

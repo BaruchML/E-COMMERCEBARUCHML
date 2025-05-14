@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const Item = ({id,name,img,price,stock}:ProductsType) => {
   return (
-    <div className='card card-shop'>
+    <div className='card card-small'>
       <img src={img} alt={name} />
       <div className=''>
         <h3>{name}</h3>

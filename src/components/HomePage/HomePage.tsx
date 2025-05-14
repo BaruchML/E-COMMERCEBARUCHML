@@ -6,7 +6,6 @@ import Notice from './Notice/Notice';
 const HomePage = () => {
   return (
     <div>
-      <h1>Home</h1>
       <Carousel />
       <News />
       <Info />
