@@ -1,15 +1,16 @@
-import {Card,CardGame} from '../../ui/Card'
-import { GameType, getGames } from "../../../services/data"
+import {CardGame} from '../../ui/Card'
+import { GameType, getGames,getLimitedGames } from "../../../services/gamesMock"
 import { useEffect, useState } from "react"
 import Container from '../../ui/container'
 
 
-export default function Carousel() {
+export default function Carousel() {        
     const [games, setGames] = useState<GameType[]>([])
     useEffect(() => {
         const gamesFetch = async () => {
             try {
-                const resp = await getGames();
+                const resp = await getLimitedGames(0,3);
+
                 setGames(resp)
             }
             catch (err) {

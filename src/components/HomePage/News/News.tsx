@@ -1,31 +1,34 @@
 // import ItemList from "../ItemList/ItemList";
 import { useState, useEffect } from 'react';
-import { db } from "../../../services/config"
-import { collection, getDocs, query, where } from 'firebase/firestore';
-import { ProductsType } from '../../../types/componentTypes';
+// import { db } from "../../../services/config"
+// import { collection, getDocs, query, where } from 'firebase/firestore';
+// import { ProductsType } from '../../../types/componentTypes';
 import {CardGameSmall} from '../../ui/Card'
 import Container from '../../ui/container'
+import { GameType, getLimitedGames } from '../../../services/gamesMock';
 
 const News = () => {
-    const [productos, setProductos] = useState<ProductsType[]>([]);
-    const carouselProducts:ProductsType[] = []
+  // cambiar el nombre del estado, porque products era cuando me conectaba a firebase
+    // const [productos, setProductos] = useState<ProductsType[]>([]);
+     const [games, setGames] = useState<GameType[]>([])
   useEffect(() => {
-    const misProductos = collection(db, "productos");
+    //pendiente traer la logica de getGamesLimited a la base de datos
+ const gamesFetch = async () => {
+            try {
+                const resp = await getLimitedGames(3,8);
 
-    getDocs(misProductos)
-      .then(res => {
-        const nuevosProductos:typeof productos = res.docs.map(doc => {
-          const data = doc.data()
-          return { id: doc.id, ...data }
+                setGames(resp)
+            }
+            catch (err) {
+                console.log('Error trayendo games', err);
 
-        })
-        setProductos(nuevosProductos);
-      })
-      .catch(error => console.log(error));
+            }
+        }
+        gamesFetch()
 
 
   }, [])
-if(productos.length=== 0){
+if(games.length=== 0){
   return (
    
     <Container/>
@@ -34,12 +37,8 @@ if(productos.length=== 0){
 }
 
     return (
-            <Container scss='container-sp-even container_clean'>                   
-               <CardGameSmall scss='card-small' key={productos[0].name} img={productos[0].img} title={productos[0].name}/>
-               <CardGameSmall scss='card-small' key={productos[2].name} img={productos[2].img} title={productos[2].name}/>
-               <CardGameSmall scss='card-small' key={productos[1].name} img={productos[1].img} title={productos[1].name}/>
-               <CardGameSmall scss='card-small' key={productos[3].name} img={productos[3].img} title={productos[3].name}/>
-               <CardGameSmall scss='card-small' key={productos[4].name} img={productos[4].img} title={productos[4].name}/>
+            <Container scss='container-sp-even container_clean'>
+              {games.map(game => <CardGameSmall title={game.name} img={game.img}scss='card-small'  key={game.id}/>)}               
             </Container>
             
     )
