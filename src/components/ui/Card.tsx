@@ -34,14 +34,12 @@ export const CardGame = ({scss,text,title,img}:CardPropType) => {
         <>
             <div className={`card ${scss} `}>
                 <div className="card-img-container-ar">
-
-                <img src={img} className="img-card"></img>
+                <img src={img}></img>
                 </div>
                 <div className="card-center">
-
                 <p>{title}</p>
-                {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore commodi quis voluptate adipisci dolore fugiat repellendus tempora, voluptatibus, fuga, ipsa est nam molestias. Vel earum ducimus eveniet eligendi. Voluptatum, consequuntur.</p> */}
-                <Button scss="btn-carousel">Ver mas</Button>
+               { text && text}
+                <Button scss="btn-carousel">Comprar</Button>
                 </div>
                 
             </div>
@@ -55,13 +53,13 @@ export const CardGameSmall = ({scss,text,title,img}:CardPropType) => {
             <div className={`card ${scss} `}>
                 <div className="card-img-small-container-ar">
 
-                <img src={img} className="img-card"></img>
+                <img src={img}></img>
                 </div>
                 <div className="card-center">
 
                 <p>{title}</p>
                 {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore commodi quis voluptate adipisci dolore fugiat repellendus tempora, voluptatibus, fuga, ipsa est nam molestias. Vel earum ducimus eveniet eligendi. Voluptatum, consequuntur.</p> */}
-                <Button scss="btn-carousel">Ver mas</Button>
+                <Button scss="btn-card-small">Ver mas</Button>
                 </div>
                 
             </div>

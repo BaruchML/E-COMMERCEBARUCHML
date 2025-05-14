@@ -1,5 +1,6 @@
 
 // CONTENEDORES
+@use '../../variables';
 .container {
 background-color: blueviolet;
 height: 500px;
@@ -9,8 +10,8 @@ border: 2px, solid, black
 }
 .container_clean {
     border: 0;
-    background-color: rgb(255, 255, 255);
-    border-bottom: 2px solid gray;
+    background-color: variables.$bg-white;
+    border-bottom: 1px solid variables.$borders-grey;
 }
 .container-sp-even {
     justify-content: space-evenly;
