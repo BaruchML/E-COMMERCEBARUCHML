@@ -1,3 +1,4 @@
+@use '../../variables';
 .btn{
     font-size: 1.2rem;
     border-radius: 10px;
@@ -27,4 +28,21 @@
 .btn-card-small{
     width: 80%;
     font-size: small;
+}
+
+.btn-link{
+    font-size: small;
+    background-color: variables.$bg-white ;
+    color: variables.$color-red-base;
+    align-self: flex-start;
+    text-decoration: underline;
+    padding: 0px;
+    &:hover{
+        color:variables.$darkcolor-red-base;
+        background-color: variables.$bg-white ;
+        font-weight: bolder;
+        transform: none;
+        // text-decoration: underline variables.$darkcolor-red-base solid;
+    }
+    
 }

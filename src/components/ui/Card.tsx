@@ -1,8 +1,9 @@
 import Button from "./Button"
 import { CardPropType } from "../../types/uiTypes"
+import { Link } from "react-router-dom"
 
 
-export const Card = ({scss,text}:CardPropType) => {
+export const Card = ({ scss, text }: CardPropType) => {
 
     return (
         <>
@@ -14,59 +15,88 @@ export const Card = ({scss,text}:CardPropType) => {
         </>
     )
 }
-export const CardText = ({scss='card',text,img}:CardPropType) => {
+export const CardTextLeft = ({ scss = 'card', text, img, title }: CardPropType) => {
 
     return (
         <>
-           <div className={`card ${scss}`}>
-            <div className="card-img-container-ar">
-            <img src={img}></img>
+            <div className={`card ${scss}`}>
+                <div className="card-img-text-container-ar">
+                    <img src={img}></img>
+                </div>
+                <div className="card-center-info">
+                    <div className="card-center-column">
+                        <Link to={'/shop'}>
+                            <h2>{title}</h2>
+                            <p >{text}</p>
+                            <Button scss="btn-link">Explora</Button>
+                        </Link>
 
+                    </div>
+                </div>
             </div>
-          <p >{text}</p>
+        </>
+    )
+}
+export const CardTextRight = ({ scss = 'card', text, img, title }: CardPropType) => {
+
+    return (
+        <>
+            <div className={`card ${scss}`}>
+                <div className="card-center-info">
+                    <div className="card-center-column">
+                        <Link to={'/shop'}>
+                            <h2>{title}</h2>
+                            <p >{text}</p>
+                            <Button scss="btn-link">Tienda</Button>
+                        </Link>
+                    </div>
+                </div>
+                <div className="card-img-text-container-ar-right">
+                    <img src={img}></img>
+                </div>
             </div>
         </>
     )
 }
 
-export const CardGame = ({scss,text,title,img}:CardPropType) => {
+export const CardGame = ({ scss, text, title, img }: CardPropType) => {
 
     return (
         <>
             <div className={`card ${scss} `}>
                 <div className="card-img-container-ar">
-                <img src={img}></img>
+                    <img src={img}></img>
                 </div>
                 <div className="card-center">
-                <p>{title}</p>
-               { text && text}
-                <Button scss="btn-carousel">Comprar</Button>
+                    <p>{title}</p>
+                    {text && text}
+                    <Button scss="btn-carousel">Comprar</Button>
                 </div>
-                
+
             </div>
         </>
     )
 }
-export const CardGameSmall = ({scss,text,title,img}:CardPropType) => {
+export const CardGameSmall = ({ scss, text, title, img }: CardPropType) => {
 
     return (
         <>
             <div className={`card ${scss} `}>
                 <div className="card-img-small-container-ar">
 
-                <img src={img}></img>
+                    <img src={img}></img>
                 </div>
                 <div className="card-center">
 
-                <p>{title}</p>
-                {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore commodi quis voluptate adipisci dolore fugiat repellendus tempora, voluptatibus, fuga, ipsa est nam molestias. Vel earum ducimus eveniet eligendi. Voluptatum, consequuntur.</p> */}
-                <Button scss="btn-card-small">Ver mas</Button>
+                    <p>{title}</p>
+                    {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore commodi quis voluptate adipisci dolore fugiat repellendus tempora, voluptatibus, fuga, ipsa est nam molestias. Vel earum ducimus eveniet eligendi. Voluptatum, consequuntur.</p> */}
+                    <Button scss="btn-card-small">Ver mas</Button>
                 </div>
-                
+
             </div>
         </>
     )
 }
 export const games = [
-    {id:1,name:'Mario 64',img:'../../../public/img/mario_64.jpg'}
+    { id: 1, name: 'Mario 64', img: '../../../public/img/mario_64.jpg' }
 ]

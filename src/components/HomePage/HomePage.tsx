@@ -9,7 +9,6 @@ const HomePage = () => {
       <Carousel />
       <News />
       <Info />
-      <Info />
       <Notice />
     </div>
   )
