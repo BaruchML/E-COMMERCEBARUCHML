@@ -15,7 +15,7 @@ const News = () => {
     //pendiente traer la logica de getGamesLimited a la base de datos
  const gamesFetch = async () => {
             try {
-                const resp = await getLimitedGames(3,8);
+                const resp = await getLimitedGames(3,7);
 
                 setGames(resp)
             }
@@ -37,7 +37,7 @@ if(games.length=== 0){
 }
 
     return (
-            <Container scss='container-sp-even container_clean'>
+            <Container scss='container-sp-even' clean title='Los favoritos de siempre'>
               {games.map(game => <CardGameSmall title={game.name} img={game.img}scss='card-small'  key={game.id}/>)}               
             </Container>
             

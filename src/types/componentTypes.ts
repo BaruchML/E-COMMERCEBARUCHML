@@ -14,6 +14,8 @@ export type ProductsType = {
   export interface ChildrenContextProps {
       scss?:string
       children?: React.ReactNode;
+      title?:string,
+      clean?:boolean
   }
   
   

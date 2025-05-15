@@ -22,7 +22,7 @@ export default function Carousel() {
     }, [])
 
     return (
-        <Container scss='container-sp-even container_clean '>
+        <Container scss='container-sp-even' clean={true} title='Lo mas nuevo'>
             {games.map((e, i) => <CardGame title={e.name} img={e.img} scss='card-carousel' key={i} />)}
         </Container>
     )

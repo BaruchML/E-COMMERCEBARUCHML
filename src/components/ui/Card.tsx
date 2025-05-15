@@ -20,7 +20,7 @@ export const CardTextLeft = ({ scss = 'card', text, img, title }: CardPropType) 
     return (
         <>
             <div className={`card ${scss}`}>
-                <div className="card-img-text-container-ar">
+                <div className="card-img-text-container-ar-left">
                     <img src={img}></img>
                 </div>
                 <div className="card-center-info">
@@ -89,7 +89,7 @@ export const CardGameSmall = ({ scss, text, title, img }: CardPropType) => {
                 <div className="card-center">
 
                     <p>{title}</p>
-                    {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore commodi quis voluptate adipisci dolore fugiat repellendus tempora, voluptatibus, fuga, ipsa est nam molestias. Vel earum ducimus eveniet eligendi. Voluptatum, consequuntur.</p> */}
+                     {text && text}
                     <Button scss="btn-card-small">Ver mas</Button>
                 </div>
 
@@ -97,6 +97,23 @@ export const CardGameSmall = ({ scss, text, title, img }: CardPropType) => {
         </>
     )
 }
-export const games = [
-    { id: 1, name: 'Mario 64', img: '../../../public/img/mario_64.jpg' }
-]
+export const CardNoticeSmall = ({ scss, text, title, img }: CardPropType) => {
+
+    return (
+        <>
+            <div className={`card ${scss} `}>
+                <div className="card-img-small-notice-container-ar">
+
+                    <img src={img}></img>
+                </div>
+                <div className="card-center-notice">
+
+                    <p>{title}</p>
+                    <p>{text}</p>
+                    <Button scss="btn-link">Leer mas</Button>
+                </div>
+
+            </div>
+        </>
+    )
+}
