@@ -14,15 +14,16 @@ export const Card = ({scss,text}:CardPropType) => {
         </>
     )
 }
-export const CardText = ({scss='card',text}:CardPropType) => {
+export const CardText = ({scss='card',text,img}:CardPropType) => {
 
     return (
         <>
            <div className={`card ${scss}`}>
-          <p >
-            
-            {text}
-            </p>
+            <div className="card-img-container-ar">
+            <img src={img}></img>
+
+            </div>
+          <p >{text}</p>
             </div>
         </>
     )

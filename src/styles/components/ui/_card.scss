@@ -16,7 +16,7 @@
     }
 }
 
-
+//Card Crousel
 .card-carousel {
     width: 400px;
     padding: 0rem;
@@ -63,10 +63,10 @@
 
 }
 
+//Card news
 .card-img-small-container-ar {
     position: relative;
     padding-bottom: 75%;
-    height: auto;
     overflow: hidden;
     border-radius: 10% 10% 0% 0%;
 
@@ -99,7 +99,26 @@
 }
 
 .card-info {
-    width: 80%;
+   width: 80%;
+   height: 100%;
+    padding: 0rem;
+    border-radius: 10%;
+    border: 1px solid variables.$borders-grey;
+    font-weight: bold;
+
+    &:hover {
+        padding: 0rem;
+        border-radius: 10%;
+
+        & p {
+            color: variables.$color-red-base;
+        }
+
+        & .card-img-container-ar img {
+            transform: scale(1.1);
+            border-radius: 10% 10% 0% 0%;
+        }
+    }
 }
 
 .card-shop:hover {
