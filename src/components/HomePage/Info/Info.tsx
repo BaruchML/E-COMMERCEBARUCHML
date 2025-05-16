@@ -5,7 +5,7 @@ import Container from '../../ui/container'
 const Info = (/* {handleEvent}:ButtonPropType */) => {
     return (
         <>
-            <Container scss='container-center' clean title='Novedades'>    
+            <Container scss='container-center' clean title='Descubre'>    
                 <CardTextLeft scss='card-info' title={'RETRO GAMES SIEMPRE A TU DISPOSICIÓN'}text={'Sumergete en el mundo del Arcade ahora'}img='/img/retro-1.jpg'/>
             </Container>
             <Container clean scss='container-center' >    

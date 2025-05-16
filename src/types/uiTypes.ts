@@ -8,9 +8,13 @@ export interface CardPropType {
     scss?:string
     text?:string
     title?:string,
-    img?:string
+    img?:string,
+    list?:ListType[]
 }
-
+interface ListType{
+    subtitle:string,
+    link:string
+}
 export interface SearchPropType {
     handleEvent?:(e:React.ChangeEvent<HTMLInputElement>) => void | string
     scss?:string

@@ -1,6 +1,6 @@
 
 import { Outlet } from 'react-router-dom'
-import NavBar from './routes/NavBar'
+import NavBar from './components/Header/NavBar'
 import CartProvider from './components/context/CartContext'
 import './styles/main.scss'
 import Footer from './components/Footer/Footer'

@@ -15,7 +15,7 @@ export const Card = ({ scss, text }: CardPropType) => {
         </>
     )
 }
-export const CardTextLeft = ({ scss = 'card', text, img, title }: CardPropType) => {
+export const CardTextLeft = ({ scss, text, img, title }: CardPropType) => {
 
     return (
         <>
@@ -37,7 +37,7 @@ export const CardTextLeft = ({ scss = 'card', text, img, title }: CardPropType) 
         </>
     )
 }
-export const CardTextRight = ({ scss = 'card', text, img, title }: CardPropType) => {
+export const CardTextRight = ({ scss, text, img, title }: CardPropType) => {
 
     return (
         <>
@@ -89,7 +89,7 @@ export const CardGameSmall = ({ scss, text, title, img }: CardPropType) => {
                 <div className="card-center">
 
                     <p>{title}</p>
-                     {text && text}
+                    {text && text}
                     <Button scss="btn-card-small">Ver mas</Button>
                 </div>
 
@@ -113,6 +113,29 @@ export const CardNoticeSmall = ({ scss, text, title, img }: CardPropType) => {
                     <Button scss="btn-link">Leer mas</Button>
                 </div>
 
+            </div>
+        </>
+    )
+}
+
+export const CardFooter = ({ scss, list, title }: CardPropType) => {
+
+    return (
+        <>
+            <div className={`card ${scss} `}>
+                <h3>{title}</h3>
+                <ul>
+                    {list && list.map((i,index) => {
+                        return (
+                            <li key={index}>
+                                <Link to={i.link}>
+                                    {i.subtitle}
+                                </Link>
+                            </li>)
+                    }
+                    )
+                    }
+                </ul>
             </div>
         </>
     )
