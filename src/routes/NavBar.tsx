@@ -5,26 +5,29 @@ const NavBar = () => {
   return (
     <>
     <header className='navbar'>
+    <div>
+
       <Link to="/">
-        <img className="LogoNintendo" src={"../img/logo.png"} alt="Logo Nintendo" />
+        <img className="logo" src={"../img/logo-2.png"} alt="retro-games-logo" />
       </Link>
+    </div>
       <nav className='navbar_nav'>
         <ul className='navLinks'>
           <li>
-            <NavLink to="/">Inicio</NavLink>
+            <NavLink to="/"><h1>Inicio</h1></NavLink>
           </li>
           <li>
-            <NavLink to="/shop">Shop</NavLink>
+            <NavLink to="/shop"><h1>Tienda</h1></NavLink>
           </li>
           <li>
-            <NavLink to="categoria/3">Princesas</NavLink>
+            <NavLink to="categoria/3"><h1>Noticias</h1></NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="categoria/2">Villanos</NavLink>
           </li>
           <li>
             <NavLink to="categoria/4">Extras</NavLink>
-          </li>
+          </li> */}
 
 
         </ul>

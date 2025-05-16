@@ -20,11 +20,16 @@
     border-radius: 10%;
     border: 1px solid variables.$borders-grey;
     font-weight: bold;
+    box-shadow: 2px 5px 0px variables.$darkcolor-red-base;
+    border-bottom: 2px solid variables.$darkcolor-red-base;
+    border-right: 2px solid variables.$darkcolor-red-base;
     &:hover {
+         box-shadow: 5px 10px 0px variables.$darkcolor-red-base;
+
         & p {
             color: variables.$color-red-base;
         }
-        & .card-img-container-ar img {
+        & .card_gameCarousel-img-container img {
             transform: scale(1.1);
             border-radius: 10% 10% 0% 0%;
         }
