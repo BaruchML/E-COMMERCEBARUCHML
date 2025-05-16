@@ -16,7 +16,7 @@ const CarWidget = () => {
       <Link to="/cart">
         <iconify-icon icon="picon:cart" width="32" height="32" style={{
           color: hovered ? '#840d0d' : 'black',
-          borderBottom: hovered ? '1px solid #840d0d' : '1px solid transparent',
+          // borderBottom: hovered ? '1px solid #840d0d' : '1px solid transparent',
           transition: 'color 0.3s, border-color 0.3s ease',
           transitionDuration: '.5s'
         }}
