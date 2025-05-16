@@ -6,28 +6,32 @@ export const footerList = [
         {subtitle:'Other Proyects',link:'urlalgo'},
         {subtitle:'Legacy Version :P',link:'urlalgo'},
 
-    ]
+    ],
+    demo:false
     },
     {title:'JUEGOS',
     list:[
-        {subtitle:'conocenos',link:'urlalgo'},
-        {subtitle:'conocenos',link:'urlalgo'},
-        {subtitle:'conocenos',link:'urlalgo'},
-    ]
+        {subtitle:'Juegos mas recientes',link:'urlalgo'},
+        {subtitle:'Noticias',link:'urlalgo'},
+        {subtitle:'Tienda',link:'urlalgo'},
+    ],
+    demo:false
     },
     {title:'ASISTENCIA',
     list:[
-        {subtitle:'conocenos',link:'urlalgo'},
-        {subtitle:'conocenos',link:'urlalgo'},
-        {subtitle:'conocenos',link:'urlalgo'},
-    ]
+        {subtitle:'Control Parental',link:'urlalgo'},
+        {subtitle:'Garantias',link:'urlalgo'},
+        {subtitle:'Servicios',link:'urlalgo'},
+    ],
+    demo:true
     },
     {title:'PRIVACIDAD',
     list:[
-        {subtitle:'conocenos',link:'urlalgo'},
-        {subtitle:'conocenos',link:'urlalgo'},
-        {subtitle:'conocenos',link:'urlalgo'},
-    ]
+        {subtitle:'Politica de Privacidad',link:'urlalgo'},
+        {subtitle:'Compra Segura',link:'urlalgo'},
+        {subtitle:'Cookies',link:'urlalgo'},
+    ],
+    demo:true
     },
 ]
 

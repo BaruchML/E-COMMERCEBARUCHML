@@ -62,20 +62,39 @@
 .footer-icons {
     display: flex;
     // background-color: yellow;
+    width: 23%;
     margin-top: 20px;
-    justify-content: start;
+    justify-content: space-around;
     justify-self: start;
 
     & iconify-icon {
         color: black;
-        margin-left: 40px;
-        padding: 2px;
-        border-radius: 5%;
+        padding: 10px;
+        border-radius: 10px;
         transition: .5s ease;
 
         &:hover {
             color: variables.$darkcolor-red-base;
-            box-shadow: 2px 2px 0px variables.$darkcolor-red-base;
+            box-shadow: 3px 3px 0px variables.$darkcolor-red-base;
+            background-color: rgb(247, 247, 247);
+            ;
         }
     }
+}
+
+.demo{
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+    background-color: rgb(255, 217, 0);
+      box-shadow: 3px 3px 0px black;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: smaller;
+    font-weight: bolder;
+    justify-self: end;
+    width: 30%;
+    &:hover{
+           rotate: 15deg;
+    } 
 }

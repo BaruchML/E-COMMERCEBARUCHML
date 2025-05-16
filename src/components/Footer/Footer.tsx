@@ -16,7 +16,7 @@ const Footer = () => {
 
                     {footerList.map((footeritem) => {
                         return (
-                            <CardFooter key={footeritem.title} title={footeritem.title} list={footeritem.list} scss="card-footer" />
+                            <CardFooter key={footeritem.title} title={footeritem.title} list={footeritem.list} scss="card-footer" demo={footeritem.demo} />
                         )
                     })}
                 </div>

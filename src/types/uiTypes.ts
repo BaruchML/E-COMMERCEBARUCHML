@@ -10,6 +10,7 @@ export interface CardPropType {
     title?:string,
     img?:string,
     list?:ListType[]
+    demo?:boolean
 }
 interface ListType{
     subtitle:string,
