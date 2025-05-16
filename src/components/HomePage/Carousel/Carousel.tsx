@@ -1,5 +1,5 @@
-import {CardGame} from '../../ui/Card'
-import { GameType, getGames,getLimitedGames } from "../../../services/gamesMock"
+import {CardGameCarousel} from '../../ui/Card'
+import { GameType,getLimitedGames } from "../../../services/gamesMock"
 import { useEffect, useState } from "react"
 import Container from '../../ui/container'
 
@@ -23,7 +23,7 @@ export default function Carousel() {
 
     return (
         <Container scss='container-sp-even' clean={true} title='Lo mas nuevo'>
-            {games.map((e, i) => <CardGame title={e.name} img={e.img} scss='card-carousel' key={i} />)}
+            {games.map((e, i) => <CardGameCarousel title={e.name} img={e.img} scss='card-carousel' key={i} />)}
         </Container>
     )
 }

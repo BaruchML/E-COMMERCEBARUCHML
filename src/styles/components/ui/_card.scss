@@ -1,34 +1,29 @@
 @use '../../variables';
 
 .card {
-    // display: grid;
     background-color: variables.$bg-white;
     width: 200px;
     height: auto;
     border-radius: 10px;
     transition-duration: .5s;
     font-family: Arial, Helvetica, sans-serif;
-    // justify-content: space-around;
     padding: 2rem;
-
     &:hover {
         box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     }
 }
 
-//Card Crousel
+//HOMEPAGE-CAROUSEL
 .card-carousel {
     width: 25%;
     padding: 0rem;
     border-radius: 10%;
     border: 1px solid variables.$borders-grey;
     font-weight: bold;
-
     &:hover {
         & p {
             color: variables.$color-red-base;
         }
-
         & .card-img-container-ar img {
             transform: scale(1.1);
             border-radius: 10% 10% 0% 0%;
@@ -36,7 +31,7 @@
     }
 }
 
-.card-img-container-ar {
+.card_gameCarousel-img-container {
     position: relative;
     padding-bottom: 75%;
     height: auto;
@@ -270,7 +265,4 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // background-color: aqua;
-    // width: 100%;
-
 }

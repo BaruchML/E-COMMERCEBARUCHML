@@ -59,12 +59,12 @@ export const CardTextRight = ({ scss = 'card', text, img, title }: CardPropType)
     )
 }
 
-export const CardGame = ({ scss, text, title, img }: CardPropType) => {
+export const CardGameCarousel = ({ scss, text, title, img }: CardPropType) => {
 
     return (
         <>
             <div className={`card ${scss} `}>
-                <div className="card-img-container-ar">
+                <div className="card_gameCarousel-img-container ">
                     <img src={img}></img>
                 </div>
                 <div className="card-center">
