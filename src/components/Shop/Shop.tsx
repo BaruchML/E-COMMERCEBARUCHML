@@ -1,7 +1,7 @@
 import { useState } from "react";
-import ItemListContainer from "../Item/ItemListContainer/ItemListContainer";
+import ItemListContainer from "./ItemList/ItemListContainer";
 import Container from "../ui/container";
-import SideBar from "./SideBar";
+import SideBar from "./SideBar/SideBar";
 import { ProductsType } from "../../types/componentTypes";
 
 function Shop() {
@@ -14,9 +14,9 @@ function Shop() {
     }
    
     return (
-        <Container scss="container-shop">
+        <Container clean scss="container-shop">
             <SideBar handleEvent={handleSearch} />
-            <ItemListContainer />
+            <ItemListContainer queryMock={query} />
         </Container>
     );
 }

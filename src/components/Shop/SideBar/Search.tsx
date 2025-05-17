@@ -1,5 +1,5 @@
-import { ButtonPropType, SearchPropType } from "../../types/uiTypes";
-import Button from "../ui/Button";
+import { ButtonPropType, SearchPropType } from "../../../types/uiTypes";
+import Button from "../../ui/Button";
 
 function Search({scss,handleEvent}:SearchPropType) {
     const onClick = handleEvent

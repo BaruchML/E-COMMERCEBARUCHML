@@ -2,9 +2,9 @@
 .btn{
     font-size: 1.2rem;
     border-radius: 10px;
-    border: 0 solid #c71212 ;
+    border: 0 solid variables.$darkcolor-red-base ;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #c71212;
+    background-color: variables.$darkcolor-red-base;
     color: white;
     padding: 7px 0px;
    
@@ -14,7 +14,7 @@
         transform-origin: center center;
     &:hover{
         // color: #913030;
-        background-color: #840d0d;
+        background-color:variables.$darkcolor-red-base;
        transform: scale(1.1)
         // font-weight: bold;
     }

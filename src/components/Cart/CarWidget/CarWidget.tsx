@@ -9,28 +9,21 @@ const CarWidget = () => {
   const { totalQuantity } = useContext(CartContext);
   const [hovered, setHovered] = useState(false)
   return (
+    <>
+    <div className="container-cart-widget">
+      
     <div className="cart-widget-header" >
-      <div>
-        
-      </div>
       <Link to="/cart">
-        <iconify-icon icon="picon:cart" width="32" height="32" style={{
-          color: hovered ? '#840d0d' : 'black',
-          // borderBottom: hovered ? '1px solid #840d0d' : '1px solid transparent',
-          transition: 'color 0.3s, border-color 0.3s ease',
-          transitionDuration: '.5s'
-        }}
-          onMouseEnter={() => setHovered(true)}
-          onMouseLeave={() => setHovered(false)}
-        ></iconify-icon>
-          </Link>
-        <div>
-          {
-            totalQuantity > 0 && <strong className="quantity"> {totalQuantity}</strong>
-
-          }
-        </div>
+        <iconify-icon icon="picon:cart" width="32" height="32" 
+         ></iconify-icon>
+      </Link>
+      <div className="cart-widget-quantity">
+        {
+          totalQuantity > 0 && <strong className="quantity"> {totalQuantity}</strong>
+        }
+      </div>
     </div>
+        </div></>
   )
 }
 

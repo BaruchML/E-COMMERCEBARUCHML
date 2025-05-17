@@ -119,15 +119,11 @@ export const CardNoticeSmall = ({ scss, text, title, img }: CardPropType) => {
 }
 
 export const CardFooter = ({ scss, list, title,demo }: CardPropType) => {
-    let titletouse = title
     let demonly = (<p className="demo">DEMO ONLY</p>)
-    // if (demo) {
-    //    titletouse = titletouse + demonly
-    // }
     return (
         <>
             <div className={`card ${scss} `}>
-                <h3>{titletouse} </h3>
+                <h3>{title} </h3>
                
                 <ul>
                     {list && list.map((i,index) => {

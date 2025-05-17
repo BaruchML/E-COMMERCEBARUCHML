@@ -1,4 +1,4 @@
-import { SearchPropType } from "../../types/uiTypes";
+import { SearchPropType } from "../../../types/uiTypes";
 import Search from "./Search";
 
 function SideBar({handleEvent}:SearchPropType) {

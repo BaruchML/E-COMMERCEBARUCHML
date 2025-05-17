@@ -15,7 +15,9 @@ export type ProductsType = {
       scss?:string
       children?: React.ReactNode;
       title?:string,
-      clean?:boolean
+      clean?:boolean,
+      queryMock?:string,
+
   }
   
   

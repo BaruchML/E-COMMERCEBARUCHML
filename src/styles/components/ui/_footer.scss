@@ -76,7 +76,7 @@
         &:hover {
             color: variables.$darkcolor-red-base;
             box-shadow: 3px 3px 0px variables.$darkcolor-red-base;
-            background-color: rgb(247, 247, 247);
+ background-color: variables.$bg-complem;;
             ;
         }
     }

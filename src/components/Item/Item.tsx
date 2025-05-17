@@ -1,9 +1,9 @@
-import {ProductsType } from '../../types/componentTypes';
+import { ProductsType } from '../../types/componentTypes';
 import Button from '../ui/Button';
 import './Item.css';
 import { Link } from 'react-router-dom'
 
-const Item = ({id,name,img,price,stock}:ProductsType) => {
+const Item = ({ id, name, img, price, stock }: ProductsType) => {
   return (
     <div className='card card-small'>
       <img src={img} alt={name} />

@@ -198,3 +198,18 @@ export const getGame = (id: string) => {
         resolve(games.find(item => item.id === id))
     })
 }
+
+
+export const getSearchedGames = (query:string=''): Promise<GameType[]> => {
+    return new Promise((resolve) => {
+        if (query = '') {
+            console.log('limpio');
+            
+            resolve(games)
+        }else{
+
+            console.log({query});
+            return games.filter((game)=> game.name?.toLocaleLowerCase())
+        }
+    })
+}
