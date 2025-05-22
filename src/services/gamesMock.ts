@@ -202,14 +202,12 @@ export const getGame = (id: string) => {
 
 export const getSearchedGames = (query:string=''): Promise<GameType[]> => {
     return new Promise((resolve) => {
-        if (query = '') {
-            console.log('limpio');
-            
-            resolve(games)
+        if (query === '') {    
+                resolve(games)
         }else{
-
-            console.log({query});
-            return games.filter((game)=> game.name?.toLocaleLowerCase())
+            const gamesFiltred = games.filter((game)=> game.name?.toLowerCase().includes(query.toLowerCase()))
+            resolve(gamesFiltred)
         }
+        
     })
 }

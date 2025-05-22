@@ -32,14 +32,10 @@ const ItemListContainer = ({queryMock}:ChildrenContextProps) => {
     //   .catch(error => console.log(error));
     const gamesFetch = async () => {
                 try {
-                  if (queryMock) {
-                       const resp = await getSearchedGames(queryMock);
+                    const resp = await getSearchedGames(queryMock);
+           
+                    
                     setGames(resp)
-                  }
-                  console.log({});
-                  
-                  const resp = await getGames()
-                  setGames(resp)
                 }
                 catch (err) {
                     console.log('Error trayendo games', err);
