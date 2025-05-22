@@ -2,6 +2,7 @@ export interface ButtonPropType {
     handleEvent?:() => void | string
     scss?:string
     children? : React.ReactNode
+     onClickEvent?:(e: React.MouseEvent<HTMLButtonElement>) => void
 }
 
 export interface CardPropType {
@@ -19,4 +20,6 @@ interface ListType{
 export interface SearchPropType {
     handleEvent?:(e:React.ChangeEvent<HTMLInputElement>) => void | string
     scss?:string
+    onClickEvent?:(category:string) => void
+    cleanCategory?:() => void
 }

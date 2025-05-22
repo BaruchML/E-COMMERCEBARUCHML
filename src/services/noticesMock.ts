@@ -22,14 +22,14 @@ const notices: noticeType[] = [
         id: "2",
         name: "SUNNYLAND DLC",
         description: 'Paquete de expansion que te permite conocer zonas inexploradas del mapa Badam',
-        img: "/img/sunnyland-3.png",
+        img: "/img/sunnyland-1.png",
         category: 'rpg'
 
     },
     {
         id: "3",
-        name: "Burnout Revenge",
-        description: 'Festejando el dia de Burnout se lanzaran nuevos skins ',
+        name: "Burnoutt Recargado",
+        description: 'Festejando el dia de Burnoutt se lanzaran nuevos skins ',
         img: "/img/notice-3.png",
         category: 'adventure'
     },
@@ -42,7 +42,7 @@ const notices: noticeType[] = [
     },
     {
         id: "5",
-        name: "Matora's Mask",
+        name: "Recompensa en Tiny World",
         description: 'Habla con este personaje para obtener 70 Rupias',
         img: "/img/notice-5.png",
 

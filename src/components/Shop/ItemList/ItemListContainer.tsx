@@ -5,13 +5,13 @@ import { useParams } from 'react-router-dom';
 // import { collection, getDocs, query, where } from 'firebase/firestore';
 import { ChildrenContextProps, ProductsType } from '../../../types/componentTypes';
 import Container, { ContainerListItems } from '../../ui/container';
-import { GameType, getGames, getLimitedGames, getSearchedGames } from '../../../services/gamesMock';
+import { GameType, getCategoryGames, getGames, getLimitedGames, getSearchedGames } from '../../../services/gamesMock';
 import { CardGameSmall } from '../../ui/Card';
 
-const ItemListContainer = ({queryMock}:ChildrenContextProps) => {
+const ItemListContainer = ({ queryMock, category }: ChildrenContextProps) => {
   // const [productos, setProductos] = useState<ProductsType[]>([]);
-   const [search,setSearch] = useState(queryMock)
-    const [games, setGames] = useState<GameType[]>([])
+  const [search, setSearch] = useState(queryMock)
+  const [games, setGames] = useState<GameType[]>([])
 
   // const { idCategoria } = useParams();
 
@@ -31,32 +31,33 @@ const ItemListContainer = ({queryMock}:ChildrenContextProps) => {
     //   })
     //   .catch(error => console.log(error));
     const gamesFetch = async () => {
-                try {
-                    const resp = await getSearchedGames(queryMock);
-           
-                    
-                    setGames(resp)
-                }
-                catch (err) {
-                    console.log('Error trayendo games', err);
-    
-                }
-            }
-            gamesFetch()
 
-  }, [/* idCategoria */queryMock])
-// if(!games){
-//   return (
-   
-//     <Container/>
+      try {
+        const resp = await getSearchedGames(queryMock);
 
-//   )
-// }
+
+        setGames(resp)
+      }
+      catch (err) {
+        console.log('Error trayendo games', err);
+
+      }
+    }
+    gamesFetch()
+
+  }, [/* idCategoria */queryMock, category])
+  // if(!games){
+  //   return (
+
+  //     <Container/>
+
+  //   )
+  // }
   return (
     <>
-       <ContainerListItems clean title='Juegos'>
-              {games.map(game => <CardGameSmall title={game.name} img={game.img}scss='card-small'  key={game.id}/>)}               
-            </ContainerListItems>
+      <ContainerListItems clean title='Juegos'>
+        {games.map(game => <CardGameSmall title={game.name} img={game.img} scss='card-small' key={game.id} />)}
+      </ContainerListItems>
     </>
   )
 }

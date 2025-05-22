@@ -32,3 +32,34 @@ Proyecto e-commerce básico, utilizando lo aprendido de React y Firebase
 
 ## Licencia
 Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE para obtener más información.
+
+## Créditos de imágenes
+
+Las siguientes imágenes utilizadas en este proyecto fueron diseñadas por autores de Freepik.  
+Estas imágenes están licenciadas para uso gratuito con atribución, según los [Términos de uso de Freepik](https://www.freepik.com/terms_of_use).
+
+- "Designed by macrovector / Freepik" — [www.freepik.com](http://www.freepik.com)
+- "Designed by Freepik" — [www.freepik.com](http://www.freepik.com)
+
+Las siguientes imágenes se utilizaron en este proyecto, proporcionadas por los autores a través de [Unsplash](https://unsplash.com), con licencia gratuita para uso personal y comercial:
+
+- Foto de [Evgeniy Smersh](https://unsplash.com/es/@igrindphoto) en [Unsplash](https://unsplash.com/es/fotos/un-monton-de-videojuegos-encima-de-una-mesa-DtTpaWveIHE)
+- Foto de [Kvalifik](https://unsplash.com/es/@kvalifik) en [Unsplash](https://unsplash.com/es/fotos/paquete-de-alimentos-con-etiqueta-negra-y-roja-Qp0sNSZhFx4)
+- Foto de [Guillaume Coupy](https://unsplash.com/es/@guiom_c) en [Unsplash](https://unsplash.com/es/fotos/una-gameboy-azul-y-roja-sentada-encima-de-una-mesa-Zdkn765eMZs)
+- Foto de [Patrick](https://unsplash.com/es/@pf91_photography) en [Unsplash](https://unsplash.com/es/fotos/mando-de-juegos-de-nintendo-blanco-sobre-superficie-amarilla-fOYg1lkZA7Y)
+
+## Agradecimientos
+
+Este proyecto utiliza recursos visuales con licencia CC0 (dominio público).  
+Agradecemos a los artistas que comparten sus obras gratuitamente para la comunidad.
+
+- Imágenes de [Kenney.nl](https://kenney.nl/)
+- Recursos de [OpenGameArt.org](https://opengameart.org/)
+- Imágenes de [Game Art 2D.nl](https://www.gameart2d.com/)
+- Assets descargados desde [itch.io/game-assets](https://itch.io/game-assets), utilizados según las licencias individuales indicadas por cada autor.
+- Iconos y sprites libres de derechos usados según la licencia CC0
+
+Gracias a los artistas independientes que comparten sus gráficos para uso publico.
+Gracias por fomentar el desarrollo abierto y creativo.
+
+

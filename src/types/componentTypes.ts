@@ -17,6 +17,7 @@ export type ProductsType = {
       title?:string,
       clean?:boolean,
       queryMock?:string,
+      category?:string | null
 
   }
   

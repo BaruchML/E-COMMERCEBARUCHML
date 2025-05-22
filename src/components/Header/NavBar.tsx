@@ -5,10 +5,10 @@ const NavBar = () => {
   return (
     <>
     <header className='navbar'>
-    <div>
+    <div className='logo-container'>
 
       <Link to="/">
-        <img className="logo" src={"../img/logo-2.png"} alt="retro-games-logo" />
+        <img className="logo" src={"../img/logo.png"} alt="retro-games-logo" />
       </Link>
     </div>
       <nav className='navbar_nav'>
