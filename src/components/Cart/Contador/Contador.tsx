@@ -1,10 +1,10 @@
 import { useState } from "react";
 import "./Contador.css"
-import { ItemType } from "../../context/CartContext";
-import { ProductsType } from "../../Shop/ItemList/ItemList";
+import { GameCartItemType } from "../../../types/componentTypes";
+
 interface ContadorType {
     inicial:number,
-    producto: ProductsType,
+    producto: GameCartItemType,
     funcionAgregar:(quantity:number) => void
 
 }

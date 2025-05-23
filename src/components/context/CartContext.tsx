@@ -1,5 +1,5 @@
 import { useState, createContext, } from "react"
-import { ChildrenContextProps, CartContextType, ItemType, ProductsType } from "../../types/componentTypes";
+import { ChildrenContextProps, CartContextType, GameCartType, BasicProductType } from "../../types/componentTypes";
 
 export const CartContext = createContext<CartContextType>({
     cart: [],
@@ -13,11 +13,11 @@ export const CartContext = createContext<CartContextType>({
 
 export const CartProvider = ({ children }:ChildrenContextProps) => {
 
-    const [cart, setCart] = useState<ItemType[]>([]);
+    const [cart, setCart] = useState<GameCartType[]>([]);
     const [total, setTotal] = useState(0);
     const [totalQuantity, setTotalQuantity] = useState(0); //cambiar el nombre
 
-    const addToCart = ({item, quantity}:ItemType) => {
+    const addToCart = ({item, quantity}:GameCartType) => {
         console.log({item,quantity,price:item.price,name:item.name});
         const existingProduct = cart.find(prod => prod.item.id === item.id);
 
@@ -35,7 +35,7 @@ export const CartProvider = ({ children }:ChildrenContextProps) => {
         }
     }
 
-    const eraseProduct = ({id}:ProductsType) => {
+    const eraseProduct = ({id}:BasicProductType) => {
         const updatedCart = cart.filter(prod => prod.item.id !== id);
         const eliminatedProduct = cart.find(prod => prod.item.id === id);
 

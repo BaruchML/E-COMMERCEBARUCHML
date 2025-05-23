@@ -1,12 +1,14 @@
-import { CategoriesType, GameType } from "../types/componentTypes";
+import { CategoriesType, FullProductType } from "../types/componentTypes";
 
-export const games: GameType[] = [
+export const games: FullProductType[] = [
     {
         id: "1",
         name: "Gothic Dania Town",
         description: 'Lorem',
         img: "/img/goth-1.png",
-        category: 'Aventura'
+        category: 'Aventura',
+        price:1000,
+        stock:10
     },
     {
         id: "28",

@@ -6,13 +6,13 @@ import { useState, useEffect } from 'react';
 import { CardGameSmall } from '../../ui/Card'
 import Container from '../../ui/container'
 import { getLimitedGames } from '../../../utils/gamesFunctions';
-import { GameType } from '../../../types/componentTypes';
+import { GameShowCardType } from '../../../types/componentTypes';
 
 const News = () => {
   // cambiar el nombre del estado, porque products era cuando me conectaba a firebase
   // const [productos, setProductos] = useState<ProductsType[]>([]);
   //pendiente traer la logica de getGamesLimited a la base de datos
-  const [games, setGames] = useState<GameType[]>([])
+  const [games, setGames] = useState<GameShowCardType[]>([])
   useEffect(() => {
     const gamesFetch = async () => {
       try {

@@ -59,7 +59,7 @@ export const CardTextRight = ({ scss, text, img, title }: CardPropType) => {
     )
 }
 
-export const CardGameCarousel = ({ scss, text, title, img }: CardPropType) => {
+export const CardGameCarousel = ({ scss, text, title, img,id }: CardPropType) => {
 
     return (
         <>
@@ -70,10 +70,12 @@ export const CardGameCarousel = ({ scss, text, title, img }: CardPropType) => {
                 <div className="card-center">
                     <p>{title}</p>
                     {text && text}
-                    <Button scss="btn-carousel">Comprar</Button>
-                </div>
 
+                    <Link to={`/item/${id}`}>
+                    <Button scss="btn-carousel">Comprar</Button>
+                    </Link>
             </div>
+                </div>
         </>
     )
 }

@@ -1,14 +1,14 @@
 import { games} from "../services/gamesMock"
-import { GameType } from "../types/componentTypes"
+import { GameShowCardType } from "../types/componentTypes"
 
 
-export const getGames = (): Promise<GameType[]> => {
+export const getGames = (): Promise<GameShowCardType[]> => {
     return new Promise((resolve) => {
         resolve(games)
     })
 }
 
-export const getLimitedGames = (start: number = 0, large: number): Promise<GameType[]> => {
+export const getLimitedGames = (start: number = 0, large: number): Promise<GameShowCardType[]> => {
     return new Promise((resolve => {
         const limitedGames = []
         for (let i = start; i < large; i++) {
@@ -25,7 +25,7 @@ export const getGame = (id: string) => {
 }
 
 
-export const getSearchedGames = (query: string = '', category: string | null = null): Promise<GameType[]> => {
+export const getSearchedGames = (query: string = '', category: string | null = null): Promise<GameShowCardType[]> => {
     if (!category) {
         
         return new Promise((resolve) => {
@@ -61,7 +61,7 @@ export const getSearchedGames = (query: string = '', category: string | null = n
     }
 }
 
-export const getCategoryGames = (category: string): Promise<GameType[]> => {
+export const getCategoryGames = (category: string): Promise<GameShowCardType[]> => {
     return new Promise((resolve) => {
         if (category === null) {
             resolve(games)

@@ -13,7 +13,7 @@ export interface CardPropType {
     text?: string
     title?: string,
     img?: string,
-  
+  id?:string
 }
 export interface CardFooterPropType extends CardPropType{
     list?: ListType[]

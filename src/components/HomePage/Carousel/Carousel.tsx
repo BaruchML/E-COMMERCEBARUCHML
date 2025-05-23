@@ -1,11 +1,12 @@
 import {CardGameCarousel} from '../../ui/Card'
-import { GameType,getLimitedGames } from "../../../services/gamesMock"
 import { useEffect, useState } from "react"
 import Container from '../../ui/container'
+import { GameShowCardType } from '../../../types/componentTypes'
+import { getLimitedGames } from '../../../utils/gamesFunctions'
 
 
 export default function Carousel() {        
-    const [games, setGames] = useState<GameType[]>([])
+    const [games, setGames] = useState<GameShowCardType[]>([])
     useEffect(() => {
         const gamesFetch = async () => {
             try {
@@ -23,7 +24,7 @@ export default function Carousel() {
 
     return (
         <Container scss='container-sp-even' clean={true} title='Lo mas nuevo'>
-            {games.map((e, i) => <CardGameCarousel title={e.name} img={e.img} scss='card-carousel' key={i} />)}
+            {games.map((e, i) => <CardGameCarousel id={e.id} title={e.name} img={e.img} scss='card-carousel' key={i} />)}
         </Container>
     )
 }

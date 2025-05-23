@@ -2,13 +2,13 @@
 // import { db } from "../../../services/config"
 // import { collection, getDocs, query, where } from 'firebase/firestore';
 import { useState, useEffect } from 'react';
-import {SearchPropType,GameType } from '../../../types/componentTypes';
+import {SearchPropType,GameShowCardType } from '../../../types/componentTypes';
 import { ContainerListItems } from '../../ui/container';
 import { CardGameSmall } from '../../ui/Card';
 import { getSearchedGames } from '../../../utils/gamesFunctions';
 
 const ItemListContainer = ({ queryMock, category }: SearchPropType) => {
-  const [games, setGames] = useState<GameType[]>([])
+  const [games, setGames] = useState<GameShowCardType[]>([])
       useEffect(() => {
         if (category) {
           
