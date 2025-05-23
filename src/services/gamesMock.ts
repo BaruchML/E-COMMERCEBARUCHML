@@ -9,16 +9,16 @@ export interface GameType {
     description: string,
     category?: string
 }
-export interface CategoriesType{
-    name:string
+export interface CategoriesType {
+    name: string
 }
-export const categories:CategoriesType[] = [
-    {name:'RPG'},
-    {name:'Estrategia'},
-    {name:'Aventura'},
-    {name:'Rol'},
-    {name:'Accion'},
-    {name:'Casual'},
+export const categories: CategoriesType[] = [
+    { name: 'RPG' },
+    { name: 'Estrategia' },
+    { name: 'Aventura' },
+    { name: 'Rol' },
+    { name: 'Accion' },
+    { name: 'Casual' },
 ]
 const games: GameType[] = [
     {
@@ -33,7 +33,7 @@ const games: GameType[] = [
         name: "Tech Dungeon",
         description: 'Lorem',
         img: "/img/tech-dungeon-1.png",
-        category:'RPG'
+        category: 'RPG'
 
     },
     {
@@ -41,10 +41,10 @@ const games: GameType[] = [
         name: "Burnoutt",
         description: 'Lorem',
         img: "/img/burnoutt-1.jpg",
-        category:'Accion'
+        category: 'Accion'
 
     },
-       {
+    {
         id: "8",
         name: "Warped",
         description: 'Lorem',
@@ -52,14 +52,14 @@ const games: GameType[] = [
         category: 'RPG'
 
     },
-   
+
     {
         id: "3",
         name: "Sunny Land",
         description: 'Lorem',
         img: "/img/sunnyland-1.png",
         category: 'Aventura'
-    }, 
+    },
     {
         id: "7",
         name: "Tiny Swords",
@@ -68,7 +68,7 @@ const games: GameType[] = [
         category: 'Rol'
 
     },
- 
+
     {
         id: "9",
         name: "World Travel",
@@ -100,8 +100,8 @@ const games: GameType[] = [
         category: 'Aventura'
 
     },
-   
-     {
+
+    {
         id: "2",
         name: "RPG BATTLE",
         description: 'Lorem',
@@ -114,7 +114,7 @@ const games: GameType[] = [
         name: "Farm Defense",
         description: 'Lorem',
         img: "/img/farm-defense-1.jpg",
-        category:'Estrategia'
+        category: 'Estrategia'
 
     },
     {
@@ -122,7 +122,7 @@ const games: GameType[] = [
         name: "Nightfall 2",
         description: 'Lorem',
         img: "/img/nightfall-3.jpg",
-        category:'Rol'
+        category: 'Rol'
 
     },
     {
@@ -130,7 +130,7 @@ const games: GameType[] = [
         name: "Mineraft",
         description: 'Lorem',
         img: "/img/mineraft-1.png",
-        category:'Aventura'
+        category: 'Aventura'
 
     },
     {
@@ -146,7 +146,7 @@ const games: GameType[] = [
         name: "Ninja Adventure",
         description: 'Lorem',
         img: "/img/notice-1.png",
-        category:'Aventura'
+        category: 'Aventura'
 
     },
     {
@@ -154,7 +154,7 @@ const games: GameType[] = [
         name: "Golden Pirates",
         description: 'Lorem',
         img: "/img/golden-pirates-1.jpg",
-        category:'Rol'
+        category: 'Rol'
 
     },
 
@@ -163,7 +163,7 @@ const games: GameType[] = [
         name: "Casino",
         description: 'Lorem',
         img: "/img/casino-1.jpg",
-        category:'Casual'
+        category: 'Casual'
 
     },
     {
@@ -171,7 +171,7 @@ const games: GameType[] = [
         name: "CatleMania",
         description: 'Lorem',
         img: "/img/castlemania-1.png",
-        category:'RPG'
+        category: 'RPG'
 
     },
     {
@@ -179,7 +179,7 @@ const games: GameType[] = [
         name: "The Graveyard 3",
         description: 'Lorem',
         img: "/img/graveyard-1.jpg",
-        category:'Estrategia'
+        category: 'Estrategia'
 
     },
     {
@@ -187,14 +187,14 @@ const games: GameType[] = [
         name: "Land Monster",
         description: 'Lorem',
         img: "/img/land-monster-1.png",
-        category:'Estrategia'
+        category: 'Estrategia'
     },
     {
         id: "22",
         name: "Lune Blade",
         description: 'Lorem',
         img: "/img/lune-blade-1.jpg",
-        category:'Accion'
+        category: 'Accion'
 
     },
     {
@@ -202,7 +202,7 @@ const games: GameType[] = [
         name: "Monster Enemy",
         description: 'Lorem',
         img: "/img/monster-enemy-1.webp",
-        category:'Rol'
+        category: 'Rol'
 
     },
     {
@@ -210,7 +210,7 @@ const games: GameType[] = [
         name: "Oak Woods",
         description: 'Lorem',
         img: "/img/oak-woods-1.png",
-        category:'Estrategia'
+        category: 'Estrategia'
 
     },
     {
@@ -218,7 +218,7 @@ const games: GameType[] = [
         name: "Plane Sprite",
         description: 'Lorem',
         img: "/img/plane-sprite-1.jpg",
-        category:'Casual'
+        category: 'Casual'
 
     },
     {
@@ -226,7 +226,7 @@ const games: GameType[] = [
         name: "Puzzle",
         description: 'Lorem',
         img: "/img/puzzle-1.png",
-        category:'Casual'
+        category: 'Casual'
 
     },
     {
@@ -234,7 +234,7 @@ const games: GameType[] = [
         name: "Spell Master",
         description: 'Lorem',
         img: "/img/spell-master-1.jpg",
-        category:'RPG'
+        category: 'RPG'
 
     },
 
@@ -327,26 +327,43 @@ export const getGame = (id: string) => {
 }
 
 
-export const getSearchedGames = (query: string = '',category:string | null= null): Promise<GameType[]> => {
+export const getSearchedGames = (query: string = '', category: string | null = null): Promise<GameType[]> => {
     if (!category) {
-        
-    }
-    return new Promise((resolve) => {
-        if (query === '' && !category) {
-            console.log('function searched');
-            
-            resolve(games)
-        } else {
-            const gamesFiltred = games.filter((game) => game.name?.toLowerCase().includes(query.toLowerCase()))
-            console.log({category});
-            
-            resolve(gamesFiltred)
-        }
 
-    })
+        return new Promise((resolve) => {
+            if (query === '') {
+                console.log('function searched');
+                resolve(games)
+            } else {
+                const gamesFiltred = games.filter((game) => game.name?.toLowerCase().includes(query.toLowerCase()))
+                console.log({ category });
+                resolve(gamesFiltred)
+            }
+
+        })
+
+    } else {
+
+        return new Promise((resolve) => {
+            if (query != '') {
+                const gamesFiltred = games.filter((game) => game.name?.toLowerCase().includes(query.toLowerCase()))
+                console.log({ category });
+                resolve(gamesFiltred)
+            }else if (category) {
+
+                const gamesFiltred = games.filter((game) => game.category?.toLowerCase().includes(category.toLowerCase()))
+                console.log({ category });
+                query=''
+                resolve(gamesFiltred)
+            }
+
+
+        })
+
+    }
 }
 
-export const getCategoryGames = (category:string): Promise<GameType[]> => {
+export const getCategoryGames = (category: string): Promise<GameType[]> => {
     return new Promise((resolve) => {
         if (category === null) {
             resolve(games)

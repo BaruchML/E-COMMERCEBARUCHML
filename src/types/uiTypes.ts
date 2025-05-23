@@ -21,5 +21,6 @@ export interface SearchPropType {
     handleEvent?:(e:React.ChangeEvent<HTMLInputElement>) => void | string
     scss?:string
     onClickEvent?:(category:string) => void
-    cleanCategory?:() => void
+    cleanCategory?:(e:React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
+    query?:string
 }
