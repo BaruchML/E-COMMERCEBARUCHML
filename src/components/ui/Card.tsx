@@ -1,9 +1,9 @@
 import Button from "./Button"
-import { CardPropType } from "../../types/uiTypes"
+import { CardFooterPropType, CardPropType } from "../../types/uiTypes"
 import { Link } from "react-router-dom"
 
 
-export const Card = ({ scss, text }: CardPropType) => {
+export const Card = ({ scss }: CardPropType) => {
 
     return (
         <>
@@ -118,15 +118,14 @@ export const CardNoticeSmall = ({ scss, text, title, img }: CardPropType) => {
     )
 }
 
-export const CardFooter = ({ scss, list, title,demo }: CardPropType) => {
-    let demonly = (<p className="demo">DEMO ONLY</p>)
+export const CardFooter = ({ scss, list, title, demo }: CardFooterPropType) => {
+    let demoOnly = (<p className="demo">DEMO ONLY</p>)
     return (
         <>
             <div className={`card ${scss} `}>
                 <h3>{title} </h3>
-               
                 <ul>
-                    {list && list.map((i,index) => {
+                    {list && list.map((i, index) => {
                         return (
                             <li key={index}>
                                 <Link to={i.link}>
@@ -137,7 +136,7 @@ export const CardFooter = ({ scss, list, title,demo }: CardPropType) => {
                     )
                     }
                 </ul>
-                  {demo && demonly} 
+                {demo && demoOnly}
             </div>
         </>
     )

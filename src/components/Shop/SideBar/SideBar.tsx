@@ -1,19 +1,18 @@
-import { SearchPropType } from "../../../types/uiTypes";
+import { SearchPropType } from "../../../types/componentTypes";
 import Categories from "./Categories";
-import Search from "./Search";
+import InputSearch from "./InputSearch";
 
-function SideBar({handleEvent,onClickEvent,cleanCategory,query}:SearchPropType) {
+function SideBar({ handleEvent, onClickEvent, cleanCategory, queryMock }: SearchPropType) {
 
-    return ( 
+    return (
         <>
-        <div className="container-sidebar">
-            SideBar
-        <Search handleEvent={handleEvent} query={query}/>
-        <Categories onClickEvent={onClickEvent} cleanCategory={cleanCategory}/>
-        </div>
-        
+            <div className="container-sidebar">
+                <InputSearch handleEvent={handleEvent} queryMock={queryMock} />
+                <Categories onClickEvent={onClickEvent} cleanCategory={cleanCategory} />
+            </div>
+
         </>
-     );
+    );
 }
 
 export default SideBar;

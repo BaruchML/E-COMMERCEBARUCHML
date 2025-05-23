@@ -1,14 +1,13 @@
-import { useState, useEffect } from 'react';
-import ItemList from "../ItemList/ItemList";
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 // import { db } from "../../../services/config"
 // import { collection, getDocs, query, where } from 'firebase/firestore';
-import { ChildrenContextProps, ProductsType } from '../../../types/componentTypes';
-import Container, { ContainerListItems } from '../../ui/container';
-import { GameType, getCategoryGames, getGames, getLimitedGames, getSearchedGames } from '../../../services/gamesMock';
+import { useState, useEffect } from 'react';
+import {SearchPropType,GameType } from '../../../types/componentTypes';
+import { ContainerListItems } from '../../ui/container';
 import { CardGameSmall } from '../../ui/Card';
+import { getSearchedGames } from '../../../utils/gamesFunctions';
 
-const ItemListContainer = ({ queryMock, category }: ChildrenContextProps) => {
+const ItemListContainer = ({ queryMock, category }: SearchPropType) => {
   const [games, setGames] = useState<GameType[]>([])
       useEffect(() => {
         if (category) {
