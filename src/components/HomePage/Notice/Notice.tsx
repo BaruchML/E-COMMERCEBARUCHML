@@ -24,10 +24,10 @@ function Notice() {
     return ( 
         <>
         <Container title="Ultimas Noticias" clean scss="container-notice">
-             {newNotices.map((n) => <CardNoticeSmall scss="card-notice" title={n.name} text={n.description} img={n.img}/>)}
+             {newNotices.map((n) => <CardNoticeSmall key={n.name} scss="card-notice" title={n.name} text={n.description} img={n.img}/>)}
         </Container>
         <Container clean scss="container-notice">
-                    {notices.map((n) => <CardNoticeSmall scss="card-notice-small" title={n.name} text={n.description} img={n.img}/>)}
+                    {notices.map((n) => <CardNoticeSmall  key={n.name} scss="card-notice-small" title={n.name} text={n.description} img={n.img}/>)}
     
         </Container>
         </>

@@ -9,14 +9,16 @@ export interface GameType {
     description: string,
     category?: string
 }
-
-export const categories = [
-    'RPG',
-    'Estrategia',
-    'Aventura',
-    'Rol',
-    'Accion',
-    'Casual',
+export interface CategoriesType{
+    name:string
+}
+export const categories:CategoriesType[] = [
+    {name:'RPG'},
+    {name:'Estrategia'},
+    {name:'Aventura'},
+    {name:'Rol'},
+    {name:'Accion'},
+    {name:'Casual'},
 ]
 const games: GameType[] = [
     {
@@ -325,12 +327,19 @@ export const getGame = (id: string) => {
 }
 
 
-export const getSearchedGames = (query: string = ''): Promise<GameType[]> => {
+export const getSearchedGames = (query: string = '',category:string | null= null): Promise<GameType[]> => {
+    if (!category) {
+        
+    }
     return new Promise((resolve) => {
-        if (query === '') {
+        if (query === '' && !category) {
+            console.log('function searched');
+            
             resolve(games)
         } else {
             const gamesFiltred = games.filter((game) => game.name?.toLowerCase().includes(query.toLowerCase()))
+            console.log({category});
+            
             resolve(gamesFiltred)
         }
 

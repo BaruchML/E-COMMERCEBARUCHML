@@ -12,7 +12,7 @@ function Categories({scss,onClickEvent,cleanCategory}:SearchPropType) {
 
     return ( 
 <div className="categories-container" >
-        {categories.map((category) => <Button onClickEvent={()=>onClick(category)}>{category}</Button>)}
+        {categories.map((category) => <Button key={category.name} onClickEvent={()=>onClick(category.name)}>{category.name}</Button>)}
         {/* {categories.map((category) => <button onClick={()=>onClick(category)}>{category}</button>)} */}
         {/* <input style={{width:'auto'}} placeholder="Search" onChange={handleEvent}/>
         <Button></Button> */}

@@ -9,12 +9,12 @@ function Shop() {
     const [categoryGame , setCategoryGame] = useState<string | null>(null)
 
     const handleSearch = (e:React.ChangeEvent<HTMLInputElement>) => {
-        console.log(e.target.value);
+        console.log({query:e.target.value});
         
         setQuery(e.target.value);
     }
     const handleCategory = (category:string) => {
-        console.log({category});
+        console.log(category);
         
         setCategoryGame(category)
     }

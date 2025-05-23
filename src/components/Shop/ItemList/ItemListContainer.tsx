@@ -9,50 +9,29 @@ import { GameType, getCategoryGames, getGames, getLimitedGames, getSearchedGames
 import { CardGameSmall } from '../../ui/Card';
 
 const ItemListContainer = ({ queryMock, category }: ChildrenContextProps) => {
-  // const [productos, setProductos] = useState<ProductsType[]>([]);
-  const [search, setSearch] = useState(queryMock)
   const [games, setGames] = useState<GameType[]>([])
+      useEffect(() => {
+        if (category) {
+          
+          console.log({categoryItemList:category});
+        }else{
+                  console.log({categoryItemList:'no hay'});
 
-  // const { idCategoria } = useParams();
-
-  useEffect(() => {
-    // * PENDIENTE CONECTAR LA LOGICA PARA TRAER PRODUCTOS DESDE FIREBASE MIENTRAS SE USARA EL MOCK
-    // const misProductos = idCategoria ? query(collection(db, "productos"),
-    //   where("idCat", "==", idCategoria)) : collection(db, "productos");
-
-    // getDocs(misProductos)
-    //   .then(res => {
-    //     const nuevosProductos:typeof productos = res.docs.map(doc => {
-    //       const data = doc.data()
-    //       return { id: doc.id, ...data }
-
-    //     })
-    //     setProductos(nuevosProductos);
-    //   })
-    //   .catch(error => console.log(error));
+        }
+        
     const gamesFetch = async () => {
-
       try {
-        const resp = await getSearchedGames(queryMock);
-
-
+        const resp = await getSearchedGames(queryMock,category);
         setGames(resp)
       }
       catch (err) {
         console.log('Error trayendo games', err);
-
       }
     }
     gamesFetch()
 
   }, [/* idCategoria */queryMock, category])
-  // if(!games){
-  //   return (
 
-  //     <Container/>
-
-  //   )
-  // }
   return (
     <>
       <ContainerListItems clean title='Juegos'>
@@ -63,3 +42,27 @@ const ItemListContainer = ({ queryMock, category }: ChildrenContextProps) => {
 }
 
 export default ItemListContainer
+
+
+// * PENDIENTE CONECTAR LA LOGICA PARA TRAER PRODUCTOS DESDE FIREBASE MIENTRAS SE USARA EL MOCK
+// const [productos, setProductos] = useState<ProductsType[]>([]);
+// const { idCategoria } = useParams();
+
+
+
+// const misProductos = idCategoria ? query(collection(db, "productos"),
+//   where("idCat", "==", idCategoria)) : collection(db, "productos");
+
+//useEffect () {
+  
+// getDocs(misProductos)
+//   .then(res => {
+  //     const nuevosProductos:typeof productos = res.docs.map(doc => {
+    //       const data = doc.data()
+    //       return { id: doc.id, ...data }
+    
+    //     })
+    //     setProductos(nuevosProductos);
+    //   })
+    //   .catch(error => console.log(error));
+  // }
