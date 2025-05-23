@@ -30,11 +30,16 @@ const ItemListContainer = ({ queryMock, category }: SearchPropType) => {
     gamesFetch()
 
   }, [/* idCategoria */queryMock, category])
+  let noGames ;
+  if (games.length === 0) {
+    noGames = (<div>No hay Juegos que coincidan con tu busqueda</div>)
+  }
 
   return (
     <>
-      <ContainerListItems clean title='Juegos'>
-        {games.map(game => <CardGameSmall title={game.name} img={game.img} scss='card-small' key={game.id} />)}
+      <ContainerListItems  clean title={`Juegos ${category != null ? 'tipo ' + category : ''}`}>
+        {noGames}
+        {games.map(game => <CardGameSmall title={game.name} img={game.img} scss='card-small-shop' key={game.id} />)}
       </ContainerListItems>
     </>
   )

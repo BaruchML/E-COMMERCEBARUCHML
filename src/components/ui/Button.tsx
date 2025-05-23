@@ -1,8 +1,9 @@
-import {ButtonPropType}from'../../types/uiTypes'
+import {ButtonCategoryPropType, ButtonPropType}from'../../types/uiTypes'
+import { useState } from 'react';
 
 
+const Button = ({onClickEvent,scss,children = 'button',}:ButtonPropType) => {
 
-const Button = ({handleEvent,onClickEvent,scss,children = 'button'}:ButtonPropType) => {
     return (
         <>
         
@@ -12,3 +13,12 @@ const Button = ({handleEvent,onClickEvent,scss,children = 'button'}:ButtonPropTy
 }
 
 export default Button
+
+const ButtonCategorySearch =  ({onClickEvent,scss,children = 'button',selected}:ButtonCategoryPropType) => {
+
+    return (
+        <>
+        <button className={`btn ${scss}`} onClick={onClickEvent}>{children}</button>
+        </>
+    )
+}

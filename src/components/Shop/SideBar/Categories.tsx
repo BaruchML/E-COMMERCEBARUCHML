@@ -2,10 +2,12 @@
 import { SearchPropType } from "../../../types/componentTypes";
 import Button from "../../ui/Button";
 import { categories } from "../../../services/gamesMock";
+import { useState } from "react";
 
 
 
 function Categories({onClickEvent,cleanCategory}:SearchPropType) {
+
     let onClick:(category:string) => void;
     if (onClickEvent) {
         onClick=onClickEvent
@@ -13,9 +15,12 @@ function Categories({onClickEvent,cleanCategory}:SearchPropType) {
 
     
     return ( 
-<div className="categories-container" >
-        {categories.map((category) => <Button key={category.name} onClickEvent={()=>onClick(category.name)}>{category.name}</Button>)}
-        <button onClick={cleanCategory}>Todos</button>
+<div className="container-categories-sidebar" >
+        <h3 className="container-categories-sidebar_title">Categorias</h3>
+        <ul>
+        {categories.map((category) => <li className="" key={category.name}><Button onClickEvent={()=>{onClick(category.name)}}>{category.name}</Button></li>)}
+        <li><Button onClickEvent={cleanCategory}>Todos</Button></li>
+        </ul>
        
 </div>
      );

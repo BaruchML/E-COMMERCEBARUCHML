@@ -3,10 +3,14 @@
 export interface ButtonPropType {
     scss?: string
     children?: React.ReactNode
+
     handleEvent?: () => void | string
     onClickEvent?: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 
+export interface ButtonCategoryPropType extends ButtonPropType {
+    selected?:boolean
+}
 
 export interface CardPropType {
     scss?: string

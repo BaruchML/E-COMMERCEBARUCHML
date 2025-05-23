@@ -23,6 +23,7 @@
 .btn-carousel{
     width: 100%;
     margin-bottom: 30px;
+    padding: 7px;
 }
 
 .btn-card-small{
@@ -45,4 +46,9 @@
         // text-decoration: underline variables.$darkcolor-red-base solid;
     }
     
+}
+
+
+.btn_selected{
+    background-color: aqua;
 }

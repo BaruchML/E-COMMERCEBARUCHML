@@ -7,8 +7,10 @@ function SideBar({ handleEvent, onClickEvent, cleanCategory, queryMock }: Search
     return (
         <>
             <div className="container-sidebar">
+                <div className="container-items-sidebar">
                 <InputSearch handleEvent={handleEvent} queryMock={queryMock} />
                 <Categories onClickEvent={onClickEvent} cleanCategory={cleanCategory} />
+                </div>
             </div>
 
         </>

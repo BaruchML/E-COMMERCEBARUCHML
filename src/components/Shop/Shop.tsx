@@ -9,22 +9,20 @@ function Shop() {
     const [categoryGame, setCategoryGame] = useState<string | null>(null)
 
     const handleQuerySearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-        console.log({ query: e.target.value });
         setCategoryGame(null)
         setQuery(e.target.value);
     }
     const handleCategory = (category: string) => {
-        console.log(category);
         setQuery('')
         setCategoryGame(category)
     }
-    const cleanSearch = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    const cleanSearch = (/* e: React.MouseEvent<HTMLButtonElement, MouseEvent> */) => {
         setQuery('')
         setCategoryGame(null)
     }
 
     return (
-        <Container clean scss="container-shop">
+        <Container  clean scss="container-shop">
             <SideBar handleEvent={handleQuerySearch} onClickEvent={handleCategory} cleanCategory={cleanSearch} queryMock={query} />
             <ItemListContainer queryMock={query} category={categoryGame} />
         </Container>
