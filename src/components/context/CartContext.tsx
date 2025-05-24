@@ -15,8 +15,8 @@ export const CartProvider = ({ children }:ChildrenContextProps) => {
 
     const [cart, setCart] = useState<GameCartType[]>([]);
     const [total, setTotal] = useState(0);
-    const [totalQuantity, setTotalQuantity] = useState(0); //cambiar el nombre
-
+    const [totalQuantity, setTotalQuantity] = useState(0);
+//  * Añade varios productos al Cart,puede sumar varias cantidades del mismo producto, pero el boton de comprar solo agregara 1
     const addToCart = ({item, quantity}:GameCartType) => {
         console.log({item,quantity,price:item.price,name:item.name});
         const existingProduct = cart.find(prod => prod.item.id === item.id);

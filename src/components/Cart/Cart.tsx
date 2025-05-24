@@ -4,30 +4,27 @@ import { Link } from "react-router-dom"
 import CartItem from "./CartItem/CartItem";
 import './Cart.css'
 import { UserContext } from "../context/UserContext";
-import { Card } from "../ui/Card";
 import Container from "../ui/container";
 import Button from "../ui/Button";
 
 const Cart = () => {
-    const {user,state,logOut,loadUser} = useContext(UserContext)
+    const { user, logOut, loadUser } = useContext(UserContext)
     const { cart, cleanCart, total, totalQuantity } = useContext(CartContext);
-if (!user) {
-    return (
+    if (!user) {
+        return (
             <Container scss='container-center'>
-
-
-        <Button handleEvent={()=>loadUser({id:1,name:'baruch'})} >Log in</Button>
+                <Button onClickEvent={() => loadUser({ id: 1, name: 'baruch' })} >Log in</Button>
             </Container>
-    )
-}
+        )
+    }
     if (totalQuantity === 0) {
         return (
             <>
-                     <Container scss='container-center'>
+                <Container scss='container-center'>
                     <h2>No hay productos en el carrito. Compra o vete</h2>
                     <Link to="/"><Button>Ver Productos</Button></Link>
-                    <Button handleEvent={logOut} >Log out</Button>
-                      </Container>
+                    <Button onClickEvent={logOut} >Log out</Button>
+                </Container>
                 <hr />
             </>
         )
@@ -38,7 +35,6 @@ if (!user) {
             <div>
                 {
                     cart.map(prod => <CartItem key={prod.item.id} {...prod} />)
-
                 }
             </div>
             <div className="divCard">
@@ -48,7 +44,7 @@ if (!user) {
                 {
                     cleanCart && (<button className="btnVaciarCompra" onClick={() => cleanCart()}> Vaciar Carrito</button>)
                 }
-                
+
                 <Link to="/checkout"><button className="btnFinCompra">Continuar Compra</button></Link>
             </div>
 

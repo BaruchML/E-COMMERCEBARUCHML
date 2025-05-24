@@ -1,7 +1,5 @@
-import { useState } from 'react'
-import Contador from '../../Cart/Contador/Contador';
-import { Link } from 'react-router-dom';
 // import './ItemDetail.css'
+import { useState } from 'react'
 import { CartContext } from '../../context/CartContext';
 import { useContext } from 'react';
 import { GameCartType, FullProductType } from '../../../types/componentTypes';
@@ -16,8 +14,10 @@ const ItemDetail = ({ ...producto }: FullProductType) => {
   const handleQuantity = (quantity: number) => {
     setAgregarCantidad(quantity)
 
-    const handleItem: GameCartType = { item: { ...producto }, quantity: quantity };
-    addToCart(handleItem)
+    if(producto.stock > 0){
+      const handleItem: GameCartType = { item: { ...producto }, quantity: quantity };
+      addToCart(handleItem)
+    }
 
   }
 

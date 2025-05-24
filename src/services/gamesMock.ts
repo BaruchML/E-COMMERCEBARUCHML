@@ -8,14 +8,15 @@ export const games: FullProductType[] = [
         img: "/img/goth-1.png",
         category: 'Aventura',
         price:1000,
-        stock:10
+        stock:0
     },
     {
         id: "28",
         name: "Tech Dungeon",
         description: 'Lorem',
         img: "/img/tech-dungeon-1.png",
-        category: 'RPG'
+        category: 'RPG',
+        stock:1
 
     },
     {

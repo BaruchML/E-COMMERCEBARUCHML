@@ -37,7 +37,7 @@ export interface GameShowCardType extends BasicProductType {
     category?: string
 }
 export interface GameCartItemType extends BasicProductType {
-    stock?: number,
+    stock: number,
     price?: number
 }
 
