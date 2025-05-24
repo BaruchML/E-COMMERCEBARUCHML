@@ -16,7 +16,7 @@ if (!user) {
             <Container scss='container-center'>
 
 
-        <Button handleEvent={()=>loadUser({id:1,name:'baruch'})} >Log in</Button>
+        <Button onClickEvent={()=>loadUser({id:1,name:'baruch'})} >Log in</Button>
             </Container>
     )
 }
@@ -26,7 +26,7 @@ if (!user) {
                      <Container scss='container-center'>
                     <h2>No hay productos en el carrito. Compra o vete</h2>
                     <Link to="/"><Button>Ver Productos</Button></Link>
-                    <Button handleEvent={logOut} >Log out</Button>
+                    <Button onClickEvent={logOut} >Log out</Button>
                       </Container>
                 <hr />
             </>
