@@ -1,6 +1,7 @@
 import Button from "./Button"
-import { CardFooterPropType, CardPropType } from "../../types/uiTypes"
+import { CardFooterPropType, CardItemPropType, CardPropType } from "../../types/uiTypes"
 import { Link } from "react-router-dom"
+import Contador from "../Cart/Contador/Contador"
 
 
 export const Card = ({ scss }: CardPropType) => {
@@ -59,7 +60,7 @@ export const CardTextRight = ({ scss, text, img, title }: CardPropType) => {
     )
 }
 
-export const CardGameCarousel = ({ scss, text, title, img,id }: CardPropType) => {
+export const CardGameCarousel = ({ scss, text, title, img, id }: CardPropType) => {
 
     return (
         <>
@@ -72,10 +73,10 @@ export const CardGameCarousel = ({ scss, text, title, img,id }: CardPropType) =>
                     {text && text}
 
                     <Link to={`/item/${id}`}>
-                    <Button scss="btn-carousel">Comprar</Button>
+                        <Button scss="btn-carousel">Comprar</Button>
                     </Link>
-            </div>
                 </div>
+            </div>
         </>
     )
 }
@@ -139,6 +140,32 @@ export const CardFooter = ({ scss, list, title, demo }: CardFooterPropType) => {
                     }
                 </ul>
                 {demo && demoOnly}
+            </div>
+        </>
+    )
+}
+
+export const CardItemDetail = ({ scss, img, title, price, addQuantity, handleQuantity, product }: CardItemPropType) => {
+
+    return (
+        <>
+            <div className={`card ${scss}`}>
+                <div className="card-item-detail_img-ar">
+                    <img src={img} alt={title}></img>
+                </div>
+                <div className="card-item-detail_info">
+                    <div className="card-item-detail_column">
+
+                        <h1>{title}</h1>
+                        <h2 >${price}</h2>
+                        {addQuantity > 0 ? (<Link to="/cart"><button className='btnCompra'>Terminar Compra</button></Link>) :
+
+                            (<Contador inicial={1} producto={product}
+                                funcionAgregar={handleQuantity} />)
+                        }
+
+                    </div>
+                </div>
             </div>
         </>
     )

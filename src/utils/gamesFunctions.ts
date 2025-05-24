@@ -1,5 +1,5 @@
 import { games} from "../services/gamesMock"
-import { GameShowCardType } from "../types/componentTypes"
+import { FullProductType, GameShowCardType } from "../types/componentTypes"
 
 
 export const getGames = (): Promise<GameShowCardType[]> => {
@@ -18,9 +18,15 @@ export const getLimitedGames = (start: number = 0, large: number): Promise<GameS
     }))
 }
 // ? pendiente typar // CREO QUE FALTA TIPARLO, DEJE LA NOTA PERO NO SE SI SÍ
-export const getGame = (id: string) => {
-    return new Promise((resolve) => {
-        resolve(games.find(item => item.id === id))
+export const getGame = (id: string):Promise<FullProductType> => {
+    return new Promise((resolve,reject) => {
+        const game = games.find(item => item.id === id)
+          if (!game) {
+      return reject(new Error('Producto no encontrado'));
+    }
+    resolve(game);
+        
+        resolve(game)
     })
 }
 

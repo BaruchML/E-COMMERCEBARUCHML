@@ -1,37 +1,37 @@
+// import { db } from "../../../services/config";
+// import { getDoc, doc } from "firebase/firestore";
 import { useState, useEffect } from "react";
-import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
-import { db } from "../../../services/config";
-import { getDoc, doc } from "firebase/firestore";
-import { ProductsType } from "../../../types/componentTypes";
+import { FullProductType } from "../../../types/componentTypes";
+import { getGame } from "../../../utils/gamesFunctions";
 import Container from "../../ui/container";
+import ItemDetail from "../ItemDetail/ItemDetail";
 import Info from "../../HomePage/Info/Info";
 import AboutItem from "./AboutItem/About";
-import { Card } from "../../ui/Card";
 
 
 const ItemDetailContainer = () => {
-  const [producto, setProducto] = useState<ProductsType>();
 
-  const { idItem } = useParams();
-
-  if(!idItem){
-    return (<h1>Sin item</h1>)
+  const [producto, setProducto] = useState<FullProductType | null>(null);
+  let { idItem } = useParams();
+  let gameId:string;
+  if (idItem) {
+    gameId = idItem
   }
   useEffect(() => {
-    const nuevoDoc = doc(db, "productos", idItem);
 
-    getDoc(nuevoDoc)
-      .then(res => {
-        if (res.exists()) {
-          
-          const data = res.data() as Omit<ProductsType, 'id'>;
-          setProducto({ id: res.id, ...data })
-        }
-      })
-      .catch(error => console.log(error))
+    const gameFetch = async () => {
+      try {
+        const resp = await getGame(gameId)
+        setProducto(resp)
+      }catch(err){
+        console.log({err});
+      }
+    }
+    gameFetch()
+  
   }, [idItem])
-  if (!producto) {
+  if (!producto) {   // * Preferible mandar a pagina 404
     return(
     <div>
       <Container scss="container-center">
@@ -46,9 +46,7 @@ const ItemDetailContainer = () => {
   }
   return (
     <div>
-      <Container scss="container-center">
       <ItemDetail {...producto} />
-      </Container>
       <Info/>
       <AboutItem/>
     </div>
@@ -56,3 +54,17 @@ const ItemDetailContainer = () => {
 }
 
 export default ItemDetailContainer
+
+//* Traer logica para firebase
+
+      // const nuevoDoc = doc(db, "productos", idItem);
+    
+      // getDoc(nuevoDoc)
+      //   .then(res => {
+      //     if (res.exists()) {
+            
+      //       const data = res.data() as Omit<ProductsType, 'id'>;
+      //       setProducto({ id: res.id, ...data })
+      //     }
+      //   })
+      //   .catch(error => console.log(error))

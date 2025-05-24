@@ -1,3 +1,4 @@
+import { FullProductType } from "./componentTypes"
 
 
 export interface ButtonPropType {
@@ -17,11 +18,18 @@ export interface CardPropType {
     text?: string
     title?: string,
     img?: string,
-  id?:string
+    id?:string
 }
 export interface CardFooterPropType extends CardPropType{
-    list?: ListType[]
-    demo?: boolean
+    list: ListType[]
+    demo: boolean
+}
+export interface CardItemPropType extends CardPropType{
+    price?:number
+    stock?: number
+    handleQuantity:(quantity:number) => void
+    addQuantity:number
+    product:FullProductType
 }
 
 

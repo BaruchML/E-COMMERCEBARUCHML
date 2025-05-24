@@ -49,7 +49,7 @@ export type FullProductType = GameShowCardType & GameCartItemType
 // }
 
 export interface GameCartType {
-    item: GameCartItemType,
+    item: FullProductType,
     quantity: number
 }
 
