@@ -37,19 +37,18 @@ export type BasicProductType = {
 export interface GameShowCardType extends BasicProductType {
     img: string,
     info:GameShowInformationType,
-        category: string,
 }
 export interface GameShowInformationType {
-    lunchDate?: string,
-
-    console?:string,
-    description?: string,
-    titleDescription?:string,
-    numberOfPlayers?: string,
-    developer?: string,
-    clasification?:string,
-    size?:string,
-    rating?:string
+    lunchDate: string,
+    category: string,
+    console:string,
+    description: string,
+    titleDescription:string,
+    numberOfPlayers: string,
+    developer: string,
+    clasification:string,
+    size:string,
+    rating:string
 }
 export interface GameCartItemType extends BasicProductType {
     stock: number,
