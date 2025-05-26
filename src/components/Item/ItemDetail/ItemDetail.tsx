@@ -25,9 +25,9 @@ const ItemDetail = ({ ...producto }: FullProductType) => {
     <>
       <Container scss="container-center">
       <CardItemDetail
-          img={producto.img}
-          title={producto.name}
-          price={producto.price}
+          // img={producto.img}
+          // title={producto.name}
+          // price={producto.price}
           addQuantity={agregarCantidad}
           handleQuantity={handleQuantity}
           product={producto}

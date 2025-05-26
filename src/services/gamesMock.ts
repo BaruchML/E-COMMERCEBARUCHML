@@ -5,8 +5,8 @@ export const games: FullProductType[] = [
         id: "1",
         name: "Gothic Dania Town",
         img: "/img/goth-1.png",
-        price: 1000,
-        stock: 50, // Ajustado a un valor de stock más realista
+        price: 1099,
+        stock: 0, 
         info: {
             category: 'Aventura',
             clasification: 'E (Everyone)',
@@ -24,7 +24,7 @@ export const games: FullProductType[] = [
         id: "28",
         name: "Tech Dungeon",
         img: "/img/tech-dungeon-1.png",
-        stock: 120, // Ajustado a un valor de stock más realista
+        stock: 120, 
         price: 2000,
         info: {
             category: 'RPG',
@@ -43,10 +43,10 @@ export const games: FullProductType[] = [
         id: "17",
         name: "Burnoutt",
         img: "/img/burnoutt-1.jpg",
-        stock: 80, // Asumiendo stock disponible
-        price: 1500, // Asumiendo un precio
+        stock: 80, 
+        price: 1500, 
         info: {
-            category: 'Acción',
+            category: 'Accion',
             clasification: 'E10+ (Everyone 10+)',
             console: 'Xbox 360',
             description: 'Siente la adrenalina en Burnoutt, un frenético juego de carreras arcade donde la velocidad no es el único objetivo. Provoca colisiones espectaculares, realiza derrapes imposibles y utiliza el nitro para dejar a tus oponentes en el polvo. Con una amplia gama de vehículos personalizables y modos de juego que van desde carreras callejeras hasta desafíos de destrucción, Burnoutt es el paraíso para los amantes de la velocidad y el caos vehicular. Prepárate para quemar el asfalto y dejar tu marca.',
@@ -62,8 +62,8 @@ export const games: FullProductType[] = [
         id: "8",
         name: "Warped",
         img: "/img/warped-1.png",
-        stock: 65, // Asumiendo stock disponible
-        price: 1800, // Asumiendo un precio
+        stock: 65, 
+        price: 1800, 
         info: {
             category: 'RPG',
             clasification: 'T (Teen)',
@@ -81,8 +81,8 @@ export const games: FullProductType[] = [
         id: "3",
         name: "Sunny Land",
         img: "/img/sunnyland-1.png",
-        stock: 200, // Asumiendo stock disponible
-        price: 800, // Asumiendo un precio
+        stock: 200, 
+        price: 800, 
         info: {
             category: 'Aventura',
             clasification: 'E (Everyone)',
@@ -100,8 +100,8 @@ export const games: FullProductType[] = [
         id: "7",
         name: "Tiny Swords",
         img: "/img/tiny-swords-1.png",
-        stock: 90, // Asumiendo stock disponible
-        price: 1200, // Asumiendo un precio
+        stock: 90, 
+        price: 1200, 
         info: {
             category: 'Rol',
             clasification: 'E10+ (Everyone 10+)',
@@ -119,8 +119,8 @@ export const games: FullProductType[] = [
         id: "9",
         name: "World Travel",
         img: "/img/world-travel-1.png",
-        stock: 70, // Asumiendo stock disponible
-        price: 1300, // Asumiendo un precio
+        stock: 70, 
+        price: 1300, 
         info: {
             category: 'Estrategia',
             clasification: 'E (Everyone)',
@@ -138,10 +138,10 @@ export const games: FullProductType[] = [
         id: "4",
         name: "Alien Royal",
         img: "/img/alien-crash-1.jpg",
-        stock: 40, // Asumiendo stock disponible
-        price: 2200, // Asumiendo un precio
+        stock: 40, 
+        price: 2200, 
         info: {
-            category: 'Acción',
+            category: 'Accion',
             clasification: 'M (Mature 17+)',
             console: 'PC',
             description: 'Lucha por la supervivencia en Alien Royal, un intenso shooter de ciencia ficción donde eres el último bastión de la humanidad contra una invasión alienígena implacable. Explora entornos post-apocalípticos, recolecta armas exóticas y utiliza habilidades especiales para repeler a las hordas extraterrestres. Con un sistema de combate dinámico y gráficos impresionantes, Alien Royal te sumerge en una guerra desesperada por el futuro de la Tierra. ¿Serás capaz de resistir el asalto final?',
@@ -157,10 +157,10 @@ export const games: FullProductType[] = [
         id: "5",
         name: "Space Wars",
         img: "/img/space-wars-3.png",
-        stock: 110, // Asumiendo stock disponible
-        price: 1900, // Asumiendo un precio
+        stock: 110, 
+        price: 1900, 
         info: {
-            category: 'Acción',
+            category: 'Accion',
             clasification: 'T (Teen)',
             console: 'PC',
             description: 'Prepárate para el combate estelar en Space Wars, un juego de acción espacial con batallas épicas entre naves. Pilota tu propia nave de guerra, personaliza su armamento y participa en intensos dogfights en el vacío del espacio. Únete a una facción, completa misiones desafiantes y explora galaxias vastas llenas de asteroides, estaciones espaciales y peligrosos piratas. La supervivencia depende de tu habilidad para maniobrar y disparar con precisión.',
@@ -176,8 +176,8 @@ export const games: FullProductType[] = [
         id: "6",
         name: "Sunny Land Forest Illusion",
         img: "/img/sunnylandFI-1.png",
-        stock: 180, // Asumiendo stock disponible
-        price: 900, // Asumiendo un precio
+        stock: 180, 
+        price: 900, 
         info: {
             category: 'Aventura',
             clasification: 'E (Everyone)',
@@ -195,8 +195,8 @@ export const games: FullProductType[] = [
         id: "2",
         name: "RPG BATTLE",
         img: "/img/rpg-battle-1.png",
-        stock: 95, // Asumiendo stock disponible
-        price: 1700, // Asumiendo un precio
+        stock: 95, 
+        price: 1700, 
         info: {
             category: 'RPG',
             clasification: 'T (Teen)',
@@ -214,8 +214,8 @@ export const games: FullProductType[] = [
         id: "10",
         name: "Farm Defense",
         img: "/img/farm-defense-1.jpg",
-        stock: 150, // Asumiendo stock disponible
-        price: 700, // Asumiendo un precio
+        stock: 150, 
+        price: 700, 
         info: {
             category: 'Estrategia',
             clasification: 'E (Everyone)',
@@ -233,8 +233,8 @@ export const games: FullProductType[] = [
         id: "12",
         name: "Nightfall 2",
         img: "/img/nightfall-3.jpg",
-        stock: 75, // Asumiendo stock disponible
-        price: 2500, // Asumiendo un precio
+        stock: 75, 
+        price: 2500, 
         info: {
             category: 'Rol',
             clasification: 'M (Mature 17+)',
@@ -252,8 +252,8 @@ export const games: FullProductType[] = [
         id: "13",
         name: "Mineraft",
         img: "/img/mineraft-1.png",
-        stock: 300, // Asumiendo stock disponible
-        price: 1200, // Asumiendo un precio
+        stock: 300, 
+        price: 1200, 
         info: {
             category: 'Aventura',
             clasification: 'E (Everyone)',
@@ -271,8 +271,8 @@ export const games: FullProductType[] = [
         id: "14",
         name: "Poker",
         img: "/img/poker-1.png",
-        stock: 500, // Asumiendo stock disponible
-        price: 200, // Asumiendo un precio
+        stock: 500, 
+        price: 200, 
         info: {
             category: 'Casual',
             clasification: 'E (Everyone)',
@@ -290,8 +290,8 @@ export const games: FullProductType[] = [
         id: "15",
         name: "Ninja Adventure",
         img: "/img/notice-1.png",
-        stock: 130, // Asumiendo stock disponible
-        price: 1100, // Asumiendo un precio
+        stock: 130, 
+        price: 1100, 
         info: {
             category: 'Aventura',
             clasification: 'E (Everyone)',
@@ -309,8 +309,8 @@ export const games: FullProductType[] = [
         id: "16",
         name: "Golden Pirates",
         img: "/img/golden-pirates-1.jpg",
-        stock: 85, // Asumiendo stock disponible
-        price: 1600, // Asumiendo un precio
+        stock: 85, 
+        price: 1600, 
         info: {
             category: 'Rol',
             clasification: 'T (Teen)',
@@ -328,8 +328,8 @@ export const games: FullProductType[] = [
         id: "18",
         name: "Casino",
         img: "/img/casino-1.jpg",
-        stock: 400, // Asumiendo stock disponible
-        price: 300, // Asumiendo un precio
+        stock: 400, 
+        price: 300, 
         info: {
             category: 'Casual',
             clasification: 'E (Everyone)',
@@ -347,8 +347,8 @@ export const games: FullProductType[] = [
         id: "19",
         name: "CatleMania",
         img: "/img/castlemania-1.png",
-        stock: 60, // Asumiendo stock disponible
-        price: 2100, // Asumiendo un precio
+        stock: 60, 
+        price: 2100, 
         info: {
             category: 'RPG',
             clasification: 'T (Teen)',
@@ -366,8 +366,8 @@ export const games: FullProductType[] = [
         id: "20",
         name: "The Graveyard 3",
         img: "/img/graveyard-1.jpg",
-        stock: 55, // Asumiendo stock disponible
-        price: 1400, // Asumiendo un precio
+        stock: 55, 
+        price: 1400, 
         info: {
             category: 'Estrategia',
             clasification: 'T (Teen)',
@@ -385,8 +385,8 @@ export const games: FullProductType[] = [
         id: "21",
         name: "Land Monster",
         img: "/img/land-monster-1.png",
-        stock: 70, // Asumiendo stock disponible
-        price: 1350, // Asumiendo un precio
+        stock: 70, 
+        price: 1350, 
         info: {
             category: 'Estrategia',
             clasification: 'E10+ (Everyone 10+)',
@@ -404,10 +404,10 @@ export const games: FullProductType[] = [
         id: "22",
         name: "Lune Blade",
         img: "/img/lune-blade-1.jpg",
-        stock: 45, // Asumiendo stock disponible
-        price: 2300, // Asumiendo un precio
+        stock: 45, 
+        price: 2300, 
         info: {
-            category: 'Acción',
+            category: 'Accion',
             clasification: 'M (Mature 17+)',
             console: 'PlayStation 5',
             description: 'Desenvaina la legendaria Lune Blade en este trepidante juego de acción y combate hack-and-slash. Enfréntate a demonios y criaturas sobrenaturales en un mundo oscuro y estilizado. Domina un sistema de combate fluido con combos devastadores, habilidades mágicas y parrys precisos. Explora vastos niveles llenos de secretos, mejora tu arma y descubre la verdad detrás de la maldición que asola la tierra. Prepárate para una experiencia de combate visceral y desafiante.',
@@ -423,8 +423,8 @@ export const games: FullProductType[] = [
         id: "23",
         name: "Monster Enemy",
         img: "/img/monster-enemy-1.webp",
-        stock: 60, // Asumiendo stock disponible
-        price: 1850, // Asumiendo un precio
+        stock: 60, 
+        price: 1850, 
         info: {
             category: 'Rol',
             clasification: 'T (Teen)',
@@ -442,8 +442,8 @@ export const games: FullProductType[] = [
         id: "24",
         name: "Oak Woods",
         img: "/img/oak-woods-1.png",
-        stock: 90, // Asumiendo stock disponible
-        price: 1000, // Asumiendo un precio
+        stock: 90, 
+        price: 1000, 
         info: {
             category: 'Estrategia',
             clasification: 'E (Everyone)',
@@ -461,8 +461,8 @@ export const games: FullProductType[] = [
         id: "25",
         name: "Plane Sprite",
         img: "/img/plane-sprite-1.jpg",
-        stock: 150, // Asumiendo stock disponible
-        price: 600, // Asumiendo un precio
+        stock: 150, 
+        price: 600, 
         info: {
             category: 'Casual',
             clasification: 'E (Everyone)',
@@ -480,8 +480,8 @@ export const games: FullProductType[] = [
         id: "26",
         name: "Puzzle",
         img: "/img/puzzle-1.png",
-        stock: 250, // Asumiendo stock disponible
-        price: 400, // Asumiendo un precio
+        stock: 250, 
+        price: 400, 
         info: {
             category: 'Casual',
             clasification: 'E (Everyone)',
@@ -499,8 +499,8 @@ export const games: FullProductType[] = [
         id: "27",
         name: "Spell Master",
         img: "/img/spell-master-1.jpg",
-        stock: 80, // Asumiendo stock disponible
-        price: 1950, // Asumiendo un precio
+        stock: 80, 
+        price: 1950, 
         info: {
             category: 'RPG',
             clasification: 'T (Teen)',

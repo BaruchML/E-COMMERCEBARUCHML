@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { GameCartItemType } from "../../../types/componentTypes";
-import "./Contador.css"
 import { Link } from "react-router-dom";
+import Button from "../../ui/Button";
 
 interface ContadorType {
     inicial: number,
@@ -36,12 +36,12 @@ const Contador = ({ inicial, producto, funcionAgregar }: ContadorType) => {
                 {/* <button className="btn" onClick={restaContdor}> - </button> */}
                 {/* <strong>{contador}</strong> */}
                 {/* <button className="btn" onClick={sumaContador}> + </button> */}
-                <div >
+                <div>
                     {producto.stock < contador
                         ? <div>
                             <p>Lo sentimos, estamos en espera de que lleguen mas copias de este juego. ¡Puedes ver más aqui!.</p>
-                            <Link to={'/shop'}><button className="btnAgregar" onClick={() => { funcionAgregar(contador) }}>Ver mas Juegos </button></Link></div>
-                        : <button className="btnAgregar" onClick={() => { funcionAgregar(contador) }}>Agregar al carrito</button>}
+                            <Link to={'/shop'}><Button scss="btn_item-detail" onClickEvent={() => { funcionAgregar(contador) }}>Ver mas Juegos </Button></Link></div>
+                        : <Button scss="btn_item-detail" onClickEvent={() => { funcionAgregar(contador) }}>Agregar al carrito</Button>}
 
                 </div>
             </div>

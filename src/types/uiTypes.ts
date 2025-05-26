@@ -25,12 +25,19 @@ export interface CardFooterPropType extends CardPropType{
     demo: boolean
 }
 export interface CardItemPropType extends CardPropType{
-    price?:number
-    stock?: number
     handleQuantity:(quantity:number) => void
     addQuantity:number
     product:FullProductType
 }
+
+//* Si sigue comentado entonces mejor borrarlo
+// export interface CardItemDetailPropType extends CardPropType{
+//     price:number
+//     stock?: number
+//     handleQuantity:(quantity:number) => void
+//     addQuantity:number
+//     product:FullProductType
+// }
 
 
 export interface ListType {
