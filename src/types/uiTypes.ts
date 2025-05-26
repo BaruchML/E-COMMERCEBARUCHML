@@ -28,6 +28,7 @@ export interface CardItemPropType extends CardPropType{
     handleQuantity:(quantity:number) => void
     addQuantity:number
     product:FullProductType
+
 }
 
 //* Si sigue comentado entonces mejor borrarlo

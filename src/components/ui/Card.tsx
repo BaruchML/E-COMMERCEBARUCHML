@@ -156,7 +156,7 @@ export const CardItemDetail = ({ scss, addQuantity, handleQuantity, product }: C
                 </div>
                 <div className="card-item-detail_info">
                     <div className="card-item-detail_column">
-                        <div style={{ background: 'yellow', width: '100%' }}>
+                        <div className="card-item-detail-column_info ">
 
                             <h1>{product.name}</h1>
                             <p>Fecha de lanzamiento: {product.info.lunchDate}</p>
@@ -164,14 +164,16 @@ export const CardItemDetail = ({ scss, addQuantity, handleQuantity, product }: C
                             <p>Cantidad de Jugadores: {product.info.numberOfPlayers}</p>
 
                         </div>
-                        <div style={{ background: 'yellow', width: '100%' }}>
+                        <div className="card-item-detail-column_info ">
                             <h2 >{formatCurrency(product.price)}</h2>
-                            {addQuantity > 0
+                            {addQuantity > 0 
                                 ? (<Link to="/cart"><Button scss='btn_item-detail'>Terminar Compra</Button></Link>)
                                 : (<Contador inicial={1} producto={product}
                                     funcionAgregar={handleQuantity} />)
                             }
+                            {addQuantity > 0 && <Link to={'/shop'}><Button scss="btn_item-detail">Ver mas Juegos </Button></Link>}
                         </div>
+                     
                     </div>
 
                 </div>
