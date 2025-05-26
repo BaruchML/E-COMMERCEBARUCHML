@@ -13,7 +13,7 @@ const Cart = () => {
     if (!user) {
         return (
             <Container scss='container-center'>
-                <Button onClickEvent={() => loadUser({ id: 1, name: 'baruch' })} >Log in</Button>
+                <Button onClickEvent={() => loadUser({ id: 1, name: 'baruch',state:"no-loged" })} >Log in</Button>
             </Container>
         )
     }

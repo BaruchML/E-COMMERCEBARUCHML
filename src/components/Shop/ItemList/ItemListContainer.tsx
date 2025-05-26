@@ -10,13 +10,13 @@ import { getSearchedGames } from '../../../utils/gamesFunctions';
 const ItemListContainer = ({ queryMock, category }: SearchPropType) => {
   const [games, setGames] = useState<GameShowCardType[]>([])
       useEffect(() => {
-        if (category) {
+        // if (category) {
           
-          console.log({categoryItemList:category});
-        }else{
-                  console.log({categoryItemList:'no hay'});
+        //   console.log({categoryItemList:category});
+        // }else{
+        //           console.log({categoryItemList:'no hay'});
 
-        }
+        // }
         
     const gamesFetch = async () => {
       try {

@@ -16,7 +16,7 @@ function Shop() {
         setQuery('')
         setCategoryGame(category)
     }
-    const cleanSearch = (/* e: React.MouseEvent<HTMLButtonElement, MouseEvent> */) => {
+    const cleanSearch = () => {
         setQuery('')
         setCategoryGame(null)
     }

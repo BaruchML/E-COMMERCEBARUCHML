@@ -1,38 +1,37 @@
 import { useState, createContext, } from "react"
-import {ChildrenContextProps,UserContextType, UserType } from "../../types/componentTypes";
+import {ChildrenContext,UserContextType, UserType } from "../../types/componentTypes";
 
 export const UserContext = createContext<UserContextType>({
     user: null,
-    state:'no-loged',
-    loadUser: ({id, name}:UserType) =>{} ,
+    loadUser: ({id, name,state}:UserType) =>{} ,
     logOut:() => {},
     
 });
 
-export const UserProvider = ({ children }:ChildrenContextProps) => {
+export const UserProvider = ({ children }:ChildrenContext) => {
 
     const [user, setUser] = useState<UserType|null>(null);
-    const [state, setState] = useState<'no-loged' | 'logging'| 'logged'>('no-loged');// se van a enviar estos dos estados
+    // const [state, setState] = useState<'no-loged' | 'logging'| 'logged'>('no-loged');// se van a enviar estos dos estados
 
-    const loadUser = ({id, name}:UserType) => {
+    const loadUser = ({id, name,state}:UserType) => {
        const stateInLoggin = state === 'logged'
 
         if (stateInLoggin) {
             return user
         } else {
-            setUser({id,name})    
-            setState('logged')
+            setUser({id,name,state:'logged'})    
+            // setState('logged')
         }
     }
 
     const logOut = () => {
         setUser(null);
-        setState('no-loged')
+        // setState('no-loged')
     }
 
     return (
 
-        <UserContext.Provider value={{user,state,loadUser,logOut}}>
+        <UserContext.Provider value={{user,loadUser,logOut}}>
             {children}
         </UserContext.Provider>
     )

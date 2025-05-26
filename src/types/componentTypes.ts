@@ -1,11 +1,14 @@
-export interface ChildrenContextProps {
+export interface ContainerPropsType {
     scss?: string
-    children?: React.ReactNode;
+    children: React.ReactNode;
     title?: string,
     clean?: boolean,
-
-
 }
+export interface ChildrenContext {
+    children: React.ReactNode;
+}
+
+
 export interface CartContextType {
     cart: GameCartType[],
     total: number,
@@ -21,7 +24,7 @@ export interface SearchPropType {
     queryMock?: string,
     category?: string | null
     handleEvent?: (e: React.ChangeEvent<HTMLInputElement>) => void | string
-    onClickEvent?: (category: string) => void
+    onClickEvent?:(category: string) => void
     cleanCategory?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 
@@ -32,13 +35,25 @@ export type BasicProductType = {
 }
 
 export interface GameShowCardType extends BasicProductType {
-    img?: string,
+    img: string,
+    info:GameShowInformationType,
+        category: string,
+}
+export interface GameShowInformationType {
+    lunchDate?: string,
+
+    console?:string,
     description?: string,
-    category?: string
+    titleDescription?:string,
+    numberOfPlayers?: string,
+    developer?: string,
+    clasification?:string,
+    size?:string,
+    rating?:string
 }
 export interface GameCartItemType extends BasicProductType {
     stock: number,
-    price?: number
+    price: number
 }
 
 
@@ -56,14 +71,13 @@ export interface GameCartType {
 export interface UserType {
     id: number,
     name: string,
-    status?: boolean
-
+    state: 'no-loged' | 'logging' | 'logged'
 }
 
 export interface UserContextType {
     user: UserType | null,
-    state: 'no-loged' | 'logging' | 'logged',
-    loadUser: ({ id, name }: UserType) => void,
+    // state: 'no-loged' | 'logging' | 'logged',
+    loadUser: ({ id, name,state }: UserType) => void,
     logOut: () => void
 }
 

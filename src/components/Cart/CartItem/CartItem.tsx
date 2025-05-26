@@ -1,9 +1,10 @@
 
 import { useContext } from "react"
-import { CartContext, ItemType } from "../../context/CartContext";
+import { GameCartType } from "../../../types/componentTypes";
+import { CartContext } from "../../context/CartContext";
 import './CartItem.css'
 
-const CartItem = ({ item, quantity }:ItemType) => {
+const CartItem = ({ item, quantity }:GameCartType) => {
   const { eraseProduct } = useContext(CartContext);
   return (
     <div className="divCartItem">

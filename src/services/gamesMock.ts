@@ -4,11 +4,11 @@ export const games: FullProductType[] = [
     {
         id: "1",
         name: "Gothic Dania Town",
-        description: 'Lorem',
         img: "/img/goth-1.png",
         category: 'Aventura',
         price:1000,
-        stock:0
+        stock:0,
+        // info:{category:'Aventura'},
     },
     {
         id: "28",
@@ -16,7 +16,8 @@ export const games: FullProductType[] = [
         description: 'Lorem',
         img: "/img/tech-dungeon-1.png",
         category: 'RPG',
-        stock:1
+        stock:1,
+        price:2000,
 
     },
     {

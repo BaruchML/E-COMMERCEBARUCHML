@@ -1,7 +1,7 @@
-import { ChildrenContextProps } from "../../types/componentTypes"
+import { ContainerPropsType } from "../../types/componentTypes"
 
 
-export const Container: React.FC<ChildrenContextProps> = ({ children, scss, title,clean=false }) => {
+export const Container: React.FC<ContainerPropsType> = ({ children, scss, title,clean=false }) => {
 
     return (
         <>
@@ -21,7 +21,7 @@ export const Container: React.FC<ChildrenContextProps> = ({ children, scss, titl
 
 
 
-export const ContainerListItems: React.FC<ChildrenContextProps> = ({ children, scss, title,clean=false }) => {
+export const ContainerListItems: React.FC<ContainerPropsType> = ({ children, scss, title,clean=false }) => {
 
     return (
         <>
