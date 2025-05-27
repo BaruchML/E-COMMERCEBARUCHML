@@ -9,9 +9,9 @@
     justify-content: space-between;
     background-color: red;
     &:hover {
-        & p {
+        // & p {
             // color: variables.$color-red-base;
-        }
+        // }
 
         & .card-img-text-container-ar-left img {
             transform: scale(1.1);

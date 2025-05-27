@@ -50,7 +50,7 @@ const ItemDetailContainer = () => {
     <div>
       <ItemDetail {...producto} />
       <InfoItemDetail {...producto}/>
-      <FeaturesItemDetail/>
+      <FeaturesItemDetail {...producto}/>
     </div>
   )
 }

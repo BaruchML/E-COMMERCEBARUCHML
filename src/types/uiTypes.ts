@@ -1,4 +1,4 @@
-import { FullProductType } from "./componentTypes"
+import { FullProductType, GameShowCardType } from "./componentTypes"
 
 
 export interface ButtonPropType {
@@ -24,6 +24,11 @@ export interface CardFooterPropType extends CardPropType{
     list: ListType[]
     demo: boolean
 }
+export interface CardFeaturePropType extends CardPropType{
+    feature: FeatureType
+    productInfo: string
+    // demo: boolean
+}
 export interface CardItemPropType extends CardPropType{
     handleQuantity:(quantity:number) => void
     addQuantity:number
@@ -44,4 +49,9 @@ export interface CardItemPropType extends CardPropType{
 export interface ListType {
     subtitle: string,
     link: string
+}
+
+export interface FeatureType {
+    title:string,
+    icon:string
 }

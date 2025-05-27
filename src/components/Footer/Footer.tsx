@@ -1,13 +1,12 @@
 import Container from "../ui/container"
 import { CardFooter } from "../ui/Card"
 import { footerList, footerIcons } from "../../services/footerMock"
-import { useState } from "react"
 import { Link } from "react-router-dom"
 
 
 
 const Footer = () => {
-    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+    
     return (
         <>
 
@@ -26,8 +25,6 @@ const Footer = () => {
                         return (
                             <Link key={index} to={item.url}>
                                 <iconify-icon  icon={item.icon} width="32" height="32"
-                                    onMouseEnter={() => setHoveredIndex(index)}
-                                    onMouseLeave={() => setHoveredIndex(null)}
                                 ></iconify-icon>
                             </Link>
                         )

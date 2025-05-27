@@ -1,5 +1,5 @@
 import Button from "./Button"
-import { CardFooterPropType, CardItemPropType, CardPropType } from "../../types/uiTypes"
+import { CardFeaturePropType, CardFooterPropType, CardItemPropType, CardPropType } from "../../types/uiTypes"
 import { Link } from "react-router-dom"
 import Contador from "../Cart/Contador/Contador"
 import { formatCurrency } from "../../utils/formatCurrency"
@@ -199,6 +199,19 @@ export const CardTextLeftItemDetail = ({ scss, text, img, title }: CardPropType)
                 <div className="card-img-text-container-ar-right-detail">
                     <img src={img}></img>
                 </div>
+            </div>
+        </>
+    )
+}
+
+export const CardFeature = ({ scss, feature,productInfo}: CardFeaturePropType) => {
+    let demoOnly = (<p className="demo">DEMO ONLY</p>)
+    return (
+        <>
+            <div className={`card ${scss} `}>
+                <iconify-icon icon={feature.icon}></iconify-icon>
+                <h1>{feature.title} </h1>
+                <p>{productInfo}</p>
             </div>
         </>
     )
