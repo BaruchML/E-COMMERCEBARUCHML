@@ -367,7 +367,10 @@
     background-color: yellow;
     width: 100%;
     display: flex;
-    // min-height: 0px;
+    min-height: 50%;
     flex-direction: column;
     gap: 5px;
+    border-top: 1px solid black;
 }
+
+

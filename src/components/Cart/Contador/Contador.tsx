@@ -12,26 +12,26 @@ interface ContadorType {
 const Contador = ({ inicial, producto, funcionAgregar }: ContadorType) => {
     const [contador, setContador] = useState(inicial);
 
-    const sumaContador = () => {
-        if (producto.stock && contador < producto.stock ) {
-            setContador(contador + 1)
-        }
-    }
+    // const sumaContador = () => {
+    //     if (producto.stock && contador < producto.stock ) {
+    //         setContador(contador + 1)
+    //     }
+    // }
 
-    const restaContdor = () => {
-        if (contador > inicial) {
-            setContador(contador - 1)
-        }
-    }
+    // const restaContdor = () => {
+    //     if (contador > inicial) {
+    //         setContador(contador - 1)
+    //     }
+    // }
 
 
 
     return (
         <>
             <div className="divContador">
-             <button className="btn" onClick={restaContdor}> - </button>
+             {/* <button className="btn" onClick={restaContdor}> - </button>
              <strong>{contador}</strong>
-             <button className="btn" onClick={sumaContador}> + </button>
+             <button className="btn" onClick={sumaContador}> + </button> */}
                 <div>
                     {producto.stock < contador
                         ? <div>
