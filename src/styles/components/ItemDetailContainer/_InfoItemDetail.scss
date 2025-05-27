@@ -1,0 +1,23 @@
+.card_info-detail {
+    width: 85%;
+    // max-height: 90%;
+    padding: 1rem;
+    // border: 1px solid /* variables.$borders-grey */;
+    font-weight: bold;
+    border-radius: 30px;
+    display: flex;
+
+    &:hover {
+        & p {
+            // color: variables.$color-red-base;
+        }
+
+        & .card-img-text-container-ar-left img {
+            transform: scale(1.1);
+        }
+
+        & .card-img-text-container-ar-right img {
+            transform: scale(1.1);
+        }
+    }
+}
