@@ -2,6 +2,7 @@ import Button from "./Button"
 import { CardFooterPropType, CardItemPropType, CardPropType } from "../../types/uiTypes"
 import { Link } from "react-router-dom"
 import Contador from "../Cart/Contador/Contador"
+import { formatCurrency } from "../../utils/formatCurrency"
 
 
 export const Card = ({ scss }: CardPropType) => {
@@ -145,26 +146,36 @@ export const CardFooter = ({ scss, list, title, demo }: CardFooterPropType) => {
     )
 }
 
-export const CardItemDetail = ({ scss, img, title, price, addQuantity, handleQuantity, product }: CardItemPropType) => {
+export const CardItemDetail = ({ scss, addQuantity, handleQuantity, product }: CardItemPropType) => {
 
     return (
         <>
             <div className={`card ${scss}`}>
                 <div className="card-item-detail_img-ar">
-                    <img src={img} alt={title}></img>
+                    <img src={product.img} alt={product.name}></img>
                 </div>
                 <div className="card-item-detail_info">
                     <div className="card-item-detail_column">
+                        <div className="card-item-detail-column_info ">
 
-                        <h1>{title}</h1>
-                        <h2 >${price}</h2>
-                        {addQuantity > 0 ? (<Link to="/cart"><button className='btnCompra'>Terminar Compra</button></Link>) :
+                            <h1>{product.name}</h1>
+                            <p>Fecha de lanzamiento: {product.info.lunchDate}</p>
+                            <p>Consola: {product.info.console}</p>
+                            <p>Cantidad de Jugadores: {product.info.numberOfPlayers}</p>
 
-                            (<Contador inicial={1} producto={product}
-                                funcionAgregar={handleQuantity} />)
-                        }
-
+                        </div>
+                        <div className="card-item-detail-column_info ">
+                            <h2 >{formatCurrency(product.price)}</h2>
+                            {addQuantity > 0 
+                                ? (<Link to="/cart"><Button scss='btn_item-detail'>Terminar Compra</Button></Link>)
+                                : (<Contador inicial={1} producto={product}
+                                    funcionAgregar={handleQuantity} />)
+                            }
+                            {addQuantity > 0 && <Link to={'/shop'}><Button scss="btn_item-detail">Ver mas Juegos </Button></Link>}
+                        </div>
+                     
                     </div>
+
                 </div>
             </div>
         </>

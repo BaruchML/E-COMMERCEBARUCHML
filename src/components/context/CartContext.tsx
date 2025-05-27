@@ -1,5 +1,5 @@
 import { useState, createContext, } from "react"
-import { ChildrenContextProps, CartContextType, GameCartType, BasicProductType } from "../../types/componentTypes";
+import { ChildrenContext, CartContextType, GameCartType, BasicProductType } from "../../types/componentTypes";
 
 export const CartContext = createContext<CartContextType>({
     cart: [],
@@ -11,14 +11,14 @@ export const CartContext = createContext<CartContextType>({
     
 });
 
-export const CartProvider = ({ children }:ChildrenContextProps) => {
+export const CartProvider = ({ children }:ChildrenContext) => {
 
     const [cart, setCart] = useState<GameCartType[]>([]);
     const [total, setTotal] = useState(0);
-    const [totalQuantity, setTotalQuantity] = useState(0); //cambiar el nombre
-
+    const [totalQuantity, setTotalQuantity] = useState(0);
+//  * Añade varios productos al Cart,puede sumar varias cantidades del mismo producto, pero el boton de comprar solo agregara 1
     const addToCart = ({item, quantity}:GameCartType) => {
-        console.log({item,quantity,price:item.price,name:item.name});
+        // console.log({item,quantity,price:item.price,name:item.name});
         const existingProduct = cart.find(prod => prod.item.id === item.id);
 
         if (!existingProduct) {

@@ -55,9 +55,9 @@ export const getSearchedGames = (query: string = '', category: string | null = n
                 resolve(gamesFiltred)
             }else if (category) {
                 
-                const gamesFiltred = games.filter((game) => game.category?.toLowerCase().includes(category.toLowerCase()))
+                const gamesFiltred = games.filter((game) => game.info.category?.toLowerCase().includes(category.toLowerCase()))
                 console.log({ category });
-                query=''
+  
                 resolve(gamesFiltred)
             }
             
@@ -67,14 +67,14 @@ export const getSearchedGames = (query: string = '', category: string | null = n
     }
 }
 
-export const getCategoryGames = (category: string): Promise<GameShowCardType[]> => {
-    return new Promise((resolve) => {
-        if (category === null) {
-            resolve(games)
-        } else {
-            const gamesFiltred = games.filter((game) => game.category?.toLowerCase().includes(category.toLowerCase()))
-            resolve(gamesFiltred)
-        }
+// export const getCategoryGames = (category: string): Promise<GameShowCardType[]> => {
+//     return new Promise((resolve) => {
+//         if (category === null) {
+//             resolve(games)
+//         } else {
+//             const gamesFiltred = games.filter((game) => game.category?.toLowerCase().includes(category.toLowerCase()))
+//             resolve(gamesFiltred)
+//         }
         
-    })
-}
+//     })
+// }
