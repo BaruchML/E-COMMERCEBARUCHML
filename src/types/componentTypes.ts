@@ -35,7 +35,7 @@ export type BasicProductType = {
 }
 
 export interface GameShowCardType extends BasicProductType {
-    img: string,
+    img: string[],
     info:GameShowInformationType,
 }
 export interface GameShowInformationType {

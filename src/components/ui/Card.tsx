@@ -152,7 +152,7 @@ export const CardItemDetail = ({ scss, addQuantity, handleQuantity, product }: C
         <>
             <div className={`card ${scss}`}>
                 <div className="card-item-detail_img-ar">
-                    <img src={product.img} alt={product.name}></img>
+                    <img src={product.img[0]} alt={product.name}></img>
                 </div>
                 <div className="card-item-detail_info">
                     <div className="card-item-detail_column">
@@ -176,6 +176,28 @@ export const CardItemDetail = ({ scss, addQuantity, handleQuantity, product }: C
                      
                     </div>
 
+                </div>
+            </div>
+        </>
+    )
+}
+
+export const CardTextLeftItemDetail = ({ scss, text, img, title }: CardPropType) => {
+
+    return (
+        <>
+            <div className={`card ${scss}`}>
+                <div className="card-center-info-detail">
+                    <div className="card-center-column-detail">
+                        {/* <Link to={'/shop'}> */}
+                            <h2>{title}</h2>
+                            <p >{text}</p>
+                            {/* <Button scss="btn-link">Tienda</Button>
+                        </Link> */}
+                    </div>
+                </div>
+                <div className="card-img-text-container-ar-right-detail">
+                    <img src={img}></img>
                 </div>
             </div>
         </>

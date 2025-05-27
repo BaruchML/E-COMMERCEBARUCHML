@@ -39,7 +39,7 @@ const ItemListContainer = ({ queryMock, category }: SearchPropType) => {
     <>
       <ContainerListItems  clean title={`Juegos ${category != null ? 'tipo ' + category : ''}`}>
         {noGames}
-        {games.map(game => <CardGameSmall title={game.name} img={game.img} scss='card-small-shop' key={game.id} />)}
+        {games.map(game => <CardGameSmall title={game.name} img={game.img[0]} scss='card-small-shop' key={game.id} />)}
       </ContainerListItems>
     </>
   )

@@ -26,15 +26,15 @@ const News = () => {
     gamesFetch()
 
   }, [])
-  if (games.length === 0) {
-    return (
-      <Container />
-    )
-  }
+  // if (games.length === 0) {
+  //   return (
+  //     <Container />
+  //   )
+  // }
 
   return (
     <Container scss='container-sp-even' clean title='Los favoritos de siempre'>
-      {games.map(game => <CardGameSmall title={game.name} img={game.img} scss='card-small' key={game.id} />)}
+      {games.map(game => <CardGameSmall title={game.name} img={game.img[0]} scss='card-small' key={game.id} />)}
     </Container>
 
   )

@@ -4,7 +4,7 @@ export const games: FullProductType[] = [
    {
         id: "1",
         name: "Gothic Dania Town",
-        img: "/img/goth-1.png",
+        img: ["/img/goth-1.png","/img/goth-2.png","/img/goth-3.png"],
         price: 1099,
         stock: 0, 
         info: {
@@ -23,7 +23,7 @@ export const games: FullProductType[] = [
     {
         id: "28",
         name: "Tech Dungeon",
-        img: "/img/tech-dungeon-1.png",
+        img: ["/img/tech-dungeon-1.png","/img/tech-dungeon-2.png","/img/tech-dungeon-3.png"],
         stock: 120, 
         price: 2000,
         info: {
@@ -42,7 +42,7 @@ export const games: FullProductType[] = [
     {
         id: "17",
         name: "Burnoutt",
-        img: "/img/burnoutt-1.jpg",
+        img: ["/img/burnoutt-1.jpg","/img/burnoutt-2.jpg","/img/notice-3.png",],
         stock: 80, 
         price: 1500, 
         info: {
@@ -61,7 +61,7 @@ export const games: FullProductType[] = [
     {
         id: "8",
         name: "Warped",
-        img: "/img/warped-1.png",
+        img: ["/img/warped-1.png","/img/warped-2.png","/img/warped-3.png",],
         stock: 65, 
         price: 1800, 
         info: {
@@ -80,7 +80,7 @@ export const games: FullProductType[] = [
     {
         id: "3",
         name: "Sunny Land",
-        img: "/img/sunnyland-1.png",
+        img: ["/img/sunnyland-1.png","/img/sunnyland-2.png","/img/sunnyland-3.jpg"],
         stock: 200, 
         price: 800, 
         info: {
@@ -99,7 +99,7 @@ export const games: FullProductType[] = [
     {
         id: "7",
         name: "Tiny Swords",
-        img: "/img/tiny-swords-1.png",
+        img: ["/img/tiny-swords-1.png","/img/tiny-swords-2.png","/img/notice-5.png"],
         stock: 90, 
         price: 1200, 
         info: {
@@ -118,7 +118,7 @@ export const games: FullProductType[] = [
     {
         id: "9",
         name: "World Travel",
-        img: "/img/world-travel-1.png",
+        img: ["/img/world-travel-1.png","/img/world-travel-2.png","/img/world-travel-3.png",],
         stock: 70, 
         price: 1300, 
         info: {
@@ -137,7 +137,7 @@ export const games: FullProductType[] = [
     {
         id: "4",
         name: "Alien Royal",
-        img: "/img/alien-crash-1.jpg",
+        img: ["/img/alien-crash-1.jpg","/img/alien-crash-2.png","/img/alien-crash-3.png"],
         stock: 40, 
         price: 2200, 
         info: {
@@ -156,7 +156,7 @@ export const games: FullProductType[] = [
     {
         id: "5",
         name: "Space Wars",
-        img: "/img/space-wars-3.png",
+        img: ["/img/space-wars-3.png","/img/space-wars-1.png","/img/space-wars-2.png"],
         stock: 110, 
         price: 1900, 
         info: {
@@ -175,7 +175,7 @@ export const games: FullProductType[] = [
     {
         id: "6",
         name: "Sunny Land Forest Illusion",
-        img: "/img/sunnylandFI-1.png",
+        img: ["/img/sunnylandFI-1.png","/img/sunnylandFI-2.png","/img/sunnylandFI-3.png"],
         stock: 180, 
         price: 900, 
         info: {
@@ -194,7 +194,7 @@ export const games: FullProductType[] = [
     {
         id: "2",
         name: "RPG BATTLE",
-        img: "/img/rpg-battle-1.png",
+        img: ["/img/rpg-battle-1.png","/img/rpg-battle-2.png","/img/notice-6.png"],
         stock: 95, 
         price: 1700, 
         info: {
@@ -213,7 +213,7 @@ export const games: FullProductType[] = [
     {
         id: "10",
         name: "Farm Defense",
-        img: "/img/farm-defense-1.jpg",
+        img: ["/img/farm-defense-1.jpg","/img/farm-defense-2.png","/img/farm-defense-3.png"],
         stock: 150, 
         price: 700, 
         info: {
@@ -232,7 +232,7 @@ export const games: FullProductType[] = [
     {
         id: "12",
         name: "Nightfall 2",
-        img: "/img/nightfall-3.jpg",
+        img: ["/img/nightfall-3.jpg","/img/nightfall-1.png","/img/nightfall-2.png"],
         stock: 75, 
         price: 2500, 
         info: {
@@ -251,7 +251,7 @@ export const games: FullProductType[] = [
     {
         id: "13",
         name: "Mineraft",
-        img: "/img/mineraft-1.png",
+        img: ["/img/mineraft-1.png","/img/mineraft-2.jpg","/img/mineraft-3.png"],
         stock: 300, 
         price: 1200, 
         info: {
@@ -270,7 +270,7 @@ export const games: FullProductType[] = [
     {
         id: "14",
         name: "Poker",
-        img: "/img/poker-1.png",
+        img: ["/img/poker-1.png","/img/poker-2.jpg","/img/poker-3.jpg"],
         stock: 500, 
         price: 200, 
         info: {
@@ -289,7 +289,7 @@ export const games: FullProductType[] = [
     {
         id: "15",
         name: "Ninja Adventure",
-        img: "/img/notice-1.png",
+        img: ["/img/notice-1.png","/img/ninja-adventure-2.jpg","/img/ninja-adventure-3.jpg"],
         stock: 130, 
         price: 1100, 
         info: {
@@ -308,7 +308,7 @@ export const games: FullProductType[] = [
     {
         id: "16",
         name: "Golden Pirates",
-        img: "/img/golden-pirates-1.jpg",
+        img: ["/img/golden-pirates-1.jpg","/img/notice-4.png","/img/golden-pirates-2.png"],
         stock: 85, 
         price: 1600, 
         info: {
@@ -327,7 +327,7 @@ export const games: FullProductType[] = [
     {
         id: "18",
         name: "Casino",
-        img: "/img/casino-1.jpg",
+        img: ["/img/casino-1.jpg","/img/casino-2.jpg","/img/casino-3.jpg"],
         stock: 400, 
         price: 300, 
         info: {
@@ -346,7 +346,7 @@ export const games: FullProductType[] = [
     {
         id: "19",
         name: "CatleMania",
-        img: "/img/castlemania-1.png",
+        img: ["/img/castlemania-1.png","/img/castlemania-2.png","/img/castlemania-3.png"],
         stock: 60, 
         price: 2100, 
         info: {
@@ -365,7 +365,7 @@ export const games: FullProductType[] = [
     {
         id: "20",
         name: "The Graveyard 3",
-        img: "/img/graveyard-1.jpg",
+        img: ["/img/graveyard-1.jpg","/img/graveyard-2.jpg","/img/graveyard-3.jpg"],
         stock: 55, 
         price: 1400, 
         info: {
@@ -384,7 +384,7 @@ export const games: FullProductType[] = [
     {
         id: "21",
         name: "Land Monster",
-        img: "/img/land-monster-1.png",
+        img:[ "/img/land-monster-1.png", "/img/land-monster-2.png", "/img/land-monster-3.jpg"],
         stock: 70, 
         price: 1350, 
         info: {
@@ -403,7 +403,7 @@ export const games: FullProductType[] = [
     {
         id: "22",
         name: "Lune Blade",
-        img: "/img/lune-blade-1.jpg",
+        img: ["/img/lune-blade-1.jpg","/img/lune-blade-2.jpg","/img/lune-blade-3.jpg"],
         stock: 45, 
         price: 2300, 
         info: {
@@ -422,7 +422,7 @@ export const games: FullProductType[] = [
     {
         id: "23",
         name: "Monster Enemy",
-        img: "/img/monster-enemy-1.webp",
+        img: ["/img/monster-enemy-1.webp","/img/monster-enemy-2.webp","/img/monster-enemy-3.webp"],
         stock: 60, 
         price: 1850, 
         info: {
@@ -441,7 +441,7 @@ export const games: FullProductType[] = [
     {
         id: "24",
         name: "Oak Woods",
-        img: "/img/oak-woods-1.png",
+        img: ["/img/oak-woods-1.png","/img/oak-woods-2.png","/img/oak-woods-3.jpg"],
         stock: 90, 
         price: 1000, 
         info: {
@@ -460,7 +460,7 @@ export const games: FullProductType[] = [
     {
         id: "25",
         name: "Plane Sprite",
-        img: "/img/plane-sprite-1.jpg",
+        img: ["/img/plane-sprite-1.jpg","/img/plane-sprite-2.jpg","/img/plane-sprite-3.jpg"],
         stock: 150, 
         price: 600, 
         info: {
@@ -479,7 +479,7 @@ export const games: FullProductType[] = [
     {
         id: "26",
         name: "Puzzle",
-        img: "/img/puzzle-1.png",
+        img: ["/img/puzzle-1.png","/img/puzzle-2.png","/img/puzzle-3.png"],
         stock: 250, 
         price: 400, 
         info: {
@@ -498,7 +498,7 @@ export const games: FullProductType[] = [
     {
         id: "27",
         name: "Spell Master",
-        img: "/img/spell-master-1.jpg",
+        img: ["/img/spell-master-1.jpg","/img/spell-master-2.jpg","/img/spell-master-3.jpg"],
         stock: 80, 
         price: 1950, 
         info: {

@@ -42,15 +42,14 @@ const ItemDetailContainer = () => {
       <h1>Provisional</h1>
       </Container>
       <Info/>
-      <InfoItemDetail/>
+      {/* <InfoItemDetail/> */}
     </div>
   )
   }
   return (
     <div>
       <ItemDetail {...producto} />
-      {/* <Info/> */}
-      <InfoItemDetail/>
+      <InfoItemDetail {...producto}/>
       <FeaturesItemDetail/>
     </div>
   )
