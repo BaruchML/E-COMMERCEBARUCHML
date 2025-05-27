@@ -1,3 +1,5 @@
+@use '../../variables';
+
 .card_info-detail {
     width: 85%;
     // max-height: 90%;
@@ -7,6 +9,7 @@
     border-radius: 0px;
     display: flex;
     justify-content: space-between;
+
     // background-color: red;
     &:hover {
         box-shadow: none;
@@ -33,12 +36,24 @@
     justify-content: center;
     align-items: center;
 
+    & p {
+        text-align: justify;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        line-height: 20px;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+
 }
+
 .card-img-text-container-ar-right-detail {
     overflow: hidden;
     border-radius: 30px;
     width: 35%;
-    
+
     & img {
         width: 100%;
         max-height: 400px;
@@ -46,5 +61,15 @@
         z-index: 1;
         transition: transform 0.3s ease-in-out;
     }
+
+}
+
+.card-item-detail_title {
+    color: variables.$darkcolor-red-base ;
+    // text-transform: uppercase;
+    text-wrap: balance;
+      font-family: "Montserrat Alternates", sans-serif;
+  font-weight: bold;
+  font-style: normal;
 
 }
