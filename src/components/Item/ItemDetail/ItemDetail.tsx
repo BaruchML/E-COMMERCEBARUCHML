@@ -9,8 +9,7 @@ import Container from '../../ui/container';
 
 const ItemDetail = ({ ...producto }: FullProductType) => {
   const [agregarCantidad, setAgregarCantidad] = useState<number>(0);
-  const [itemAgregado,setItemAgregado] = useState(false)
-  const { addToCart,cart } = useContext(CartContext);
+  const { addToCart } = useContext(CartContext);
 
 
   const handleQuantity = (quantity: number) => {
@@ -29,9 +28,6 @@ const ItemDetail = ({ ...producto }: FullProductType) => {
     <>
       <Container clean scss="container-center">
       <CardItemDetail
-              // img={producto.img}
-          // title={producto.name}
-          // price={producto.price}
           addQuantity={agregarCantidad}
           handleQuantity={handleQuantity}
           product={producto}

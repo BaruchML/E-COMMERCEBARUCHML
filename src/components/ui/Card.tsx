@@ -158,14 +158,13 @@ export const CardItemDetail = ({ scss, addQuantity, handleQuantity, product }: C
                     <div className="card-item-detail_column">
                         <div className="card-item-detail-column_info ">
 
-                            <h1>{product.name}</h1>
+                            <h1 className="card-item-detail_name">{product.name}</h1>
                             <p>Fecha de lanzamiento: {product.info.lunchDate}</p>
                             <p>Consola: {product.info.console}</p>
-                            <p>Cantidad de Jugadores: {product.info.numberOfPlayers}</p>
 
                         </div>
                         <div className="card-item-detail-column_info ">
-                            <h2 >{formatCurrency(product.price)}</h2>
+                            <h1 >{formatCurrency(product.price)}</h1>
                             {addQuantity > 0 
                                 ? (<Link to="/cart"><Button scss='btn_item-detail'>Terminar Compra</Button></Link>)
                                 : (<Contador inicial={1} producto={product}
@@ -189,11 +188,8 @@ export const CardTextLeftItemDetail = ({ scss, text, img, title }: CardPropType)
             <div className={`card ${scss}`}>
                 <div className="card-center-info-detail">
                     <div className="card-center-column-detail">
-                        {/* <Link to={'/shop'}> */}
-                            <h2>{title}</h2>
+                            <h1 className="card-item-detail_title">{title}</h1>
                             <p >{text}</p>
-                            {/* <Button scss="btn-link">Tienda</Button>
-                        </Link> */}
                     </div>
                 </div>
                 <div className="card-img-text-container-ar-right-detail">

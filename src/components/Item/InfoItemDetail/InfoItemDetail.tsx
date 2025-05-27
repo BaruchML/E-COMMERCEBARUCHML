@@ -11,7 +11,6 @@ return(
     <>
             <Container clean title='Mas acerca de' scss='container-center' >    
                 <CardTextLeftItemDetail scss='card_info-detail' title={producto.info.titleDescription}text={producto.info.description}img={producto.img[1]}/>
-
             </Container>
         </>
 )
