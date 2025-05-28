@@ -1,13 +1,51 @@
-.container-features-detail{
-    background-color: aqua;
+.container-features-detail {
+    // background-color: aqua;
     width: 85%;
     display: flex;
     flex-direction: column;
+    gap: 40px;
+
+    & img {
+        max-width: 1260px;
+        align-self: center;
+    }
+
 }
 
-.card-feature-detail{
-    background-color: bisque;
+.card-feature-detail {
+    // background-color: bisque;
     width: 100%;
     padding: 0%;
     border-radius: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid grey;
+
+    & h2 {
+        font-family: "Montserrat Alternates", sans-serif;
+        margin-left: 10px;
+    }
+
+    & h3 {
+        font-weight: 400;
+    }
+
+    &:hover {
+        box-shadow: none;
+    }
+}
+
+
+.card-feature-detail-title {
+    // background-color: red;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    
+}
+
+.card-feature-detail-info {
+    // background-color: red;
+    width: 60%;
 }

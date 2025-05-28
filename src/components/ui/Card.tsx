@@ -205,9 +205,16 @@ export const CardFeature = ({ scss, feature,productInfo}: CardFeaturePropType) =
     return (
         <>
             <div className={`card ${scss} `}>
-                <iconify-icon icon={feature.icon}></iconify-icon>
-                <h1>{feature.title} </h1>
-                <p>{productInfo}</p>
+                <div className="card-feature-detail-title">
+
+                <iconify-icon icon={feature.icon} width="32" height="32"></iconify-icon>
+                
+                <h2>{feature.title} </h2>
+                </div>
+                <div className="card-feature-detail-info">
+
+                <h3>{productInfo}</h3>
+                </div>
             </div>
         </>
     )

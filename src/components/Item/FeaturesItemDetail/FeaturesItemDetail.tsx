@@ -9,7 +9,7 @@ export const FeaturesItemDetail = ({ ...producto }: GameShowCardType) => {
 
     return (
         <>
-            <Container title='Caracteristicas' scss='container-center' >
+            <Container clean title='Caracteristicas' scss='container-center' >
                 {/* <CardFeature scss='card_info-detail' listTitles={} /> */}
                 <div className='container-features-detail'>
                     <div>
