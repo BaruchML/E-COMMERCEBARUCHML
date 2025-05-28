@@ -61,7 +61,7 @@ export const games: FullProductType[] = [
     {
         id: "8",
         name: "Warped",
-        img: ["/img/warped-1.png","/img/warped-2.png","/img/warped-3.png",],
+        img: ["/img/warped-1.png","/img/warped-3.png","/img/warped-2.png"],
         stock: 65, 
         price: 1800, 
         info: {
@@ -99,7 +99,7 @@ export const games: FullProductType[] = [
     {
         id: "7",
         name: "Tiny Swords",
-        img: ["/img/tiny-swords-1.png","/img/tiny-swords-2.png","/img/notice-5.png"],
+        img: ["/img/tiny-swords-1.png","/img/tiny-swords-2.jpeg","/img/notice-5.png"],
         stock: 90, 
         price: 1200, 
         info: {

@@ -1,14 +1,25 @@
 @use 'variables';
+@use 'mixins';
+
 
 @use './components/ui/button';
 @use './components/ui/card';
 @use './components/ui/container';
 @use './components/ui/header';
-@use './components/ui/img';
 @use './components/ui/footer';
 
 // @use './components/HomePage/_Carousel';
 // @use './components/HomePage/_HomePage';
+
+
+//HOME PAGE
+@use './components/HomePage/Carousel';
+@use './components/HomePage/Info';
+@use './components/HomePage/News';
+@use './components/HomePage/Notice';
+
+
+//ITEM DETAIL CONTAINER
 @use './components/ItemDetailContainer/InfoItemDetail';
 @use './components/ItemDetailContainer/FeaturesItemDetail';
 @use './components/ItemDetailContainer/ItemDetail';

@@ -34,7 +34,7 @@ const News = () => {
 
   return (
     <Container scss='container-sp-even' clean title='Los favoritos de siempre'>
-      {games.map(game => <CardGameSmall title={game.name} img={game.img[0]} scss='card-small' key={game.id} />)}
+      {games.map(game => <CardGameSmall id={game.id} title={game.name} img={game.img[0]} scss='card-small' key={game.id} />)}
     </Container>
 
   )

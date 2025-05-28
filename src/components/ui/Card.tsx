@@ -25,7 +25,7 @@ export const CardTextLeft = ({ scss, text, img, title }: CardPropType) => {
                 <div className="card-img-text-container-ar-left">
                     <img src={img}></img>
                 </div>
-                <div className="card-center-info">
+                <div className="card-center">
                     <div className="card-center-column">
                         <Link to={'/shop'}>
                             <h2>{title}</h2>
@@ -44,7 +44,7 @@ export const CardTextRight = ({ scss, text, img, title }: CardPropType) => {
     return (
         <>
             <div className={`card ${scss}`}>
-                <div className="card-center-info">
+                <div className="card-center">
                     <div className="card-center-column">
                         <Link to={'/shop'}>
                             <h2>{title}</h2>
@@ -81,7 +81,7 @@ export const CardGameCarousel = ({ scss, text, title, img, id }: CardPropType) =
         </>
     )
 }
-export const CardGameSmall = ({ scss, text, title, img }: CardPropType) => {
+export const CardGameSmall = ({ scss, text, title, img,id }: CardPropType) => {
 
     return (
         <>
@@ -91,10 +91,11 @@ export const CardGameSmall = ({ scss, text, title, img }: CardPropType) => {
                     <img src={img}></img>
                 </div>
                 <div className="card-center">
-
                     <p>{title}</p>
                     {text && text}
+                    <Link to={`/item/${id}`}>
                     <Button scss="btn-card-small">Ver mas</Button>
+                    </Link>
                 </div>
 
             </div>
