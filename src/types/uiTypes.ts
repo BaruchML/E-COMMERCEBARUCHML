@@ -1,3 +1,4 @@
+import { noticeType } from "../services/noticesMock"
 import { FullProductType, GameShowCardType } from "./componentTypes"
 
 
@@ -34,6 +35,9 @@ export interface CardItemPropType extends CardPropType{
     addQuantity:number
     product:FullProductType
 
+}
+export interface CardNoticePropType extends CardPropType {
+    notice: noticeType
 }
 
 //* Si sigue comentado entonces mejor borrarlo

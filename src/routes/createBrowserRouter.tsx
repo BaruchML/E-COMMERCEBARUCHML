@@ -11,14 +11,15 @@ import Cart from '../components/Cart/Cart';
 import Checkout from '../components/Checkout/Checkout';
 import HomePage from '../components/HomePage/HomePage';
 import Shop from '../components/Shop/Shop';
+import NoticesPage from '../components/NoticePage/NoticePage';
 
 export const router = createBrowserRouter([{
     path: '/',
     element: <App/>,
   errorElement: <ErrorPage/>,
   children: [{
-        path: 'categoria/:idCategoria',
-        element: <ItemListContainer/>
+        path: '/notices',
+        element: <NoticesPage/>
     },
     {
         path: '/',

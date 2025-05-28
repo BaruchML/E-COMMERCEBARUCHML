@@ -29,7 +29,6 @@
 
     &:hover {
         box-shadow: 5px 10px 0px variables.$darkcolor-red-base;
-        background-color: variables.$bg-complem;
 
         & p {
             color: variables.$color-red-base;
@@ -65,20 +64,6 @@
 
 
 
-.card-small-shop {
-    border: 1px solid variables.$borders-grey;
-    transition: .5s ease;
-    padding: 1rem;
-
-    &:hover {
-        transform: scale(1.02);
-        box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.24);
-
-        & p {
-            color: variables.$color-red-base;
-        }
-    }
-}
 
 //Card Info
 
@@ -134,12 +119,13 @@
 
 }
 
-.card-center-notice {
+.card-center-notice-small {
     @include mixins.cardFlexColumnCenter();
-    width: 90%;
+
     text-align: center;
 
 }
+
 
 .card-center-column {
     @include mixins.cardFlexColumnCenter();
@@ -153,7 +139,7 @@
 
 }
 
-.card-notice {
+.card-notice-medium {
     width: 35%;
     padding: 0rem;
     border-radius: 10%;

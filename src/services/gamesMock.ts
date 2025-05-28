@@ -213,7 +213,7 @@ export const games: FullProductType[] = [
     {
         id: "10",
         name: "Farm Defense",
-        img: ["/img/farm-defense-1.jpg","/img/farm-defense-2.png","/img/farm-defense-3.png"],
+        img: ["/img/farm-defense-1.jpg","/img/farm-defense-3.png","/img/farm-defense-2.png"],
         stock: 150, 
         price: 700, 
         info: {
@@ -460,7 +460,7 @@ export const games: FullProductType[] = [
     {
         id: "25",
         name: "Plane Sprite",
-        img: ["/img/plane-sprite-1.jpg","/img/plane-sprite-2.jpg","/img/plane-sprite-3.jpg"],
+        img: ["/img/plane-sprite-2.jpg","/img/plane-sprite-1.jpg","/img/plane-sprite-3.jpg"],
         stock: 150, 
         price: 600, 
         info: {

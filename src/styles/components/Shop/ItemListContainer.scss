@@ -1,0 +1,16 @@
+@use '../../variables';
+
+.card-small-shop {
+    border: 1px solid variables.$borders-grey;
+    transition: .5s ease;
+    padding: 1rem;
+
+    &:hover {
+        transform: scale(1.048);
+        box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.24);
+
+        & p {
+            color: variables.$color-red-base;
+        }
+    }
+}

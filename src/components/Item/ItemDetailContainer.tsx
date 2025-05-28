@@ -21,6 +21,7 @@ const ItemDetailContainer = () => {
     gameId = idItem
   }
   useEffect(() => {
+     window.scrollTo(0, 0)
 
     const gameFetch = async () => {
       try {

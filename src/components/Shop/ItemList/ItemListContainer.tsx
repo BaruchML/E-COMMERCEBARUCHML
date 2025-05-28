@@ -17,7 +17,7 @@ const ItemListContainer = ({ queryMock, category }: SearchPropType) => {
         //           console.log({categoryItemList:'no hay'});
 
         // }
-        
+         window.scrollTo(0, 0)
     const gamesFetch = async () => {
       try {
         const resp = await getSearchedGames(queryMock,category);
@@ -39,7 +39,7 @@ const ItemListContainer = ({ queryMock, category }: SearchPropType) => {
     <>
       <ContainerListItems  clean title={`Juegos ${category != null ? 'tipo ' + category : ''}`}>
         {noGames}
-        {games.map(game => <CardGameSmall title={game.name} img={game.img[0]} scss='card-small-shop' key={game.id} />)}
+        {games.map(game => <CardGameSmall id={game.id} title={game.name} img={game.img[0]} scss='card-small-shop' key={game.id} />)}
       </ContainerListItems>
     </>
   )

@@ -18,8 +18,13 @@
 @use './components/HomePage/News';
 @use './components/HomePage/Notice';
 
+//SHOP
+@use './components/Shop/ItemListContainer.scss';
 
 //ITEM DETAIL CONTAINER
 @use './components/ItemDetailContainer/InfoItemDetail';
 @use './components/ItemDetailContainer/FeaturesItemDetail';
 @use './components/ItemDetailContainer/ItemDetail';
+
+//NOTICES
+@use './components/NoticePage/NoticePage'
