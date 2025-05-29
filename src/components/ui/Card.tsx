@@ -3,7 +3,12 @@ import { CardFeaturePropType, CardFooterPropType, CardItemPropType, CardLoginPro
 import { Link } from "react-router-dom"
 import Contador from "../Cart/Contador/Contador"
 import { formatCurrency } from "../../utils/formatCurrency"
+import { GameCartType } from "../../types/componentTypes"
+// import { CartContext } from "../context/CartContext"
+// import { useContext } from "react"
 
+
+// const { eraseProduct } = useContext(CartContext);
 
 export const Card = ({ scss }: CardPropType) => {
 
@@ -312,10 +317,29 @@ export const CardRegisterSuccess = ({ scss, }: CardPropType) => {
                 <h4>
                     Usuario Registrado con Exito
                 </h4>
-                <p>Revisa tu carrito!</p>
+                <p>¡Revisa tu carrito!</p>
                 <Link to={'/cart'}>
-                    <Button>Ir</Button>
+                    <Button scss="btn-register-success">Ir</Button>
                 </Link>
+            </div>
+        </>
+    )
+}
+export const CardCartItem = ({ item, quantity }: GameCartType) => {
+    return (
+        <>
+            <div className={`card card-cart-item`}>
+                {/* <div className="divCartItem"> */}
+                    <h3>{item.name}</h3>
+                    <img src={item.img[0]}></img>
+                    <p>Cantidad: {quantity}</p>
+                    <p>Precio: ${item.price}</p>
+                    {
+                        // eraseProduct && (<button className="buttonCartItem" onClick={() => eraseProduct(item)}>Eliminar</button>)
+                    }
+
+   
+                {/* </div> */}
             </div>
         </>
     )

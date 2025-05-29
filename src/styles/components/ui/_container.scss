@@ -170,3 +170,18 @@ input[type="email"] {
     align-items: center;
      min-height: 300px;
 }
+
+.container-cart{
+    // flex-direction: r;
+    justify-content: space-evenly;
+}
+
+.container-cart-items{
+    background-color: aqua;
+    width: 60%;
+}
+
+.container-cart-summary{
+    background-color: #ec2222;
+    width: 30%;
+}

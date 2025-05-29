@@ -41,7 +41,6 @@ export const UserProvider = ({ children }: ChildrenContext) => {
         if (user) {
             setUser({...user,state:'no-loged'});
         }
-     
     }
 
     return (

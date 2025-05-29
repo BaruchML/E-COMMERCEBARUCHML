@@ -50,7 +50,7 @@ function Register() {
         loadUser({ userData:{name,lastName,phoneNumber,email}, state: "no-loged" })
 
     };
-    if (!user) {
+    if (!user || user.state != 'logged') {
         return (
         <Container clean scss="container-center-login" title="Registrate">
             <CardRegister
@@ -67,9 +67,8 @@ function Register() {
     }
     return (
         <>
-        <Container  scss="container-center">
-            <CardRegisterSuccess/>
-
+        <Container clean  scss="container-center">
+            <CardRegisterSuccess scss="card-register"/>
         </Container>
         
         </>

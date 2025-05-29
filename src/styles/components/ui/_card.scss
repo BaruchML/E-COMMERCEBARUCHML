@@ -255,6 +255,28 @@
         }
     }
 }
+.card-register {
+    width: 20%;
+    border-radius: 10px;
+    border: 2px solid variables.$darkcolor-red-base;
+    box-shadow: 10px 10px 0px variables.$darkcolor-red-base;
+
+    &:hover {
+        // background-color: variables.$bg-complem;
+        // color: variables.$darkcolor-red-base;
+        box-shadow: 10px 10px 0px variables.$darkcolor-red-base;
+    }
+
+    & button {
+        padding: 3px;
+        margin-bottom: 2px;
+        width: 50%;
+        &:hover {
+            background-color: #ec2222;
+            transform: scale(1.03);
+        }
+    }
+}
 .form-login{
 
     display: flex;
@@ -264,4 +286,24 @@
     // margin: 1rem;
     background-color: #ffffff;
     font-family: "Montserrat", Helvetica, sans-serif;
+}
+
+.empty-cart{
+    justify-content: center;
+    & button{
+        margin-left: 10px;
+        padding: 5px;
+    }
+}
+
+.card-cart-item{
+    background-color: rgb(127, 168, 255);
+    width: 100%;
+    padding: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    & img{
+        max-width: 200px;
+    }
 }
