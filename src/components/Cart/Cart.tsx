@@ -11,8 +11,8 @@ import Login from "../Login/Login";
 const Cart = () => {
     const { user, logOut, } = useContext(UserContext)
     const { cart, cleanCart, total, totalQuantity } = useContext(CartContext);
-    console.log(user);
-    if (!user) {
+
+    if (user?.state==='no-loged') {
         return (
             <>
                 <Login />

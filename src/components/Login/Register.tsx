@@ -1,9 +1,7 @@
 import Container from "../ui/container";
 import { FormEvent, useContext, useState } from "react";
 import { UserContext } from "../context/UserContext";
-import {  CardRegister } from "../ui/Card";
-
-
+import {  CardRegister, CardRegisterSuccess } from "../ui/Card";
 
 function Register() {
     const { user,loadUser } = useContext(UserContext);
@@ -49,11 +47,11 @@ function Register() {
             return;
         }
         setError('');
-        loadUser({ name, state: "no-loged" })
+        loadUser({ userData:{name,lastName,phoneNumber,email}, state: "no-loged" })
 
     };
-
-    return (
+    if (!user) {
+        return (
         <Container clean scss="container-center-login" title="Registrate">
             <CardRegister
                 error={error}
@@ -65,6 +63,16 @@ function Register() {
                 handleSubmit={handleSubmit}
                 scss="card-login" />
         </Container>
+        );
+    }
+    return (
+        <>
+        <Container  scss="container-center">
+            <CardRegisterSuccess/>
+
+        </Container>
+        
+        </>
     );
 }
 

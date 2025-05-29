@@ -4,13 +4,19 @@ import { FormEvent, useContext, useState } from "react";
 import { UserContext } from "../context/UserContext";
 import { CardLogin } from "../ui/Card";
 import { Link } from "react-router-dom";
+import { UserDataType } from "../../types/componentTypes";
 
 
 function Login() {
-    const { loadUser } = useContext(UserContext);
+    const { user,loadUser,getUser } = useContext(UserContext);
     const [name, setName] = useState('');
     const [error, setError] = useState('');
-
+    const usuarioProvisional:UserDataType = {
+      name:name,
+      lastName:'algo',
+      phoneNumber: '1212121',
+      email:'algo@gmail'
+    }
     const handleName = (e: React.ChangeEvent<HTMLInputElement>) => {
         setName(e.target.value)
     }
@@ -18,9 +24,9 @@ function Login() {
     e.preventDefault();
     if (!name) {
       setError('Por favor, ingresa un nombre de usuario.');
-    } else {
-      setError('');
-      loadUser({ name, state: "no-loged" })
+    }else{
+      setError('')
+     loadUser({userData:usuarioProvisional,state:'no-loged'})
     }
   };
 

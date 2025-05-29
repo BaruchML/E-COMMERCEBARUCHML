@@ -3,7 +3,7 @@ import { ChildrenContext, UserContextType, UserType } from "../../types/componen
 
 export const UserContext = createContext<UserContextType>({
     user: null,
-    loadUser: ({ name, state }: UserType) => { },
+    loadUser: ({ userData, state }: UserType) => { },
     logOut: () => { },
     getUser: () => { }
 
@@ -12,22 +12,25 @@ export const UserContext = createContext<UserContextType>({
 export const UserProvider = ({ children }: ChildrenContext) => {
 
     const [user, setUser] = useState<UserType | null>(null);
-    console.log(user);
 
-
-    const loadUser = ({ name, state, }: UserType) => {
+    const loadUser = ({ userData, state, }: UserType) => {
         function generarId() {
             return Date.now().toString(36) + Math.random().toString(36).slice(2, 10);
         }
         const id = generarId()
         const stateInLoggin = state === 'logged'
-        if (name === '') {
-            console.log('que paso mr');
-        } else if (stateInLoggin) {
+       if (stateInLoggin) {
             return user
         } else {
-            setUser({ name: name, state: 'logged', id: id })
-            // setState('logged')
+            setUser({
+                userData: {
+                    name: userData.name,
+                    email: userData.email,
+                    phoneNumber: userData.phoneNumber,
+                    lastName: userData.lastName
+                },
+                state: 'logged', id: id
+            })
         }
     }
     const getUser = () => {
@@ -35,8 +38,10 @@ export const UserProvider = ({ children }: ChildrenContext) => {
     }
 
     const logOut = () => {
-        setUser(null);
-        // setState('no-loged')
+        if (user) {
+            setUser({...user,state:'no-loged'});
+        }
+     
     }
 
     return (
