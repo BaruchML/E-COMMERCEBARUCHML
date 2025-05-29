@@ -23,10 +23,10 @@ const Cart = () => {
     if (totalQuantity === 0) {
         return (
             <>
-                <Container scss='container-center'>
-                    <h2>No hay productos en el carrito. Compra o vete</h2>
-                    <Link to="/"><Button>Ver Productos</Button></Link>
-                    <Button onClickEvent={logOut} >Log out</Button>
+                <Container clean scss='container-center'>
+                    <h2>No hay productos en el carrito.</h2>
+                    <Link to="/shop"><Button>Ver Productos</Button></Link>
+                    <Button onClickEvent={logOut} >Cerrar Sesion</Button>
                 </Container>
                 <hr />
             </>

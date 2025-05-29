@@ -1,3 +1,4 @@
+import { FormEvent } from "react"
 import { noticeType } from "../services/noticesMock"
 import { FullProductType, GameShowCardType, UserType } from "./componentTypes"
 
@@ -41,8 +42,20 @@ export interface CardNoticePropType extends CardPropType {
 }
 export interface CardLoginPropType extends CardPropType {
     handleName: (e: React.ChangeEvent<HTMLInputElement>) => void,
-    loadUser: ({ name,state }: UserType) => void,
-    userName:string
+    handleSubmit: (e:FormEvent)=> void
+    userName:string,
+    error:string
+
+}
+export interface CardRegisterPropType extends CardPropType {
+    handleName: (e: React.ChangeEvent<HTMLInputElement>) => void,
+    handleLastName: (e: React.ChangeEvent<HTMLInputElement>) => void,
+    handlePhoneNumber: (e: React.ChangeEvent<HTMLInputElement>) => void,
+    handleEmail: (e: React.ChangeEvent<HTMLInputElement>) => void,
+    handleEmailConf: (e: React.ChangeEvent<HTMLInputElement>) => void,
+    handleSubmit: (e:FormEvent)=> void
+    error:string
+
 }
 
 

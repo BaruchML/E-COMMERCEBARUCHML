@@ -12,6 +12,7 @@ import Checkout from '../components/Checkout/Checkout';
 import HomePage from '../components/HomePage/HomePage';
 import Shop from '../components/Shop/Shop';
 import NoticesPage from '../components/NoticePage/NoticePage';
+import Register from '../components/Login/Register';
 
 export const router = createBrowserRouter([{
     path: '/',
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([{
     {
         path: '/shop',
         element: <Shop/>
+    },
+    {
+         path: '/register',
+        element: <Register/>
     }
     ],
 },

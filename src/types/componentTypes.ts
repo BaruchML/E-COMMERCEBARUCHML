@@ -80,7 +80,6 @@ export interface UserContextType {
     loadUser: ({ name,state }: UserType) => void,
     logOut: () => void
     getUser:()=> void
-
 }
 
 export interface CategoriesType {

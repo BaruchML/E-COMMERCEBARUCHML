@@ -1,5 +1,5 @@
-import Button from "./Button"
-import { CardFeaturePropType, CardFooterPropType, CardItemPropType, CardLoginPropType, CardNoticePropType, CardPropType } from "../../types/uiTypes"
+import Button, { ButtonSubmit } from "./Button"
+import { CardFeaturePropType, CardFooterPropType, CardItemPropType, CardLoginPropType, CardNoticePropType, CardPropType, CardRegisterPropType } from "../../types/uiTypes"
 import { Link } from "react-router-dom"
 import Contador from "../Cart/Contador/Contador"
 import { formatCurrency } from "../../utils/formatCurrency"
@@ -249,14 +249,54 @@ export const CardFeature = ({ scss, feature, productInfo }: CardFeaturePropType)
     )
 }
 
-export const CardLogin = ({ scss, handleName, loadUser, userName }: CardLoginPropType) => {
-
+export const CardLogin = ({ scss, handleName, handleSubmit, error }: CardLoginPropType) => {
     return (
         <>
             <div className={`card ${scss} `}>
-                <label> Nombre de Usuario </label>
-                <input type="text" placeholder="Solo escribe tu nombre" onChange={handleName}></input>
-                <Button onClickEvent={() => loadUser({ name: userName, state: "no-loged" })} >Iniciar Sesión</Button>
+                <form className="form-login" onSubmit={handleSubmit}>
+                    <label> Nombre de Usuario </label>
+                    <input type="text" placeholder="Solo escribe tu nombre" onChange={handleName}></input>
+                    {error && <span style={{ color: 'red', fontSize: '0.9em' }}>{error}</span>}
+                    <ButtonSubmit >Iniciar Sesión</ButtonSubmit>
+                </form>
+            
+            </div>
+        </>
+    )
+}
+export const CardRegister = ({ scss, handleName,handleEmail,handleLastName,handleEmailConf,handlePhoneNumber, handleSubmit, error }: CardRegisterPropType) => {
+    return (
+        <>
+            <div className={`card ${scss} `}>
+                <form onSubmit={handleSubmit}>
+                <div>
+                    <label htmlFor=''>Nombre</label>
+                    <input type="text" onChange={handleName} />
+                </div>
+                <div>
+                    <label htmlFor=''>Apellido</label>
+                    <input type="text" onChange={handleLastName} />
+                </div>
+                <div>
+                    <label htmlFor=''>Telefono</label>
+                    <input type="text" onChange={handlePhoneNumber} />
+                </div>
+                <div>
+                    <label htmlFor=''>Email</label>
+                    <input type="email" onChange={handleEmail} />
+                </div>
+                <div>
+                    <label htmlFor=''>Email Confirmación</label>
+                    <input type="email" onChange={handleEmailConf} />
+                </div>
+                {
+                    error && <p style={{ color: "red" }}>{error}</p>
+                }
+                 <ButtonSubmit >Registrar tu usuario</ButtonSubmit>
+
+            </form>
+
+            
             </div>
         </>
     )

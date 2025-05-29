@@ -247,10 +247,21 @@
 
     & button {
         padding: 3px;
-
+        margin-bottom: 2px;
+        width: 100%;
         &:hover {
             background-color: #ec2222;
             transform: scale(1.03);
         }
     }
+}
+.form-login{
+
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    // width: 300px;
+    // margin: 1rem;
+    background-color: #ffffff;
+    font-family: "Montserrat", Helvetica, sans-serif;
 }

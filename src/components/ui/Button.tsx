@@ -22,3 +22,13 @@ const ButtonCategorySearch =  ({onClickEvent,scss,children = 'button',selected}:
         </>
     )
 }
+
+export const ButtonSubmit = ({onClickEvent,scss,children = 'button',}:ButtonPropType) => {
+
+    return (
+        <>
+        
+        <button type='submit' className={`btn ${scss}`} onClick={onClickEvent}>{children}</button>
+        </>
+    )
+}
