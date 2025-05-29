@@ -36,11 +36,10 @@ export const getSearchedGames = (query: string = '', category: string | null = n
         
         return new Promise((resolve) => {
             if (query === '') {
-                console.log('function searched');
                 resolve(games)
             } else {
                 const gamesFiltred = games.filter((game) => game.name?.toLowerCase().includes(query.toLowerCase()))
-                console.log({ category });
+  
                 resolve(gamesFiltred)
             }
             
@@ -51,12 +50,12 @@ export const getSearchedGames = (query: string = '', category: string | null = n
         return new Promise((resolve) => {
             if (query != '') {
                 const gamesFiltred = games.filter((game) => game.name?.toLowerCase().includes(query.toLowerCase()))
-                console.log({ category });
+  
                 resolve(gamesFiltred)
             }else if (category) {
                 
                 const gamesFiltred = games.filter((game) => game.info.category?.toLowerCase().includes(category.toLowerCase()))
-                console.log({ category });
+  
   
                 resolve(gamesFiltred)
             }

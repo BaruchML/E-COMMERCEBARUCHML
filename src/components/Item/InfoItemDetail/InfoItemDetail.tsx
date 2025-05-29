@@ -5,7 +5,6 @@ import Container from '../../ui/container'
 
 
 export  const InfoItemDetail = ({...producto}:GameShowCardType) => {
-    console.log(producto.img[0]);
     
 return(
     <>

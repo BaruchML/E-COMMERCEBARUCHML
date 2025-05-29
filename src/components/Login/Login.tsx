@@ -1,21 +1,21 @@
 import Button from "../ui/Button";
 import Container from "../ui/container";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { UserContext } from "../context/UserContext";
+import { CardLogin } from "../ui/Card";
 
 
 function Login() {
-    const { user, logOut, loadUser } = useContext(UserContext)
+    const { loadUser } = useContext(UserContext)
+    const [name, setName] = useState('')
+
+    const handleName = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setName(e.target.value)
+    }
+
     return (
-        <Container scss="container center">
-            <form>
-                <input>
-                    </input>
-                    <label> Usuario
-                    </label>
-            </form>
-            <Button onClickEvent={() => loadUser({ id: 1, name: 'baruch', state: "no-loged" })} >Log in</Button>
-            {/* // va a register */} <Button onClickEvent={() => alert('ir a register')} >Register</Button>
+        <Container clean scss="container-center-login" title="Inicia Sesión">
+            <CardLogin handleName={handleName} userName={name} loadUser={loadUser} scss="card-login"/>
         </Container>
     );
 }

@@ -1,5 +1,5 @@
 import Button from "./Button"
-import { CardFeaturePropType, CardFooterPropType, CardItemPropType, CardNoticePropType, CardPropType } from "../../types/uiTypes"
+import { CardFeaturePropType, CardFooterPropType, CardItemPropType, CardLoginPropType, CardNoticePropType, CardPropType } from "../../types/uiTypes"
 import { Link } from "react-router-dom"
 import Contador from "../Cart/Contador/Contador"
 import { formatCurrency } from "../../utils/formatCurrency"
@@ -102,8 +102,7 @@ export const CardGameSmall = ({ scss, text, title, img, id }: CardPropType) => {
         </>
     )
 }
-export const CardNoticeSmall = ({ scss, text, title, img,id }: CardPropType) => {
-console.log(id);
+export const CardNoticeSmall = ({ scss, text, title, img, id }: CardPropType) => {
 
     return (
         <>
@@ -128,9 +127,8 @@ console.log(id);
     )
 }
 export const CardNotice = ({ scss, notice }: CardNoticePropType) => {
-//    console.log(notice.id);
-   
-    
+
+
     return (
         <>
             <div id={notice.id} className={`card ${scss} `}>
@@ -232,7 +230,7 @@ export const CardTextLeftItemDetail = ({ scss, text, img, title }: CardPropType)
 }
 
 export const CardFeature = ({ scss, feature, productInfo }: CardFeaturePropType) => {
-    let demoOnly = (<p className="demo">DEMO ONLY</p>)
+
     return (
         <>
             <div className={`card ${scss} `}>
@@ -246,6 +244,19 @@ export const CardFeature = ({ scss, feature, productInfo }: CardFeaturePropType)
 
                     <h3>{productInfo}</h3>
                 </div>
+            </div>
+        </>
+    )
+}
+
+export const CardLogin = ({ scss, handleName, loadUser, userName }: CardLoginPropType) => {
+
+    return (
+        <>
+            <div className={`card ${scss} `}>
+                <label> Nombre de Usuario </label>
+                <input type="text" placeholder="Solo escribe tu nombre" onChange={handleName}></input>
+                <Button onClickEvent={() => loadUser({ name: userName, state: "no-loged" })} >Iniciar Sesión</Button>
             </div>
         </>
     )

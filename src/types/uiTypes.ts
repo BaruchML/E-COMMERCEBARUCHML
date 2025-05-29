@@ -1,5 +1,5 @@
 import { noticeType } from "../services/noticesMock"
-import { FullProductType, GameShowCardType } from "./componentTypes"
+import { FullProductType, GameShowCardType, UserType } from "./componentTypes"
 
 
 export interface ButtonPropType {
@@ -39,6 +39,12 @@ export interface CardItemPropType extends CardPropType{
 export interface CardNoticePropType extends CardPropType {
     notice: noticeType
 }
+export interface CardLoginPropType extends CardPropType {
+    handleName: (e: React.ChangeEvent<HTMLInputElement>) => void,
+    loadUser: ({ name,state }: UserType) => void,
+    userName:string
+}
+
 
 //* Si sigue comentado entonces mejor borrarlo
 // export interface CardItemDetailPropType extends CardPropType{

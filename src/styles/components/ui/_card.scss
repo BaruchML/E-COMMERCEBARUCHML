@@ -231,3 +231,26 @@
     box-shadow: none;
 
 }
+
+
+.card-login {
+    width: 50%;
+    border-radius: 10px;
+    border: 2px solid variables.$darkcolor-red-base;
+    box-shadow: 10px 10px 0px variables.$darkcolor-red-base;
+
+    &:hover {
+        // background-color: variables.$bg-complem;
+        // color: variables.$darkcolor-red-base;
+        box-shadow: 10px 10px 0px variables.$darkcolor-red-base;
+    }
+
+    & button {
+        padding: 3px;
+
+        &:hover {
+            background-color: #ec2222;
+            transform: scale(1.03);
+        }
+    }
+}

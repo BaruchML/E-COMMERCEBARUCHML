@@ -68,18 +68,19 @@ export interface GameCartType {
 }
 
 export interface UserType {
-    id: number,
+    id?: string,
     name: string,
     state: 'no-loged' | 'logging' | 'logged'
+    cart?:string,
+    order?:string
 }
 
 export interface UserContextType {
     user: UserType | null,
-    // state: 'no-loged' | 'logging' | 'logged',
-    loadUser: ({ id, name,state }: UserType) => void,
+    loadUser: ({ name,state }: UserType) => void,
     logOut: () => void
-    cart?:string,
-    order?:string
+    getUser:()=> void
+
 }
 
 export interface CategoriesType {
