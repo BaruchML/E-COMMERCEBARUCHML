@@ -103,6 +103,7 @@ export const CardGameSmall = ({ scss, text, title, img, id }: CardPropType) => {
     )
 }
 export const CardNoticeSmall = ({ scss, text, title, img,id }: CardPropType) => {
+console.log(id);
 
     return (
         <>
@@ -116,7 +117,7 @@ export const CardNoticeSmall = ({ scss, text, title, img,id }: CardPropType) => 
                     <p>{text}</p>
                     <div style={{ alignSelf: 'start' }}>
 
-                        <Link to={`/notices#${id}`}>
+                        <Link to={`/notices/#${id}`}>
                             <Button scss="btn-link">Leer mas</Button>
                         </Link>
                     </div>
@@ -127,6 +128,7 @@ export const CardNoticeSmall = ({ scss, text, title, img,id }: CardPropType) => 
     )
 }
 export const CardNotice = ({ scss, notice }: CardNoticePropType) => {
+//    console.log(notice.id);
    
     
     return (
@@ -140,8 +142,8 @@ export const CardNotice = ({ scss, notice }: CardNoticePropType) => {
                     <p>{notice.largeDescription}</p>
                     <p>Fecha de publicación: {notice.date}</p>
                     <div style={{ alignSelf: 'start' }}>
-                        <Link to={'/shop'}>
-                            <Button scss="btn-link">Ver Juegos</Button>
+                        <Link to={`/item/${notice.gameId}`}>
+                            <Button scss="btn-link">Ver Juego</Button>
                         </Link>
                     </div>
                 </div>

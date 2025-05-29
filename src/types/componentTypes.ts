@@ -78,6 +78,8 @@ export interface UserContextType {
     // state: 'no-loged' | 'logging' | 'logged',
     loadUser: ({ id, name,state }: UserType) => void,
     logOut: () => void
+    cart?:string,
+    order?:string
 }
 
 export interface CategoriesType {

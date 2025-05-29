@@ -9,6 +9,7 @@ export interface noticeType {
     category?: string,
     date:string,
     largeDescription:string
+    gameId:string
 }
 
 
@@ -25,7 +26,8 @@ const notices: noticeType[] = [
     cambiarán la dinámica del juego. Los ninjas se alistan para enfrentar desafíos aún más difíciles en un mundo lleno de misterios.
     Aprovecha esta nueva actualización para desbloquear habilidades únicas y sumergirte en emocionantes misiones. ¡No te lo puedes perder!
     Esta expansión traerá nuevos niveles, nuevos enemigos y más secretos por descubrir. ¡Actúa rápido y mejora tu equipo antes de la gran actualización!
-  `
+  `,
+  gameId:'15'
 },
 {
   id: "2",
@@ -40,7 +42,8 @@ const notices: noticeType[] = [
     y misterios por resolver. ¿Estás listo para expandir tus horizontes en este RPG épico?
     Además, Sunnyland trae consigo nuevas misiones, enemigos y un sinfín de aventuras por descubrir. ¡Atrévete a adentrarte en este
     nuevo capítulo y conquista los territorios más desconocidos de Badam!
-  `
+  `,
+  gameId:'3'
 },
 {
   id: "3",
@@ -56,7 +59,8 @@ const notices: noticeType[] = [
     Además de los skins, también se han añadido nuevas características y mejoras para que tu experiencia de juego sea aún más
     emocionante. No pierdas la oportunidad de obtener estos exclusivos skins y personalizar tu aventura como nunca antes. ¡Corre
     con estilo y haz que todos te vean en la pista!
-  `
+  `,
+  gameId:'17'
 },
    {
   id: "4",
@@ -72,11 +76,12 @@ const notices: noticeType[] = [
     Los piratas ahora tienen una nueva forma de navegar por los mares del Caribe, con un mapa interactivo, misiones más dinámicas y
     un sistema de recompensas mejorado. La nueva interfaz te permitirá disfrutar de la aventura con controles más intuitivos y
     gráficos mejorados. ¡Es el momento perfecto para zarpar nuevamente y explorar los océanos en busca de tesoros!
-  `
+  `,
+  gameId:'16'
 },
  {
   id: "5",
-  name: "Recompensa en Tiny World",
+  name: "Recompensa en Tiny Swords",
   description: "Habla con este personaje para obtener 70 Rupias",
   img: "/img/notice-5.png",
   category: "rpg",
@@ -87,7 +92,8 @@ const notices: noticeType[] = [
     y mejorar tus habilidades con estas monedas extra.
     Las Rupias son esenciales para comprar objetos únicos, mejorar tus armas y acceder a nuevas áreas del mundo. Aprovecha esta
     oportunidad para ganar algo extra antes de que termine el evento. ¡Habla con el personaje ahora y aprovecha las recompensas!
-  `
+  `,
+  gameId:'7'
 },
 {
   id: "6",
@@ -103,7 +109,7 @@ const notices: noticeType[] = [
     Además de las recompensas, los jugadores que adquieran el Sun Pass tendrán acceso a contenido exclusivo, incluyendo skins,
     armas y personajes especiales. ¡No pierdas la oportunidad de obtener un descuento en tu compra y aprovechar todas las ventajas
     que ofrece este evento limitado!
-  `
+  ` , gameId:'2'
 },
    
 ];

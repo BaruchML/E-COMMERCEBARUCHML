@@ -13,14 +13,17 @@ export const UserProvider = ({ children }:ChildrenContext) => {
     const [user, setUser] = useState<UserType|null>(null);
     // const [state, setState] = useState<'no-loged' | 'logging'| 'logged'>('no-loged');// se van a enviar estos dos estados
 
-    const loadUser = ({id, name,state}:UserType) => {
+    const loadUser = ({name,state,id}:UserType) => {
        const stateInLoggin = state === 'logged'
 
         if (stateInLoggin) {
             return user
         } else {
-            setUser({id,name,state:'logged'})    
+            
+            console.log(user);
+            setUser({name,state:'logged',id})    
             // setState('logged')
+            
         }
     }
 

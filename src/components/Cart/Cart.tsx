@@ -6,15 +6,17 @@ import './Cart.css'
 import { UserContext } from "../context/UserContext";
 import Container from "../ui/container";
 import Button from "../ui/Button";
+import Login from "../Login/Login";
 
 const Cart = () => {
     const { user, logOut, loadUser } = useContext(UserContext)
     const { cart, cleanCart, total, totalQuantity } = useContext(CartContext);
     if (!user) {
         return (
-            <Container scss='container-center'>
-                <Button onClickEvent={() => loadUser({ id: 1, name: 'baruch',state:"no-loged" })} >Log in</Button>
-            </Container>
+            <>
+                <Login />
+            </>
+
         )
     }
     if (totalQuantity === 0) {
