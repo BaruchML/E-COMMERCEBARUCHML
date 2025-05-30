@@ -32,7 +32,7 @@ export interface SearchPropType {
 export type BasicProductType = {
     key?: number,
     id: string,
-    name?: string,
+    name: string,
 }
 
 export interface GameShowCardType extends BasicProductType {
@@ -66,6 +66,10 @@ export type FullProductType = GameShowCardType & GameCartItemType
 export interface GameCartType {
     item: FullProductType,
     quantity: number
+}
+export interface GameOrderType{
+    item:BasicProductType
+    quantity:number
 }
 
 export interface UserType {

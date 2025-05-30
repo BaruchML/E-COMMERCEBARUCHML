@@ -237,28 +237,37 @@
     border-radius: 10px;
     border: 2px solid variables.$darkcolor-red-base;
     box-shadow: 10px 10px 0px variables.$darkcolor-red-base;
+    border: 2px solid grey;
+    box-shadow: 10px 10px 0px grey;
 
     &:hover {
         // background-color: variables.$bg-complem;
-        // color: variables.$darkcolor-red-base;
-        box-shadow: 10px 10px 0px variables.$darkcolor-red-base;
+        // color: grey;
+        box-shadow: 10px 10px 0px grey;
     }
 
     & button {
+        font-size: 1rem;
         padding: 3px;
         margin-bottom: 2px;
-        width: 100%;
+        width: 40%;
         &:hover {
             background-color: #ec2222;
             transform: scale(1.03);
         }
     }
 }
+.btn-login-toregister{
+    padding: 5px;
+           font-size: 1rem; 
+}
 .card-register {
     width: 20%;
     border-radius: 10px;
     border: 2px solid variables.$darkcolor-red-base;
     box-shadow: 10px 10px 0px variables.$darkcolor-red-base;
+     border: 2px solid grey;
+    box-shadow: 10px 10px 0px grey;
 
     &:hover {
         // background-color: variables.$bg-complem;
@@ -296,3 +305,6 @@
 }
 
 
+.card-purchase{
+    width: 90%;
+}

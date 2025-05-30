@@ -350,3 +350,20 @@ export const CardCartItem = ({ scss, game, eraseProduct }: CardCartPropType) => 
         </>
     )
 }
+export const CardPurchase = ({ scss}: CardPropType) => {
+    return (
+        <>
+            <div className={`card ${scss}`}>
+            {/* <h1>
+                Gracias por llegar hasta aqui
+            </h1> */}
+            <h3>
+                Este E-commerce es una practica de React en la que incluyo diferentes herramientas con motivo de seguir aprendiendo y presentarlas en mi portfolio,
+                ¡Aqui!
+            </h3>
+            <a href="/algun lugar">Portfolio</a>
+            <h3>Espero que te haya gustado, este sitio seguira en crecimiento asi que siempre puedes darte una vuelta para ver que novedades se han agregado.</h3>
+            </div>
+        </>
+    )
+}

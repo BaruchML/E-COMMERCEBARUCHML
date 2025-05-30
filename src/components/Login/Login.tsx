@@ -30,8 +30,8 @@ function Login() {
         <Container clean scss="container-center-login" title="Inicia Sesión">
             <CardLogin error={error} handleName={handleName} userName={name} handleSubmit={handleSubmit} scss="card-login"/>
             <br></br>
-                   <p style={{ justifySelf: 'center',  }}> Si todavia no tienes una cuenta:</p>
-                    <Link to={'/register'}><Button>Registrate</Button></Link>
+                   <p style={{ justifySelf: 'center', }}> Si todavia no tienes una cuenta:</p>
+                    <Link to={'/register'}><Button scss="btn-login-toregister">Registrate</Button></Link>
         </Container>
     );
 }
