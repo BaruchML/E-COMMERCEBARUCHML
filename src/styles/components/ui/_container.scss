@@ -23,6 +23,14 @@
     padding: 20px 0px;
     font-family: "Montserrat Alternates", Arial, Helvetica, sans-serif;
 }
+.container_clean-grey {
+    border: 0;
+    min-height: auto;
+    background-color: #fAfAfA;
+    border-bottom: 1px solid variables.$borders-grey;
+    padding: 20px 0px;
+    font-family: "Montserrat Alternates", Arial, Helvetica, sans-serif;
+}
 
 .container-flex {
     display: flex;
@@ -171,17 +179,3 @@ input[type="email"] {
      min-height: 300px;
 }
 
-.container-cart{
-    // flex-direction: r;
-    justify-content: space-evenly;
-}
-
-.container-cart-items{
-    background-color: aqua;
-    width: 60%;
-}
-
-.container-cart-summary{
-    background-color: #ec2222;
-    width: 30%;
-}

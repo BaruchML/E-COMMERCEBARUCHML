@@ -1,5 +1,5 @@
 import Button, { ButtonSubmit } from "./Button"
-import { CardFeaturePropType, CardFooterPropType, CardItemPropType, CardLoginPropType, CardNoticePropType, CardPropType, CardRegisterPropType } from "../../types/uiTypes"
+import { CardCartPropType, CardFeaturePropType, CardFooterPropType, CardItemPropType, CardLoginPropType, CardNoticePropType, CardPropType, CardRegisterPropType } from "../../types/uiTypes"
 import { Link } from "react-router-dom"
 import Contador from "../Cart/Contador/Contador"
 import { formatCurrency } from "../../utils/formatCurrency"
@@ -325,21 +325,27 @@ export const CardRegisterSuccess = ({ scss, }: CardPropType) => {
         </>
     )
 }
-export const CardCartItem = ({ item, quantity }: GameCartType) => {
+export const CardCartItem = ({ scss, game, eraseProduct }: CardCartPropType) => {
     return (
         <>
             <div className={`card card-cart-item`}>
-                {/* <div className="divCartItem"> */}
-                    <h3>{item.name}</h3>
-                    <img src={item.img[0]}></img>
-                    <p>Cantidad: {quantity}</p>
-                    <p>Precio: ${item.price}</p>
+                <div className="card-cart-item-img-container-ar">
+                    <img src={game.item.img[0]}></img>
+                </div>
+                <div className="card-cart-item-info">
+                    <h3>{game.item.name}</h3>
+                    <p>Cantidad: {game.quantity}</p>
                     {
-                        // eraseProduct && (<button className="buttonCartItem" onClick={() => eraseProduct(item)}>Eliminar</button>)
+                        eraseProduct && (<button className="card-cart-item-erase_btn" onClick={() => eraseProduct(game.item)}><iconify-icon icon="gg:trash" width="18" height="18"></iconify-icon></button>)
                     }
+                </div>
+                <div className="card-cart-item-price">
+                    <h3>Precio:</h3>
+                    <p> {formatCurrency(game.item.price)}</p>
 
-   
-                {/* </div> */}
+                </div>
+
+
             </div>
         </>
     )

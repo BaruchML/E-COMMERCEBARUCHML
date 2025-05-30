@@ -1,0 +1,123 @@
+@use '../../variables';
+@use '../../mixins';
+
+.container-cart {
+    // flex-direction: r;
+    justify-content: space-evenly;
+}
+
+.container-cart-items {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: 1px solid grey;
+    width: 65%;
+      @include mixins.cardFlexColumnCenter()
+    // justify-items: center;
+    // align-items: center;
+    // padding-bottom: 20px;
+}
+
+.container-cart-summary {
+    
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: 1px solid grey;
+    width: 32%;
+    @include mixins.cardFlexColumnCenter();
+    justify-content: space-evenly;
+       text-align: start;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        line-height: 2px;
+ 
+
+}
+
+.container-cart-sumary_btn{
+    background-color: #FFF;
+    color: variables.$darkcolor-red-base;
+    font-size: 1rem;
+    padding: 3px;
+    border: 1px solid variables.$darkcolor-red-base;
+    &:hover{
+            transform: scale(1.01);
+            background-color: #f0f0f0;
+    }
+    margin-bottom: 6px;
+}
+.container-cart-sumary_btn-buy{
+    font-size: 1rem;
+      padding: 3px;
+      outline: 2px solid variables.$darkcolor-red-base;
+      border: 1px solid white;
+     &:hover{
+            transform: scale(1.048);
+            background-color: rgb(235, 14, 14);
+           outline: 2px solid rgb(235, 14, 14);
+    }
+        margin-bottom: 6px;
+}
+
+.card-cart-item {
+    // background-color: rgb(127, 168, 255);
+    
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    // margin-bottom: 5px;
+    border-bottom: 1px solid grey;
+    &:hover {
+        box-shadow: none;
+        & h3{
+            color: variables.$darkcolor-red-base;
+        }
+    }
+}
+
+.card-cart-item-img-container-ar {
+    position: relative;
+    aspect-ratio: 1/1;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        border-radius: 10% 10% 0% 0%;
+        z-index: 1;
+        transition: transform 0.3s ease-in-out;
+        transform-origin: center center;
+    }
+}
+
+.card-cart-item-info {
+    width: 30%;
+    // background-color: aqua;
+}
+
+.card-cart-item-price {
+        width: 30%;
+    // background-color: aqua;
+}
+
+.card-cart-item-erase_btn{
+    background-color: rgb(255, 255, 255);
+    border-color: #FFF;
+    border-style: none;
+    cursor: pointer;
+    &:hover{
+        color:variables.$darkcolor-red-base;
+    }
+}
+

@@ -21,7 +21,7 @@ const NoticesPage = () => {
   }, []); 
 
   return (
-    <Container clean title='Las ultimas noticias' scss='card-notices-container'>
+    <Container cleanGrey title='Las ultimas noticias' scss='card-notices-container'>
       <div className='card-notices-container-column'>
         {notices.map((n) => <CardNotice key={n.id} scss='card-notice' notice={n}/>)}
       </div>

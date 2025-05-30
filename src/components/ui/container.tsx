@@ -1,11 +1,11 @@
 import { ContainerPropsType } from "../../types/componentTypes"
 
 
-export const Container: React.FC<ContainerPropsType> = ({ children, scss, title,clean=false }) => {
+export const Container: React.FC<ContainerPropsType> = ({ children, scss, title,clean=false,cleanGrey=false  }) => {
 
     return (
         <>
-            <div className={`container ${clean && 'container_clean'}`}>
+            <div className={`container ${clean && 'container_clean'}  ${cleanGrey && 'container_clean-grey'}`}>
 
                 {title && <div className="container-title" >
                     <h1>{title}</h1>
@@ -21,11 +21,11 @@ export const Container: React.FC<ContainerPropsType> = ({ children, scss, title,
 
 
 
-export const ContainerListItems: React.FC<ContainerPropsType> = ({ children, scss, title,clean=false }) => {
+export const ContainerListItems: React.FC<ContainerPropsType> = ({ children, scss, title,clean=false,cleanGrey=false }) => {
 
     return (
         <>
-            <div className={`container container-list ${clean && 'container_clean'}`}>
+            <div className={`container container-list ${clean && 'container_clean'} ${cleanGrey && 'container_clean-grey'}`}>
 
                 {title && <div className="container-title" >
                     <h1>{title}</h1>

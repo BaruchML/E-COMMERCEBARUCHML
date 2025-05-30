@@ -3,6 +3,7 @@ import { CartContext, ItemType } from '../context/CartContext';
 import { db } from '../../services/config';
 import { collection, addDoc, updateDoc, doc, getDoc } from 'firebase/firestore';
 import "./Checkout.css"
+import { UserContext } from '../context/UserContext';
 
 const Checkout = () => {
     const [nombre, setNombre] = useState("");
@@ -14,6 +15,7 @@ const Checkout = () => {
     const [ordenId, setOrdenId] = useState("");
 
     const { cart, cleanCart, total, totalQuantity } = useContext(CartContext);
+    const {user} = useContext(UserContext)
 
     interface OrderType {
         items: ItemType[],
@@ -25,6 +27,8 @@ const Checkout = () => {
         email: string
 
     }
+    console.log(user);
+    
 
     const manejadorFormulario = (event: FormEvent) => {
         event.preventDefault();

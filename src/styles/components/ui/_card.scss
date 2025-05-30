@@ -208,7 +208,6 @@
 
 }
 
-
 .card-shop:hover {
     padding: 2rem;
     gap: 4px;
@@ -296,14 +295,4 @@
     }
 }
 
-.card-cart-item{
-    background-color: rgb(127, 168, 255);
-    width: 100%;
-    padding: 0%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    & img{
-        max-width: 200px;
-    }
-}
+

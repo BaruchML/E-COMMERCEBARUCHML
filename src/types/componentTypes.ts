@@ -3,6 +3,7 @@ export interface ContainerPropsType {
     children: React.ReactNode;
     title?: string,
     clean?: boolean,
+    cleanGrey?: boolean,
 }
 export interface ChildrenContext {
     children: React.ReactNode;

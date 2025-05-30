@@ -7,10 +7,12 @@ import Container from "../ui/container";
 import Button from "../ui/Button";
 import Login from "../Login/Login";
 import { CardCartItem } from "../ui/Card";
+import NewsCart from "./NewsCart";
+import { formatCurrency } from "../../utils/formatCurrency";
 
 const Cart = () => {
     const { user, logOut, } = useContext(UserContext)
-    const { cart, cleanCart, total, totalQuantity } = useContext(CartContext);
+    const { cart, cleanCart, total, totalQuantity,eraseProduct } = useContext(CartContext);
 
     if (!user || user.state != 'logged') {
         return (
@@ -36,24 +38,28 @@ const Cart = () => {
     }
 
     return (
-        <Container scss="container-cart">
+        <>
+
+        <Container cleanGrey title="Carrito" scss="container-cart"> 
             <div className="container-cart-items">
                 {
-                    cart.map(prod => <CardCartItem key={prod.item.id} {...prod} />)
+                    cart.map(prod => <CardCartItem eraseProduct={eraseProduct} key={prod.item.id} game={prod} />)
                 }
             </div>
             <div className="container-cart-summary">
                 <h2>Resumen de Compra</h2>
                 <p> Total de piezas: {totalQuantity}</p>
-                <p> Total: ${total}</p>
+                <p> Total: {formatCurrency(total)}</p>
                 {
-                    cleanCart && (<button className="btnVaciarCompra" onClick={() => cleanCart()}> Vaciar Carrito</button>)
+                    cleanCart && (<Button scss="container-cart-sumary_btn" onClickEvent={() => cleanCart()}> Vaciar Carrito</Button>)
                 }
 
-                <Link to="/checkout"><button className="btnFinCompra">Continuar Compra</button></Link>
+                <Link to="/checkout"><Button scss="container-cart-sumary_btn-buy">Continuar Compra</Button></Link>
             </div>
 
         </Container>
+            <NewsCart/>
+        </>
     )
 }
 

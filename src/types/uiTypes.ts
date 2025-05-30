@@ -1,6 +1,6 @@
 import { FormEvent } from "react"
 import { noticeType } from "../services/noticesMock"
-import { FullProductType, GameShowCardType, UserType } from "./componentTypes"
+import { BasicProductType, FullProductType, GameCartType, GameShowCardType, UserType } from "./componentTypes"
 
 
 export interface ButtonPropType {
@@ -56,6 +56,11 @@ export interface CardRegisterPropType extends CardPropType {
     handleSubmit: (e:FormEvent)=> void
     error:string
 
+}
+export interface CardCartPropType extends CardPropType{
+    game: GameCartType
+    eraseProduct: ({id}:BasicProductType) => void
+    // demo: boolean
 }
 
 
