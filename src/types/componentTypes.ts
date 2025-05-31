@@ -1,14 +1,20 @@
-export interface ContainerPropsType {
+
+
+//Container
+export interface ContainerType {
     scss?: string
     children: React.ReactNode;
     title?: string,
     clean?: boolean,
     cleanGrey?: boolean,
 }
-export interface ChildrenContext {
+
+//Context in General
+export interface ContextChildrenType {
     children: React.ReactNode;
 }
 
+//CartContext
 
 export interface CartContextType {
     cart: GameCartType[],
@@ -19,9 +25,10 @@ export interface CartContextType {
     cleanCart: () => void
 }
 
+
+
 export interface SearchPropType {
     scss?: string
-    // query?: string
     queryMock?: string,
     category?: string | null
     handleEvent?: (e: React.ChangeEvent<HTMLInputElement>) => void | string
@@ -51,6 +58,7 @@ export interface GameShowInformationType {
     size:string,
     rating:string
 }
+
 export interface GameCartItemType extends BasicProductType {
     stock: number,
     price: number

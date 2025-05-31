@@ -1,5 +1,5 @@
 import { useState, createContext, } from "react"
-import { ChildrenContext, UserContextType, UserType } from "../../types/componentTypes";
+import { ContextChildrenType, UserContextType, UserType } from "../../types/componentTypes";
 
 export const UserContext = createContext<UserContextType>({
     user: null,
@@ -9,7 +9,7 @@ export const UserContext = createContext<UserContextType>({
 
 });
 
-export const UserProvider = ({ children }: ChildrenContext) => {
+export const UserProvider = ({ children }: ContextChildrenType) => {
 
     const [user, setUser] = useState<UserType | null>(null);
 

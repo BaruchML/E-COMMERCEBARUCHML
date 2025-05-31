@@ -1,5 +1,5 @@
 import { useState, createContext, } from "react"
-import { ChildrenContext, CartContextType, GameCartType, BasicProductType } from "../../types/componentTypes";
+import { ContextChildrenType, CartContextType, GameCartType, BasicProductType } from "../../types/componentTypes";
 
 export const CartContext = createContext<CartContextType>({
     cart: [],
@@ -11,7 +11,7 @@ export const CartContext = createContext<CartContextType>({
     
 });
 
-export const CartProvider = ({ children }:ChildrenContext) => {
+export const CartProvider = ({ children }:ContextChildrenType) => {
 
     const [cart, setCart] = useState<GameCartType[]>([]);
     const [total, setTotal] = useState(0);

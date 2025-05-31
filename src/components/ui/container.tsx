@@ -1,7 +1,7 @@
-import { ContainerPropsType } from "../../types/componentTypes"
+import { ContainerType } from "../../types/componentTypes"
 
 
-export const Container: React.FC<ContainerPropsType> = ({ children, scss, title,clean=false,cleanGrey=false  }) => {
+export const Container: React.FC<ContainerType> = ({ children, scss, title,clean=false,cleanGrey=false  }) => {
 
     return (
         <>
@@ -21,7 +21,7 @@ export const Container: React.FC<ContainerPropsType> = ({ children, scss, title,
 
 
 
-export const ContainerListItems: React.FC<ContainerPropsType> = ({ children, scss, title,clean=false,cleanGrey=false }) => {
+export const ContainerListItems: React.FC<ContainerType> = ({ children, scss, title,clean=false,cleanGrey=false }) => {
 
     return (
         <>
