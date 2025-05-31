@@ -4,7 +4,7 @@ export interface noticeType {
     id: string,
     name: string,
     price?: number,
-    img?: string,
+    img: string,
     description: string,
     category?: string,
     date:string,

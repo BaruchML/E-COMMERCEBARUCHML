@@ -3,7 +3,7 @@
 // import { collection, getDocs, query, where } from 'firebase/firestore';
 // import { ProductsType } from '../../../types/componentTypes';
 import { useState, useEffect } from 'react';
-import { CardGameSmall } from '../ui/Card'
+import { CardGame as CardGameNews } from '../ui/Card'
 import Container from '../ui/container'
 import { getLimitedGames } from '../../utils/gamesFunctions';
 import { GameShowCardType } from '../../types/componentTypes';
@@ -34,7 +34,20 @@ const NewsCart = () => {
 
   return (
     <Container scss='container-sp-even' clean title='Tambien te puede interesar'>
-      {games.map(game => <CardGameSmall id={game.id} title={game.name} img={game.img[0]} scss='card-small' key={game.id} />)}
+      {games.map(game => <CardGameNews
+        key={game.id}
+        style={{
+          scssCard: 'card-small',
+          scssDivImg: 'card-img-small-container-ar',
+          scssBtn: 'btn-card-small'
+        }}
+        cardInfo={{
+          id: game.id,
+          title: game.name,
+          img: game.img[0],
+          btnText: 'Ver mas'
+        }}
+      />)}
     </Container>
 
   )

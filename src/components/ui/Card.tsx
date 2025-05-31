@@ -1,14 +1,8 @@
 import Button, { ButtonSubmit } from "./Button"
-import { CardCartPropType, CardFeaturePropType, CardFooterPropType, CardItemPropType, CardLoginPropType, CardNoticePropType, CardPropType, CardRegisterPropType } from "../../types/uiTypes"
+import { CardCartPropType, CardFeaturePropType, CardFooterPropType, CardItemPropType, CardLoginPropType, CardNoticePropType, CardPropInfo, CardPropType, CardRegisterPropType } from "../../types/uiTypes"
 import { Link } from "react-router-dom"
 import Contador from "../Cart/Contador/Contador"
 import { formatCurrency } from "../../utils/formatCurrency"
-import { GameCartType } from "../../types/componentTypes"
-// import { CartContext } from "../context/CartContext"
-// import { useContext } from "react"
-
-
-// const { eraseProduct } = useContext(CartContext);
 
 export const Card = ({ scss }: CardPropType) => {
 
@@ -22,6 +16,29 @@ export const Card = ({ scss }: CardPropType) => {
         </>
     )
 }
+export const CardGame = ({ style, cardInfo,productInfo,discount }: CardPropInfo) => {
+    let offer = (<p>{productInfo?.price}</p>)
+    return (
+        <>
+            <div className={`card ${style.scssCard} `}>
+                <div className={`${style.scssDivImg}`}>
+                    <img src={cardInfo.img}></img>
+                </div>
+                <div className="card-center">
+                    <p>{cardInfo.title}</p>
+                    {cardInfo.text && <p>{cardInfo.text}</p>}
+                    {discount && offer}
+                    <div className={`${style.scssDivBtn}`}>
+                        <Link to={`/item/${cardInfo.id}`}>
+                            <Button scss={`${style.scssBtn}`}>{cardInfo.btnText}</Button>
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
+
 export const CardTextLeft = ({ scss, text, img, title }: CardPropType) => {
 
     return (
@@ -66,74 +83,7 @@ export const CardTextRight = ({ scss, text, img, title }: CardPropType) => {
     )
 }
 
-export const CardGameCarousel = ({ scss, text, title, img, id }: CardPropType) => {
-
-    return (
-        <>
-            <div className={`card ${scss} `}>
-                <div className="card_gameCarousel-img-container ">
-                    <img src={img}></img>
-                </div>
-                <div className="card-center">
-                    <p>{title}</p>
-                    {text && text}
-
-                    <Link to={`/item/${id}`}>
-                        <Button scss="btn-carousel">Comprar</Button>
-                    </Link>
-                </div>
-            </div>
-        </>
-    )
-}
-export const CardGameSmall = ({ scss, text, title, img, id }: CardPropType) => {
-
-    return (
-        <>
-            <div className={`card ${scss} `}>
-                <div className="card-img-small-container-ar">
-
-                    <img src={img}></img>
-                </div>
-                <div className="card-center">
-                    <p>{title}</p>
-                    {text && text}
-                    <Link to={`/item/${id}`}>
-                        <Button scss="btn-card-small">Ver mas</Button>
-                    </Link>
-                </div>
-
-            </div>
-        </>
-    )
-}
-export const CardNoticeSmall = ({ scss, text, title, img, id }: CardPropType) => {
-
-    return (
-        <>
-            <div className={`card ${scss} `}>
-                <div className="card-img-small-notice-container-ar">
-
-                    <img src={img}></img>
-                </div>
-                <div className="card-center-notice-small">
-                    <p>{title}</p>
-                    <p>{text}</p>
-                    <div style={{ alignSelf: 'start' }}>
-
-                        <Link to={`/notices/#${id}`}>
-                            <Button scss="btn-link">Leer mas</Button>
-                        </Link>
-                    </div>
-                </div>
-
-            </div>
-        </>
-    )
-}
 export const CardNotice = ({ scss, notice }: CardNoticePropType) => {
-
-
     return (
         <>
             <div id={notice.id} className={`card ${scss} `}>
@@ -191,11 +141,9 @@ export const CardItemDetail = ({ scss, addQuantity, handleQuantity, product }: C
                 <div className="card-item-detail_info">
                     <div className="card-item-detail_column">
                         <div className="card-item-detail-column_info ">
-
                             <h1 className="card-item-detail_name">{product.name}</h1>
                             <p>Fecha de lanzamiento: {product.info.lunchDate}</p>
                             <p>Consola: {product.info.console}</p>
-
                         </div>
                         <div className="card-item-detail-column_info ">
                             <h1 >{formatCurrency(product.price)}</h1>
@@ -325,7 +273,7 @@ export const CardRegisterSuccess = ({ scss, }: CardPropType) => {
         </>
     )
 }
-export const CardCartItem = ({ scss, game, eraseProduct }: CardCartPropType) => {
+export const CardCartItem = ({ game, eraseProduct }: CardCartPropType) => {
     return (
         <>
             <div className={`card card-cart-item`}>
@@ -350,19 +298,19 @@ export const CardCartItem = ({ scss, game, eraseProduct }: CardCartPropType) => 
         </>
     )
 }
-export const CardPurchase = ({ scss}: CardPropType) => {
+export const CardPurchase = ({ scss }: CardPropType) => {
     return (
         <>
             <div className={`card ${scss}`}>
-            {/* <h1>
+                {/* <h1>
                 Gracias por llegar hasta aqui
             </h1> */}
-            <h3>
-                Este E-commerce es una practica de React en la que incluyo diferentes herramientas con motivo de seguir aprendiendo y presentarlas en mi portfolio,
-                ¡Aqui!
-            </h3>
-            <a href="/algun lugar">Portfolio</a>
-            <h3>Espero que te haya gustado, este sitio seguira en crecimiento asi que siempre puedes darte una vuelta para ver que novedades se han agregado.</h3>
+                <h3>
+                    Este E-commerce es una practica de React en la que incluyo diferentes herramientas con motivo de seguir aprendiendo y presentarlas en mi portfolio,
+                    ¡Aqui!
+                </h3>
+                <a href="/algun_lugar">Portfolio</a>
+                <h3>Espero que te haya gustado, este sitio seguira en crecimiento asi que siempre puedes darte una vuelta para ver que novedades se han agregado.</h3>
             </div>
         </>
     )

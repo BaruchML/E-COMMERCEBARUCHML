@@ -4,7 +4,7 @@
 import { useState, useEffect } from 'react';
 import {SearchPropType,GameShowCardType } from '../../../types/componentTypes';
 import { ContainerListItems } from '../../ui/container';
-import { CardGameSmall } from '../../ui/Card';
+import { CardGame as CardGameShop } from '../../ui/Card';
 import { getSearchedGames } from '../../../utils/gamesFunctions';
 
 const ItemListContainer = ({ queryMock, category }: SearchPropType) => {
@@ -39,7 +39,22 @@ const ItemListContainer = ({ queryMock, category }: SearchPropType) => {
     <>
       <ContainerListItems  clean title={`Juegos ${category != null ? 'tipo ' + category : ''}`}>
         {noGames}
-        {games.map(game => <CardGameSmall id={game.id} title={game.name} img={game.img[0]} scss='card-small-shop' key={game.id} />)}
+       {games.map(game => <CardGameShop
+               key={game.id}
+               style={{
+                 scssCard: 'card-small-shop',
+                 scssDivImg: 'card-img-small-container-ar',
+                 scssBtn: 'btn-card-small'
+               }}
+               cardInfo={{
+                 id: game.id,
+                 title: game.name,
+                 img: game.img[0],
+                 btnText: 'Ver mas'
+               }}
+               discount
+               productInfo={game}
+             />)}
       </ContainerListItems>
     </>
   )

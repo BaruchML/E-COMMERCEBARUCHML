@@ -1,6 +1,6 @@
 import { FormEvent } from "react"
 import { noticeType } from "../services/noticesMock"
-import { BasicProductType, FullProductType, GameCartType, GameShowCardType, UserType } from "./componentTypes"
+import { BasicProductType, FullProductType, GameCartItemType, GameCartType, GameShowCardType, UserType } from "./componentTypes"
 
 
 export interface ButtonPropType {
@@ -21,6 +21,23 @@ export interface CardPropType {
     title?: string,
     img?: string,
     id?:string
+}
+export interface CardPropInfo{
+    style:{
+        scssCard:string
+        scssDivImg:string
+        scssDivBtn?:string
+        scssBtn:string
+    }
+    cardInfo:{
+        title:string
+        text?:string
+        btnText?:string
+        img:string
+        id:string
+    }
+    productInfo? : GameCartItemType,
+    discount?: boolean
 }
 export interface CardFooterPropType extends CardPropType{
     list: ListType[]
